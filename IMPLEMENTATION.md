@@ -14,9 +14,9 @@ We will not create a custom scheduler, replace native sibling records, generate 
 
 The initial repository contained only the Apache-2.0 license. These three documentation files propose the shape of future work. In particular:
 
-- \`gapline-audit\` is an existing read-only agent skill; it does not execute code or write files.
-- \`intentline-issue\` can REVIEW, CREATE, or UPDATE via an appropriately permissioned host tracker tool; issue CREATE/UPDATE alone is **not** permission to save a separate Intentline record.
-- \`intentline-plan\` saves a source-bound draft only when explicitly requested with the separate Python 3.11+ Intentline runtime available.
+- `gapline-audit` is an existing read-only agent skill; it does not execute code or write files.
+- `intentline-issue` can REVIEW, CREATE, or UPDATE via an appropriately permissioned host tracker tool; issue CREATE/UPDATE alone is **not** permission to save a separate Intentline record.
+- `intentline-plan` saves a source-bound draft only when explicitly requested with the separate Python 3.11+ Intentline runtime available.
 - RepoTend has a deterministic auditor and 13 advisory-first rules; it is not a full static security scanner.
 - Faultline is design-only; Proofline's check-only execution and Intentline export consumer have specific host, candidate, and revision restrictions.
 
@@ -28,10 +28,10 @@ Do not claim any of those tools was invoked by Foundryline merely because its in
 
 **Deliverables, once implemented:**
 
-1. \`patterns/discover.md\`: prerequisites, precise target/ref/scope, allowed read-only host actions, capped budget, Gapline call, evidence qualification, source lookup, counterevidence, duplicate checks, provisional issue construction, and handoff states.
-2. \`examples/manual-discover/\`: an authored example with original source references, plausible counterevidence, a **NOT PUBLISHED** issue, and explicit **PROPOSED — NOT RUN** verification, identified as a fixture rather than a real audit.
+1. `patterns/discover.md`: prerequisites, precise target/ref/scope, allowed read-only host actions, capped budget, Gapline call, evidence qualification, source lookup, counterevidence, duplicate checks, provisional issue construction, and handoff states.
+2. `examples/manual-discover/`: an authored example with original source references, plausible counterevidence, a **NOT PUBLISHED** issue, and explicit **PROPOSED — NOT RUN** verification, identified as a fixture rather than a real audit.
 3. A manual adopter runbook covering how to install the portable skills, confirm actual skill activation, distinguish skill installation from Python runtime setup, and proceed if access or original behavioral sources are missing.
-4. A small \`checks/\` package that validates the repository's own reference links and stated sample artifact structure without declaring behavioral agent efficacy.
+4. A small `checks/` package that validates the repository's own reference links and stated sample artifact structure without declaring behavioral agent efficacy.
 
 **First exercise:** Select a bounded public repository snapshot, record its Git commit and inspected paths, run Gapline read-only through a real authorized agent host, follow a consequential supported finding (if any) to original expectations, and draft an issue using intentline-issue REVIEW guidance. Compare the draft against a plain-agent issue-writing baseline when feasible. If no issue is substantiated, retain a valid no-findings report rather than inventing one.
 
@@ -53,9 +53,9 @@ Do not claim any of those tools was invoked by Foundryline merely because its in
 
 **Deliverables:**
 
-- Expand \`patterns/discover.md\` with an issue preparation checklist grounded in Intentline's ISSUE_WORKFLOW, including original-source lookup, current issue readback and conflict checks, preservation of unrelated fields, and uncertainty labels.
-- \`examples/issue-only/\`: REVIEW produces a local issue draft; an authorized CREATE action may later write exactly one issue and verify its URL.
-- \`examples/acceptance-draft/\`: separate saved plan from \`intentline-plan\`, with actual source bytes, output location/hashes when available, exact CLI/runtimes used, and clear DRAFT status. No local record is generated as a side effect of REVIEW/CREATE.
+- Expand `patterns/discover.md` with an issue preparation checklist grounded in Intentline's ISSUE_WORKFLOW, including original-source lookup, current issue readback and conflict checks, preservation of unrelated fields, and uncertainty labels.
+- `examples/issue-only/`: REVIEW produces a local issue draft; an authorized CREATE action may later write exactly one issue and verify its URL.
+- `examples/acceptance-draft/`: separate saved plan from `intentline-plan`, with actual source bytes, output location/hashes when available, exact CLI/runtimes used, and clear DRAFT status. No local record is generated as a side effect of REVIEW/CREATE.
 - Publish a source/authority decision table for when to skip formal planning, write an investigation issue, request a product decision, or save a structured draft.
 
 **Acceptance:**
@@ -72,8 +72,8 @@ Do not claim any of those tools was invoked by Foundryline merely because its in
 
 **Deliverables:**
 
-- \`patterns/maintain.md\` and a real RepoTend invocation example using its current checkout and Node.js requirements.
-- A small pinned fixture/reference repository and an example audit report showing \`PASS\`, \`WARN\`, \`FAIL\`, \`UNKNOWN\`, and \`NOT_APPLICABLE\` where naturally supported by real engine behavior.
+- `patterns/maintain.md` and a real RepoTend invocation example using its current checkout and Node.js requirements.
+- A small pinned fixture/reference repository and an example audit report showing `PASS`, `WARN`, `FAIL`, `UNKNOWN`, and `NOT_APPLICABLE` where naturally supported by real engine behavior.
 - A triage recipe that distinguishes confirmed, objective deviations from heuristic workflow/security recommendations.
 - Optional issue draft from a real RepoTend finding. No automatic fix, workflow mutation or GitHub settings change.
 
@@ -90,7 +90,7 @@ Do not claim any of those tools was invoked by Foundryline merely because its in
 
 **Deliverables:**
 
-- \`templates/github/intake.yml\`, initially an example template with \`workflow_dispatch\`, optionally \`schedule\`, that explicitly invokes a qualified tool/agent entry point instead of relying on skills being present.
+- `templates/github/intake.yml`, initially an example template with `workflow_dispatch`, optionally `schedule`, that explicitly invokes a qualified tool/agent entry point instead of relying on skills being present.
 - A runner qualification record for OS, agent CLI/version, skill discovery/activation, credentials scope, network/egress, source checkout, token budget, command restrictions, and effect isolation.
 - Bounded output: Markdown or structured artifact summarizing scope, no-findings/findings, evidence grade, existing issue lookup, potential issue drafts and areas unassessed.
 - Clear distinction between scheduled read-only proposal mode and a **separately authorized** publish mode.
@@ -126,8 +126,8 @@ This snippet **does not run an agent**. A future example must pin/install a comp
 
 **Deliverables:**
 
-- \`patterns/deliver.md\` with independent admission, source capture, code effects, test execution and publication gates.
-- A pinned example showing the narrow, currently supported Intentline JSON export into Proofline \`check --intentline-export\` with exact matching S1 source and explicit R-to-command mappings when available.
+- `patterns/deliver.md` with independent admission, source capture, code effects, test execution and publication gates.
+- A pinned example showing the narrow, currently supported Intentline JSON export into Proofline `check --intentline-export` with exact matching S1 source and explicit R-to-command mappings when available.
 - A refusal example for amended contracts, child slicing, missing native sandbox, stale candidate, unavailable selected commands or missing permission.
 - An optional comparison of the modular path against a separately qualified P2P-native delivery, without implying approval or evidence equivalence.
 
@@ -164,7 +164,7 @@ foundryline/
 └── checks/                    # Small tests of reference artifacts
 ~~~
 
-No \`src/foundryline\` runtime package, queue, database or service is warranted at this stage. When the same handoff becomes repeatedly error-prone across real adopters, write the smallest independent helper and retain a manual path.
+No `src/foundryline` runtime package, queue, database or service is warranted at this stage. When the same handoff becomes repeatedly error-prone across real adopters, write the smallest independent helper and retain a manual path.
 
 ## 7. Test strategy and evaluation
 
@@ -174,7 +174,7 @@ Validate Markdown links, expected example files, documented version constraints,
 
 ### Real-host negative controls
 
-- Agent cannot access target files: report \`NOT ASSESSED\`, do not invent findings.
+- Agent cannot access target files: report `NOT ASSESSED`, do not invent findings.
 - No authoritative expected behavior: issue remains provisional/investigation-focused rather than a confirmed product requirement.
 - Existing issue matches lead: propose deduplication rather than writing a duplicate.
 - Conflicting approved exception: preserve the scoped exception and do not introduce an unsanctioned acceptance criterion.

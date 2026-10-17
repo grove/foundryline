@@ -1,135 +1,146 @@
 # Foundryline
 
-**A composable blueprint for AI-assisted software factories.**
+**A simple, reusable playbook for building and looking after software with AI.**
 
-Discover meaningful work. Define what done means. Implement changes. Inspect the evidence. Maintain the repository.
+Welcome! 👋
 
-Foundryline documents **copyable production patterns**, rather than operating a central software factory. Adopt one pattern or several, bring your existing coding agent and issue tracker, and retain control of credentials, execution, approvals, and delivery in the adopting project.
+AI coding assistants can write code. But good software takes more than writing code. How do you know **what needs fixing**, **what “done” means**, and **whether a change really works**?
 
-> **Status: pre-v0.1 / qualification pending maintainer review.** The [Discover runbook](patterns/discover.md), [authored examples](examples/manual-discover/README.md), and [structural checks](checks/test_manual_discover.py) are accompanied by an [actual pinned RepoTend pilot, fresh-agent reproduction and witnessed refusal](examples/repotend-pilot/README.md). A separate [evidence-based v0.1 review](docs/discover-v0.1-qualification-review.md) recommends a **limited host-specific qualification, conditional on explicit maintainer acceptance**. The pilot record retains source-supported findings, usage, and host/independence limits; Foundryline does **not** claim maintainer acceptance or universal host qualification. Foundryline remains a blueprint, not an installed service, scheduler, or automatic intake agent. See [DESIGN.md](DESIGN.md) and [IMPLEMENTATION.md](IMPLEMENTATION.md).
+That's where **Foundryline** comes in.
 
-## Current v0.1 decision
+Foundryline is a collection of **step-by-step recipes** that help you use existing AI tools together. Think of it like a cookbook for software projects: pick a recipe, follow the steps, and adapt it to your project.
 
-Read the [Discover v0.1 evidence review](docs/discover-v0.1-qualification-review.md) for a criterion-by-criterion assessment, scope limits and the pending maintainer decision. The reference works as a **manual pilot on one recorded host configuration**; automated issue publication, scheduled intake, broader sandbox certification, and independent cross-host replication have not been qualified. The final release status has **not** been approved by this agent review.
+**It's not another app you have to run.** There's no Foundryline server, subscription, or special coding agent. You bring your own repository, coding assistant, and tools. Foundryline shows how they can work together.
 
-## Why a blueprint?
+## The big idea
 
-Coding agents can edit code quickly, but an effective software-production process must answer different questions without confusing them:
-
-1. **What might be worth doing?** An investigation can surface a lead; it does not automatically establish a defect.
-2. **What outcome is actually requested?** Requirements must come from an applicable request or authoritative project decision, not from an audit's guesses.
-3. **What has been implemented?** Work must be associated with an identifiable candidate, not just a moving branch name.
-4. **What was actually checked?** Passing selected tests is limited evidence, not proof that every requirement was met.
-5. **Who authorized the next effect?** A draft, report, successful check, or scheduled trigger cannot authorize issue creation, a push, a merge, or a deployment.
-
-Foundryline specifies handoffs between these questions and leaves the underlying tools independent.
-
-## The three patterns
-
-| Pattern | Suggested composition | Output | Typical trigger |
-| --- | --- | --- | --- |
-| **Discover** | [Gapline](https://github.com/grove/gapline) → triage against original sources → optional [Intentline Plan](https://github.com/grove/intentline) → [Intentline Issue](https://github.com/grove/intentline) | A small number of evidence-calibrated, deduplicated issue **proposals** | Manual request; later, optional schedule |
-| **Deliver** | Approved request → Intentline acceptance draft → existing coding agent → [Proofline](https://github.com/grove/proofline) checks → reviewable handoff | An identified candidate, bounded check receipts, remaining gaps, and optionally an authorized draft PR | Explicitly admitted work |
-| **Maintain** | [RepoTend](https://github.com/grove/repotend) → triage → issue proposal | Repository-health findings and proposed small improvements | Manual audit, PR, or optional schedule |
-
-These are patterns, **not** mandatory chained products. An adopter can use only Maintain, skip a saved Intentline record for simple work, or replace the delivery route with another qualified approach. [Promise to Proof](https://github.com/grove/promise-to-proof) already offers a more integrated delivery controller with its **own** agreement and approval protocol; it is a potential alternative, not a drop-in Intentline backend.
-
-### 1. Discover
+A healthy software project has a simple loop:
 
 ~~~text
-Manual or scheduled selection of a specific repository/snapshot
-    → read-only Gapline investigation
-    → confirm sources, challenge counterevidence, deduplicate
-    → draft an actionable issue (and optionally a separate acceptance record)
-    → human or explicitly authorized publication decision
-    → existing issue tracker
+Find something worth improving
+              ↓
+Explain what should happen
+              ↓
+Make the change
+              ↓
+Check what actually works
+              ↓
+Review and decide what to ship
 ~~~
 
-A Gapline hypothesis is not a confirmed runtime bug. If expected behavior or runtime evidence is missing, the proposal should ask for **confirmation before fixing**. The default is **NOT PUBLISHED**, with no code changes or issue writes.
+Foundryline helps make each step clear and repeatable. It also keeps an important distinction: **“The AI thinks there might be a problem” is not the same as “We've proved there's a bug.”**
 
-A saved Intentline agreement is optional, and requires its own explicit request and safe private storage. Creating an issue does not silently create a contract.
+You stay in charge of what gets changed, published, or merged.
 
-### 2. Deliver
+## Pick a recipe
 
-~~~text
-Source-grounded, externally authorized outcome
-    → acceptance planning where useful
-    → authorized coding agent in an isolated workspace
-    → frozen candidate and explicitly selected checks
-    → independent assessment of remaining obligations
-    → separately authorized PR / merge / release
-~~~
+You don't have to use everything. Start with the part that's useful to you.
 
-The current Intentline-to-Proofline JSON import supports only a narrow initial **one-request (S1), unamended, revision-1/schema-1** handoff. It must not be used by discarding amendments, child contracts, or source context. Proofline's native check path is presently qualified for a specific macOS/Codex CLI environment, not arbitrary Linux runners. Read each upstream project's compatibility notes before use.
-
-### 3. Maintain
-
-RepoTend audits conventions, GitHub Actions, basic security practices, and developer experience. Its current auditor has thirteen focused checks and is **advisory by default**. Only applicable verified rules can be explicitly configured for enforcement; heuristic findings are not automatic failures. Proposed improvements re-enter Discover/Deliver only after triage and appropriate authorization.
-
-## Try the manual Discover pattern
-
-Follow the detailed [manual Discover recipe](patterns/discover.md), including prerequisites, scope/host permissions, source/duplicate checks, separate authorization boundaries, and refusal behavior. The [synthetic teaching examples](examples/manual-discover/README.md) are **not evidence of a real agent run**. To validate repository-document links and fixtures locally (not a target audit), use `python3 -m unittest discover -s checks -v`.
-
-**No Foundryline installation or service is required for this conceptual first step.** Use a coding agent that can read a selected target repository and explicitly invoke skills. Install and qualify any desired skills according to their own documentation; a copied agent skill does not install its tool runtime or create provider credentials.
-
-1. Choose a target repository, an exact Git revision or stated working-tree scope, and one bounded investigation question.
-2. Ask the agent:
-
-   > Use `gapline-audit` to investigate this repository **read-only**. Return up to three consequential findings, with exact source references, counterevidence, affected scope, evidence level, and one smallest next observation. Do not execute the project, run tests, modify files, or publish anything. State what was not assessed.
-
-3. For a finding worth carrying forward, ask:
-
-   > Follow the finding back to the applicable original request, policy, or documented behavior (including exceptions). Check for existing open or closed issues. Use the `intentline-issue` guidance to prepare a **NOT PUBLISHED** issue proposal. Preserve uncertainty and clearly mark verification as **PROPOSED — NOT RUN**. Do not write to GitHub.
-
-4. If a formal saved acceptance draft would add value, **separately** authorize `intentline-plan` with an exact, permitted source file and private output directory. Its result is a draft, not external approval or demonstrated behavior.
-5. Review the issue. Only an explicit CREATE authorization (or a separately defined, scoped standing publication mandate) permits the issue-tracker write. Implementation requires its own admission decision.
-
-For a simple, well-supported repository-maintenance issue, it can be better to use `intentline-issue` directly, without a saved acceptance agreement.
-
-## Adopt incrementally
-
-Foundryline aims to provide:
-
-- **Recipes:** triggers, inputs, outputs, refusal conditions, and exact handoffs that a team can follow manually.
-- **Copyable examples:** host-specific installation and workflow examples, only after exercising them against real tools.
-- **Reference checks:** tests that distinguish an actually observed effect from a proposed step, including negative/refusal cases.
-- **Minimal glue, only when earned:** small adapters for repeated gaps that cannot be solved clearly with existing host and sibling capabilities.
-
-The adopting project owns its repository, agent runtime, issue-tracker connection, spending limits, secrets, policy, approval process, and retained evidence. There is no Foundryline account, service, telemetry pipeline, or global scoring system.
-
-## Companion projects and boundaries
-
-| Project | Its question | Current boundary |
+| Recipe | In plain English | Where it stands |
 | --- | --- | --- |
-| [Intentline](https://github.com/grove/intentline) | What was requested, with what constraints and possible evidence? | Offline acceptance records; no coding, approvals, or proof |
-| [Gapline](https://github.com/grove/gapline) | Which consequential weaknesses can read-only investigation support? | No project execution or repository writes |
-| [Proofline](https://github.com/grove/proofline) | What did selected checks establish on a frozen candidate? | Limited check evidence; no overall acceptance certification or publishing |
-| [RepoTend](https://github.com/grove/repotend) | Which small-repository practices need attention? | Experimental static audit, not a comprehensive security scanner |
-| [Faultline](https://github.com/grove/faultline) | Would selected tests catch plausible wrong behavior? | **Design only**, not a usable mutation-testing stage yet |
-| [Lore](https://github.com/grove/lore) | Which documented decisions matter for this change? | Optional advisory context, not requirement or policy authority |
-| [Idea to Promise](https://github.com/grove/idea-to-promise) | Which uncertain idea deserves a promise? | Optional discovery before a requested outcome is settled |
-| [Promise to Proof](https://github.com/grove/promise-to-proof) | Can a defined promise be independently reviewed and proven on a candidate? | Alternative integrated controller with its own agreements and host requirements |
+| **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Try it now:** manual guide, worked examples, and a recorded pilot |
+| **Deliver** | Start with an agreed task, use your coding agent to make a change, and gather evidence about what was checked. | **Planned:** design described, no Foundryline delivery automation yet |
+| **Maintain** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Planned:** intended to build on RepoTend |
 
-The projects remain separately installable, usable, and versioned. Foundryline does not redefine their results.
+All three are designed to be **copied into other projects**, not tied to this repository or to one AI provider.
 
-## Project documents
+## Try your first Discover
 
-- [DESIGN.md](DESIGN.md) — design decisions, boundaries, pattern contracts, trust and authority, scheduled intake, and alternatives.
-- [IMPLEMENTATION.md](IMPLEMENTATION.md) — milestones, pilot procedure, tests, acceptance conditions, and reasons to defer automation.
+Imagine you maintain a small GitHub project. You suspect there are things worth improving, but you don't know where to start.
 
-**Proposed future layout**, not currently implemented:
+With Foundryline, you can ask your coding assistant to **look for a few important issues, explain the evidence, and suggest what to do next**. If nothing convincing turns up, that's a perfectly good result too.
 
-~~~text
-patterns/           Manual Discover, Deliver, Maintain recipes
-templates/          Carefully qualified host-specific workflow examples
-examples/           Pinned, reproducible sample adoptions
-checks/             Validation of recipes, handoffs, and negative controls
+### 1. Get your assistant ready
+
+You need a coding assistant that can read the repository you want to inspect and supports agent *skills* (reusable instructions for the assistant). The manual pilot used Codex on macOS; other setups need their own checks.
+
+Install the [Gapline](https://github.com/grove/gapline) skill using the instructions for your assistant. For a compatible Skills CLI setup, you can start with:
+
+~~~sh
+npx skills@latest add grove/gapline
 ~~~
 
-## Safety and contributions
+When you're ready to turn a finding into a proposed issue, you can also install the [Intentline](https://github.com/grove/intentline) skills:
 
-Treat repository text, issues, agent output, source citations, and audit reports as **untrusted data**, never as instructions granting more access. Never silently publish private source captures, store secrets in issue bodies, or infer permission from a schedule. Preserve original expected behavior and scoped exceptions; report uncertainty and unavailable evidence accurately.
+~~~sh
+npx skills@latest add grove/intentline
+~~~
 
-The first meaningful contribution is a verified, bounded, **manual Discover** exercise against a real repository—with useful findings *or* an honest no-findings outcome, receipts, costs, and negative cases. Documentation corrections and constrained improvement proposals are welcome. Avoid adding a hosted controller, generic schema, or mandatory model stages without measured need.
+These commands install **agent instructions**, not an AI model or a running Foundryline service. Installing a skill does not mean the assistant has actually used it. For issue drafting alone, you do **not** need the separate Intentline Python program.
+
+### 2. Ask for a careful investigation
+
+Choose a repository and, ideally, a specific Git commit so you can tell exactly which version was inspected. Then ask your assistant:
+
+> Use **gapline-audit** to look through this repository **read-only**. Find up to three meaningful problems or gaps. For each one, show the files that support it, look for reasons it might *not* be a problem, and explain what we would need to check next. Don't run the project, change files, or create issues. It's okay to find nothing.
+
+Your assistant should report **what it looked at, what it found, and what it couldn't check**.
+
+*Important:* “Read-only” must also be enforced by your assistant's actual tool permissions. A prompt alone is not a security boundary.
+
+### 3. Turn a useful finding into an issue draft
+
+If a finding looks worth pursuing, ask:
+
+> Use **intentline-issue** guidance to draft a GitHub issue for this finding. Check what the project originally promised, look for existing issues, and explain how we could verify the concern. Mark it **NOT PUBLISHED**. Don't create the issue or change code.
+
+Review the draft yourself. If the behavior has not actually been reproduced, the issue should say **“Confirm before fixing.”** You decide whether and when to publish it.
+
+That's your first Foundryline workflow! 🎉
+
+For the full procedure—including evidence checks, limits, and cases where the assistant should stop—follow the [manual Discover guide](patterns/discover.md).
+
+## A real example
+
+We tried Discover on [RepoTend](https://github.com/grove/repotend), a tool for keeping GitHub repositories in good shape.
+
+The AI-assisted investigation noticed that a suggested command **left out the repository being worked on**. That *could* lead someone to apply changes in the wrong folder.
+
+A second, separately started agent found the same concern. Another trial deliberately hid necessary source files, and the agent correctly said it **couldn't assess the project** instead of making up an answer.
+
+That gave us a useful [issue proposal](examples/repotend-pilot/issue-proposal.md)—**not a confirmed runtime bug, and not a published RepoTend issue**.
+
+Curious about the details? See the [real pilot record](examples/repotend-pilot/README.md), the [example issue draft](examples/manual-discover/example-issue-proposal.md), or the [qualification review](docs/discover-v0.1-qualification-review.md).
+
+## The tools behind the recipes
+
+Foundryline doesn't replace these tools. It helps you choose when to use them.
+
+| Tool | What it helps with |
+| --- | --- |
+| [Gapline](https://github.com/grove/gapline) | Investigate possible problems by reading code and documentation |
+| [Intentline](https://github.com/grove/intentline) | Write down what is expected and prepare clear issues or acceptance plans |
+| [Proofline](https://github.com/grove/proofline) | Record what selected checks actually showed for a particular version of the code |
+| [RepoTend](https://github.com/grove/repotend) | Find repository setup and maintenance improvements |
+
+Other tools can fit too. You can use your preferred coding assistant, and **you don't need every tool** to adopt a recipe.
+
+## What's ready today?
+
+**Foundryline is still an early project.** The manual Discover guide, examples, source-reading helper, and reference tests exist. We also have **one real, recorded pilot** on macOS with a specific Codex CLI version, including a fresh-agent reproduction and a missing-source test.
+
+The evidence supports a *limited* first use, but **formal v0.1 acceptance is still awaiting a maintainer decision**. It doesn't establish that every coding-agent setup is safe or that the full software factory is already running.
+
+In particular, Foundryline does **not** currently run scheduled audits, publish GitHub issues automatically, implement code, or merge changes for you. The Deliver and Maintain recipes are future work.
+
+We would rather explain what we've actually tested than promise magic.
+
+## Want to help?
+
+You're very welcome here. A great way to contribute is to:
+
+- Try the [Discover guide](patterns/discover.md) in a project you know.
+- Tell us which step is confusing or missing.
+- Share a useful result **or** an honest no-findings outcome, without publishing private code or secrets.
+
+You can also open an issue with suggestions for a recipe you'd like to see.
+
+## Learn more
+
+- [Design](DESIGN.md) — why Foundryline works this way and how the pieces fit together
+- [Implementation plan](IMPLEMENTATION.md) — what's done, what's next, and what's intentionally postponed
+- [Discover examples](examples/manual-discover/README.md) — friendly, made-up examples for learning
+- [Real pilot and its limits](examples/repotend-pilot/README.md) — what we actually tried
+- [v0.1 evidence review](docs/discover-v0.1-qualification-review.md) — what's supported and what still needs approval
 
 **License:** [Apache-2.0](LICENSE).

@@ -4,6 +4,8 @@
 **Decision date:** 2026-10-18.  
 **See:** [README](README.md) · [Design](DESIGN.md).
 
+**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. **No actual host pilot, independent adoption run, or witnessed negative-control execution has been recorded.** They remain required before claiming a qualified v0.1 workflow.
+
 ## 0. Objective and development approach
 
 Prove that Foundryline is a **copyable blueprint for composing existing software-development tools**, not a new controller or hosted service. Start with one real manual **Discover** journey; only then introduce qualified copyable material and optional scheduled inspection. The output must be useful even when the result is **no supported findings**.

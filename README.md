@@ -6,7 +6,7 @@ Discover meaningful work. Define what done means. Implement changes. Inspect the
 
 Foundryline documents **copyable production patterns**, rather than operating a central software factory. Adopt one pattern or several, bring your existing coding agent and issue tracker, and retain control of credentials, execution, approvals, and delivery in the adopting project.
 
-> **Status: design / pre-v0.1.** This repository currently supplies the blueprint and implementation plan, **not** a working orchestration service, installed agent, scheduler, or qualified end-to-end automation. Examples and templates described below are proposed until they are implemented and tested. See [DESIGN.md](DESIGN.md) and [IMPLEMENTATION.md](IMPLEMENTATION.md).
+> **Status: pre-v0.1 / unqualified manual reference.** The [Discover runbook](patterns/discover.md), [authored examples](examples/manual-discover/README.md), and [structural checks](checks/test_manual_discover.py) now exist. **No real coding-agent-host pilot, independent reproduction, or security-boundary qualification has been completed.** Foundryline remains a blueprint, not an installed service, scheduler, or automatic intake agent. See [DESIGN.md](DESIGN.md) and [IMPLEMENTATION.md](IMPLEMENTATION.md).
 
 ## Why a blueprint?
 
@@ -63,6 +63,8 @@ The current Intentline-to-Proofline JSON import supports only a narrow initial *
 RepoTend audits conventions, GitHub Actions, basic security practices, and developer experience. Its current auditor has thirteen focused checks and is **advisory by default**. Only applicable verified rules can be explicitly configured for enforcement; heuristic findings are not automatic failures. Proposed improvements re-enter Discover/Deliver only after triage and appropriate authorization.
 
 ## Try the manual Discover pattern
+
+Follow the detailed [manual Discover recipe](patterns/discover.md), including prerequisites, scope/host permissions, source/duplicate checks, separate authorization boundaries, and refusal behavior. The [synthetic teaching examples](examples/manual-discover/README.md) are **not evidence of a real agent run**. To validate repository-document links and fixtures locally (not a target audit), use `python3 -m unittest discover -s checks -v`.
 
 **No Foundryline installation or service is required for this conceptual first step.** Use a coding agent that can read a selected target repository and explicitly invoke skills. Install and qualify any desired skills according to their own documentation; a copied agent skill does not install its tool runtime or create provider credentials.
 

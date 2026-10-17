@@ -1,0 +1,26 @@
+name: Blueprint reference checks
+
+# Verifies repository-owned documentation and authored fixture consistency.
+# Does NOT invoke an agent, audit another repository, or qualify Foundryline v0.1.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  reference-checks:
+    name: Manual Discover reference integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out Foundryline
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run structural reference checks (not a Gapline audit)
+        run: |
+          python3 --version
+          python3 -m unittest discover -s checks -v

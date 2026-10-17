@@ -127,7 +127,7 @@ class ManualDiscoverReferenceTests(unittest.TestCase):
         self.assertIn("NO_SUPPORTED_FINDINGS_IN_INSPECTED_SCOPE", no_findings)
         self.assertIn("not", no_findings.lower())
         self.assertIn("UNQUALIFIED / UNAVAILABLE", refusal)
-        self.assertIn("no Gapline invocation", refusal)
+        self.assertIn("Gapline skill was not invoked", refusal)
         self.assertIn("NOT PUBLISHED", refusal)
 
     def test_blank_run_record_cannot_masquerade_as_receipt(self) -> None:

@@ -6,7 +6,11 @@ Discover meaningful work. Define what done means. Implement changes. Inspect the
 
 Foundryline documents **copyable production patterns**, rather than operating a central software factory. Adopt one pattern or several, bring your existing coding agent and issue tracker, and retain control of credentials, execution, approvals, and delivery in the adopting project.
 
-> **Status: pre-v0.1 / qualification pending maintainer review.** The [Discover runbook](patterns/discover.md), [authored examples](examples/manual-discover/README.md), and [structural checks](checks/test_manual_discover.py) are accompanied by an [actual pinned RepoTend pilot, fresh-agent reproduction and witnessed refusal](examples/repotend-pilot/README.md). The record preserves source-supported findings, usage, and host/independence limits; it does **not** label v0.1 live-qualified. Foundryline remains a blueprint, not an installed service, scheduler, or automatic intake agent. See [DESIGN.md](DESIGN.md) and [IMPLEMENTATION.md](IMPLEMENTATION.md).
+> **Status: pre-v0.1 / qualification pending maintainer review.** The [Discover runbook](patterns/discover.md), [authored examples](examples/manual-discover/README.md), and [structural checks](checks/test_manual_discover.py) are accompanied by an [actual pinned RepoTend pilot, fresh-agent reproduction and witnessed refusal](examples/repotend-pilot/README.md). A separate [evidence-based v0.1 review](docs/discover-v0.1-qualification-review.md) recommends a **limited host-specific qualification, conditional on explicit maintainer acceptance**. The pilot record retains source-supported findings, usage, and host/independence limits; Foundryline does **not** claim maintainer acceptance or universal host qualification. Foundryline remains a blueprint, not an installed service, scheduler, or automatic intake agent. See [DESIGN.md](DESIGN.md) and [IMPLEMENTATION.md](IMPLEMENTATION.md).
+
+## Current v0.1 decision
+
+Read the [Discover v0.1 evidence review](docs/discover-v0.1-qualification-review.md) for a criterion-by-criterion assessment, scope limits and the pending maintainer decision. The reference works as a **manual pilot on one recorded host configuration**; automated issue publication, scheduled intake, broader sandbox certification, and independent cross-host replication have not been qualified. The final release status has **not** been approved by this agent review.
 
 ## Why a blueprint?
 

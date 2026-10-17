@@ -28,6 +28,9 @@ DOCUMENTS = (
     EXAMPLE / "example-no-findings.md",
     EXAMPLE / "example-refusal.md",
     EXAMPLE / "run-record-template.md",
+    ROOT / "examples/repotend-pilot/README.md",
+    ROOT / "examples/repotend-pilot/issue-proposal.md",
+    ROOT / "examples/repotend-pilot/host/README.md",
 )
 
 LOCAL_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")

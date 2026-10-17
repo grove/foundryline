@@ -1,0 +1,2 @@
+# Preserve actual agent reports, including Markdown hard line breaks.
+examples/repotend-pilot/receipts/*/report.md whitespace=-blank-at-eol

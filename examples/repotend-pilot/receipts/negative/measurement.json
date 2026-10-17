@@ -1,0 +1,19 @@
+{
+  "run": "negative",
+  "started_utc": "2026-10-17T23:10:09.920775+00:00",
+  "elapsed_seconds": 41.852,
+  "exit_code": 0,
+  "host": "codex-cli 0.163.0",
+  "model": "CLI default; identity not exposed in retained JSON events",
+  "billable_cost": "UNAVAILABLE",
+  "usage": {
+    "input_tokens": 61717,
+    "cached_input_tokens": 44288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 610,
+    "reasoning_output_tokens": 0
+  },
+  "source_reads": 2,
+  "thread_id": "01a14c21-4046-77c2-b024-fbe1d2fa83a0",
+  "stderr": "EMPTY"
+}

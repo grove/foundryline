@@ -1,10 +1,10 @@
 # Foundryline — Implementation Plan
 
-**Status:** Proposed, pre-v0.1. No Foundryline workflows, agents, scripts, tests, or CI integrations are implemented by this document.  
+**Status:** Manual Discover reference, structural checks/CI and a recorded real-host pilot exist; **v0.1 qualification is pending maintainer decision**. No hosted controller, scheduler, autonomous issue publisher, or generic host-isolation certification is supplied.  
 **Decision date:** 2026-10-18.  
 **See:** [README](README.md) · [Design](DESIGN.md).
 
-**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. An [actual pinned RepoTend pilot record](examples/repotend-pilot/README.md) now retains a live read-only audit, fresh-agent reproduction, witnessed source-unavailable refusal, unpublished proposal and usage. **Qualification remains pending maintainer review**, including the disclosed host-visibility and shared-operator independence limits; v0.1 is not labeled live-qualified.
+**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. An [actual pinned RepoTend pilot record](examples/repotend-pilot/README.md) now retains a live read-only audit, fresh-agent reproduction, witnessed source-unavailable refusal, unpublished proposal and usage. The separate [Discover v0.1 evidence review](docs/discover-v0.1-qualification-review.md) recommends **scoped, host-specific acceptance only after an explicit maintainer decision**. Host-visibility, shared-operator independence and missing cost/model identity remain qualified limitations. Until acceptance, v0.1 is **not** labeled live-qualified.
 
 ## 0. Objective and development approach
 

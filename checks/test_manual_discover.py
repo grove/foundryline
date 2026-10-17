@@ -21,6 +21,7 @@ DOCUMENTS = (
     ROOT / "README.md",
     ROOT / "DESIGN.md",
     ROOT / "IMPLEMENTATION.md",
+    ROOT / "docs" / "discover-v0.1-qualification-review.md",
     PATTERN,
     EXAMPLE / "README.md",
     EXAMPLE / "example-report.md",

@@ -30,7 +30,7 @@ DOCUMENTS = (
     EXAMPLE / "run-record-template.md",
 )
 
-LOCAL_LINK = re.compile(r"!?(?<!\\)\\[[^\\]]+\\]\\(([^)]+)\\)")
+LOCAL_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
 
 
 def read(path: Path) -> str:

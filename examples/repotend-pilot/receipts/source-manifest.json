@@ -1,0 +1,54 @@
+{
+  "repository": "grove/repotend",
+  "revision": "bfe410e4d61ddb472e335ce35877997a2f32d91f",
+  "sources": {
+    "docs/REMEDIATION.md": {
+      "sha256": "b715cb9d02e7c7eb89e4f7d03534c5b1c430fce98251e9e74f3c437e827fd895",
+      "lines": 59
+    },
+    "skills/repotend/scripts/remediation.ts": {
+      "sha256": "85473dd9faf93f896d8779b22b8a6eb553cb9935d46e1b03985b4f81c981153e",
+      "lines": 187
+    },
+    "test/remediation.test.mjs": {
+      "sha256": "6f5ec2dc43ec90332bcf4262368d75ddb98461bedae5bc59257803ccdfa7e9fe",
+      "lines": 152
+    },
+    "skills/repotend/scripts/remediate-cli.ts": {
+      "sha256": "f8108e736c00ef211dcae494bb5ee3452b927b99f57a633916beaa6240098a7d",
+      "lines": 22
+    },
+    "skills/repotend/scripts/remediate.mjs": {
+      "sha256": "20bd1afe3bf65a8f0ad1f5c587b5f3857936313358805d3a11f3cf1f942b95a8",
+      "lines": 17
+    },
+    "skills/repotend/scripts/engine.ts": {
+      "sha256": "9c9b700265c45143237b0701ff774c7148f198acf8221af037a703cdee21bfff",
+      "lines": 214
+    },
+    "skills/repotend/scripts/config.ts": {
+      "sha256": "2eb4823b0c029996b2eda18ca538438b1668966c56787aea3c429e8b94957922",
+      "lines": 80
+    },
+    "skills/repotend/SKILL.md": {
+      "sha256": "37b1535572c15ca0dc15e6e4da403547fc286df70b71faf14142df42213c34fc",
+      "lines": 51
+    },
+    "package.json": {
+      "sha256": "4450aba6ee59372ab6d42de31cb10e3744e137d7172334554183b185ace03347",
+      "lines": 25
+    },
+    "README.md": {
+      "sha256": "6431ac565b27b81eae4d34eb93b5dc960cecd511f318826d56415c3fe6b64b09",
+      "lines": 119
+    },
+    "skill:gapline-audit": {
+      "sha256": "5ecfeab4894c5d4fbf5b99eb3930a7535e9c4a9e86b557a971c782bb0f02e567",
+      "lines": 88
+    },
+    "skill:intentline-issue": {
+      "sha256": "5bc525e1f1515ebf5cb6332b35e4b3974d007d37047788fb8174c98cecb9f281",
+      "lines": 271
+    }
+  }
+}

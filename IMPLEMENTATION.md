@@ -4,7 +4,7 @@
 **Decision date:** 2026-10-18.  
 **See:** [README](README.md) · [Design](DESIGN.md).
 
-**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. **No actual host pilot, independent adoption run, or witnessed negative-control execution has been recorded.** They remain required before claiming a qualified v0.1 workflow.
+**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. An [actual pinned RepoTend pilot record](examples/repotend-pilot/README.md) now retains a live read-only audit, fresh-agent reproduction, witnessed source-unavailable refusal, unpublished proposal and usage. **Qualification remains pending maintainer review**, including the disclosed host-visibility and shared-operator independence limits; v0.1 is not labeled live-qualified.
 
 ## 0. Objective and development approach
 

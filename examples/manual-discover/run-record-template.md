@@ -53,4 +53,4 @@
 
 **UNQUALIFIED — NO ACTUAL RUN EVIDENCE ENTERED.**
 
-When all supporting evidence is present, an authorized reviewer may assess [Foundryline #2](https://github.com/grove/foundryline/issues/2). Do **not** mechanically replace this with a passing label merely because sections are filled or Markdown checks pass.
+When all supporting evidence is present, an authorized reviewer may assess [live qualification #4](https://github.com/grove/foundryline/issues/4), following [reference blueprint #2](https://github.com/grove/foundryline/issues/2). Do **not** mechanically replace this with a passing label merely because sections are filled or Markdown checks pass.

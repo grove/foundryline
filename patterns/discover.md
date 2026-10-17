@@ -1,8 +1,8 @@
 # Discover — manual, read-only reference pattern
 
 **Foundryline pattern:** Discover, manual profile.  
-**Status:** Copyable reference procedure and authored fixtures; **not yet qualified by a real-host pilot or independent reproduction**.  
-**Issue:** [Foundryline #2](https://github.com/grove/foundryline/issues/2).  
+**Status:** Copyable reference procedure, authored fixtures, and an [actual RepoTend pilot record](../examples/repotend-pilot/README.md); **qualification pending maintainer review**, with host and reproduction limits disclosed.
+**Issue:** [Live qualification #4](https://github.com/grove/foundryline/issues/4), following [reference blueprint #2](https://github.com/grove/foundryline/issues/2).
 **Related:** [Design](../DESIGN.md) · [Implementation](../IMPLEMENTATION.md) · [Authored examples](../examples/manual-discover/README.md).
 
 ## Purpose
@@ -116,7 +116,7 @@ A follow-up issue CREATE/UPDATE, implementation, test/proof, PR, merge or deploy
 
 ## Qualification checklist
 
-The **documentation and fixtures are not a real-host pilot**. To satisfy [issue #2](https://github.com/grove/foundryline/issues/2), a maintainer must additionally retain:
+The **documentation and fixtures are not a real-host pilot**. For [live qualification #4](https://github.com/grove/foundryline/issues/4), a maintainer must review the retained evidence for:
 
 - [ ] **One real read-only audit** with recorded agent host, actual skill activation, pinned repository SHA, permitted inspected paths and observable host activity.
 - [ ] **Source-grounded issue proposal or justified no-findings result**, with deduplication attempts and correct evidence levels.

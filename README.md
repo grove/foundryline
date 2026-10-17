@@ -6,7 +6,7 @@ Discover meaningful work. Define what done means. Implement changes. Inspect the
 
 Foundryline documents **copyable production patterns**, rather than operating a central software factory. Adopt one pattern or several, bring your existing coding agent and issue tracker, and retain control of credentials, execution, approvals, and delivery in the adopting project.
 
-> **Status: pre-v0.1 / unqualified manual reference.** The [Discover runbook](patterns/discover.md), [authored examples](examples/manual-discover/README.md), and [structural checks](checks/test_manual_discover.py) now exist. **No real coding-agent-host pilot, independent reproduction, or security-boundary qualification has been completed.** Foundryline remains a blueprint, not an installed service, scheduler, or automatic intake agent. See [DESIGN.md](DESIGN.md) and [IMPLEMENTATION.md](IMPLEMENTATION.md).
+> **Status: pre-v0.1 / qualification pending maintainer review.** The [Discover runbook](patterns/discover.md), [authored examples](examples/manual-discover/README.md), and [structural checks](checks/test_manual_discover.py) are accompanied by an [actual pinned RepoTend pilot, fresh-agent reproduction and witnessed refusal](examples/repotend-pilot/README.md). The record preserves source-supported findings, usage, and host/independence limits; it does **not** label v0.1 live-qualified. Foundryline remains a blueprint, not an installed service, scheduler, or automatic intake agent. See [DESIGN.md](DESIGN.md) and [IMPLEMENTATION.md](IMPLEMENTATION.md).
 
 ## Why a blueprint?
 

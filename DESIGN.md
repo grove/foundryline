@@ -71,10 +71,10 @@ No sibling automatically invokes another. A report or skill instruction is **unt
 
 **Trigger:** a manual operator request identifying a target and question, or a separately enabled periodic scan of named repositories/components.  
 **Input:** permitted repository snapshot, scope/inspection budget, available authoritative behavioral sources, existing issue inventory when accessible, and a publication mandate if one exists.  
-**Read-only inquiry:** ask \`gapline-audit\` to Scout → Probe → Report; at most three substantive findings by default; no project code execution, test run, build, file write, or publication. It must expose supporting and counterevidence, sampled limits, and \`DEMONSTRATED\`/\`SUPPORTED\`/\`HYPOTHESIS\`/\`REFUTED\`/\`NOT ASSESSED\` qualification as appropriate.  
+**Read-only inquiry:** ask `gapline-audit` to Scout → Probe → Report; at most three substantive findings by default; no project code execution, test run, build, file write, or publication. It must expose supporting and counterevidence, sampled limits, and `DEMONSTRATED`/`SUPPORTED`/`HYPOTHESIS`/`REFUTED`/`NOT ASSESSED` qualification as appropriate.  
 **Triage:** follow report pointers to original product requirements, established policy, and accepted exceptions; challenge severity and false leads; search open *and closed* issues; decide whether the next action is observe, specify, fix, defer, or drop. Treat an unverified runtime concern as **confirm before fixing**. A no-findings run is successful if correctly reported.  
-**Planning:** use \`intentline-plan\` *optionally*, only when a separately requested saved acceptance agreement adds value and there is a valid original source and private output. A draft does not approve behavior or grant tracker writes.  
-**Issue drafting:** use \`intentline-issue\` to REVIEW/create a **NOT PUBLISHED** proposal with plain-language context, evidence, proposed R-ID criteria, \`PROPOSED — NOT RUN\` verification, and open decisions. A simple well-grounded issue may skip formal planning.  
+**Planning:** use `intentline-plan` *optionally*, only when a separately requested saved acceptance agreement adds value and there is a valid original source and private output. A draft does not approve behavior or grant tracker writes.  
+**Issue drafting:** use `intentline-issue` to REVIEW/create a **NOT PUBLISHED** proposal with plain-language context, evidence, proposed R-ID criteria, `PROPOSED — NOT RUN` verification, and open decisions. A simple well-grounded issue may skip formal planning.  
 **Publication:** invoke CREATE once, only under a specific operator instruction or a separately configured standing mandate with repository scope and limits; use the agent host's authenticated issue tool. Read back the outcome. A failed/uncertain write means lookup before retry.  
 **Output:** no findings, rejected findings, or a bounded set of local drafts / verified issue identities with exact evidence caveats. No coding, PR, or implied approval.
 
@@ -95,7 +95,7 @@ The existing Intentline-to-Proofline adapter accepts only an initial schema-1, r
 
 **Trigger:** manual RepoTend audit, PR-specific inspection, or a deliberately configured periodic scan.  
 **Input:** pinned repository tree, audit version and configuration, rule applicability, read-only authorization.  
-**Flow:** run the current RepoTend deterministic auditor without executing target project code, retain the actual \`PASS\`, \`WARN\`, \`FAIL\`, \`UNKNOWN\`, \`NOT_APPLICABLE\` results, and triage useful deviations. Do not treat a heuristic security warning as a verified security failure.  
+**Flow:** run the current RepoTend deterministic auditor without executing target project code, retain the actual `PASS`, `WARN`, `FAIL`, `UNKNOWN`, `NOT_APPLICABLE` results, and triage useful deviations. Do not treat a heuristic security warning as a verified security failure.  
 **Output:** repository-health report and deduplicated proposals that may feed Discover; no automatic changes to GitHub settings or code.
 
 RepoTend's initial 13 rules are narrower than its proposed full release. Enforced failures are opt-in on verified rules. The blueprint must not imply that advisory defaults can block CI.
@@ -113,7 +113,7 @@ RepoTend's initial 13 rules are narrower than its proposed full release. Enforce
 | Implement candidate | Separate work admission and source write | Operator |
 | Open PR, merge, deploy | Separate gates; never inherited from reports | Appropriate authorized actor |
 
-A scheduled GitHub Actions trigger (\`schedule\` or \`workflow_dispatch\`) is merely a transport mechanism. Schedule runs may be delayed or skipped. A generic example with \`runs-on: ubuntu-latest\` cannot credibly claim to provide Proofline native checks or run Codex just by installing skill instructions. A qualified workflow must explicitly install tools, provide runner/model auth where needed, limit credentials, pin dependencies/actions, control target scopes, and record actual outcomes.
+A scheduled GitHub Actions trigger (`schedule` or `workflow_dispatch`) is merely a transport mechanism. Schedule runs may be delayed or skipped. A generic example with `runs-on: ubuntu-latest` cannot credibly claim to provide Proofline native checks or run Codex just by installing skill instructions. A qualified workflow must explicitly install tools, provide runner/model auth where needed, limit credentials, pin dependencies/actions, control target scopes, and record actual outcomes.
 
 Do not put private source text, logs, credentials, or unredacted contracts into public issues, PR descriptions, artifacts, or third-party model calls without separate authority. In cross-repository publication, the calling repository's default GitHub token is not presumed to have write rights to the target repository.
 
@@ -128,7 +128,7 @@ DISCOVERED → TRIAGED → DRAFTED → PUBLISHED → ADMITTED
                 └── DEFERRED
 ~~~
 
-\`PUBLISHED\` means tracker write was verified. \`ADMITTED\` means a separate delivery decision, not merely label placement. Rescans must compare repository/ref, behavior or rule identity, affected scope, original source and applicable exceptions, and both open and previously closed issues. A reoccurring string-match alone is neither a reliable duplicate nor a reason to reopen. Favor no write when identity or issue inventory is uncertain.
+`PUBLISHED` means tracker write was verified. `ADMITTED` means a separate delivery decision, not merely label placement. Rescans must compare repository/ref, behavior or rule identity, affected scope, original source and applicable exceptions, and both open and previously closed issues. A reoccurring string-match alone is neither a reliable duplicate nor a reason to reopen. Favor no write when identity or issue inventory is uncertain.
 
 A reusable issue proposal should contain:
 

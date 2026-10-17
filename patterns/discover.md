@@ -73,7 +73,7 @@ When source or issue search is unavailable, record **UNKNOWN / NOT CHECKED** exp
 
 ## Stage 4 — prepare a NOT PUBLISHED issue
 
-Use `intentline-issue` in **REVIEW** mode: it may produce an issue body or suggested field-level patch in the agent response, but **must not write files or tracker state**. For a new issue, ask it to *draft only*, without invoking CREATE.
+For a **new** item, ask the agent to follow `intentline-issue` **drafting guidance** and return a provisional **NOT PUBLISHED** issue body, without requesting the skill's CREATE operation or giving tracker-write authority. For an **existing** item, `intentline-issue` **REVIEW** is read-only and may return a proposed field-level patch. The skill's CREATE/UPDATE operations have distinct explicit write authorization; neither should be invoked in this stage.
 
 > Use `intentline-issue` to draft **one NOT PUBLISHED issue proposal** from this selected, source-grounded finding. Cite the applicable original behavioral source and its exceptions; retain supporting and counterevidence and the inspected commit. Explain the expected versus suspected behavior in plain language. Include proposed, observable acceptance criteria with stable R identifiers only when source-supported; mark verification **PROPOSED — NOT RUN**; include open decisions and evidence gaps if material. For an unconfirmed runtime concern put **Confirm before fixing** before the proposed checks. Preserve references to related issues. Do not call tracker write tools, execute commands, save Intentline records or claim anything was approved or proven.
 

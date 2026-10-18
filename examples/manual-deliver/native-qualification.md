@@ -117,11 +117,13 @@ expires **2026-10-25**. The ZIP was downloaded and inspected, including
 `negative-record/report.json`, both exits and native `status` output.
 The separately retained public run URL, metadata, this summary, source
 references and actual pinned workflow remain discoverable after artifact
-expiry, **but the full raw artifact itself is not guaranteed available later**.
+expiry, **and the [exact downloaded ZIP](receipts/pr19-native.zip) is now retained in Git,
+with its original digest checked by the reference suite**.
 
 The [structured qualification summary](native-qualification.json) is a
-compact **readback of observed receipts**, not a substitute for the underlying
-native process trace. No dollar billing, model spending or second-human operator
+compact **readback of observed receipts**. The retained ZIP contains the original
+reports, process receipts, frozen candidate files, selected argv, exits and source;
+the reference suite compares those bytes with this summary without replaying them. No dollar billing, model spending or second-human operator
 work was measured; no cost savings claim is made.
 
 **Not qualified here:** a genuine coding agent implementing a newly authorized

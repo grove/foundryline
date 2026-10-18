@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "documents": [
+    "README.md",
+    "IMPLEMENTATION.md",
+    "patterns/deliver.md",
+    "examples/manual-deliver/README.md",
+    "examples/manual-deliver/refusals.md",
+    "examples/manual-deliver/native-qualification.md",
+    "examples/manual-deliver/agent-qualification/independent-review.md",
+    "examples/manual-deliver/agent-qualification/README.md",
+    "examples/manual-deliver/agent-qualification/approved-task.md"
+  ],
+  "checked_local_file_links": 85,
+  "scope": "Ordinary local file-link resolution; anchors and remote HTTP contents not revalidated"
+}

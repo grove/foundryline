@@ -12,6 +12,7 @@ import json
 import subprocess
 import sys
 import unittest
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -130,11 +131,53 @@ class ManualDeliverReferenceTests(unittest.TestCase):
         self.assertEqual(record["negative"]["cli_exit"], 2)
         self.assertEqual(record["negative"]["native_observation"], "UNAVAILABLE")
         self.assertIn("NOT DEMONSTRATED", record["positive"]["source_coverage"]["R2"])
-        self.assertFalse(record["evidence_source"]["raw_artifact_retained_in_git"])
+        self.assertTrue(record["evidence_source"]["raw_artifact_retained_in_git"])
         for field in ("report_sha256", "receipt_sha256"):
             self.assertEqual(len(record["positive"][field]), 64)
             self.assertEqual(len(record["negative"][field]), 64)
         self.assertIn("coding agent implementation", " ".join(record["not_demonstrated"]))
+
+    def test_retained_native_receipts_match_readback_and_candidate(self) -> None:
+        # Read retained bytes only: no extraction, replay or native qualification.
+        record = json.loads((EXAMPLE / "native-qualification.json").read_text())
+        evidence = record["evidence_source"]
+        archive = EXAMPLE / evidence["retained_artifact"]
+        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),
+                         evidence["artifact_sha256"])
+        with zipfile.ZipFile(archive) as raw:
+            identity = json.loads(raw.read("identity.json"))
+            self.assertEqual(identity["proofline_commit"], evidence["proofline_commit"])
+            self.assertEqual(identity["foundryline_commit"], evidence["foundryline_checked_commit"])
+            self.assertEqual(identity["codex"], "codex-cli " + record["host"]["codex_cli"])
+            self.assertEqual(raw.read("source-S1.txt"), SOURCE.read_bytes())
+            for label, prefix in (("positive", "native"), ("negative", "negative")):
+                with self.subTest(label=label):
+                    summary = record[label]
+                    base = prefix + "-record/"
+                    report_bytes = raw.read(base + "report.json")
+                    self.assertEqual(hashlib.sha256(report_bytes).hexdigest(),
+                                     summary["report_sha256"])
+                    report = json.loads(report_bytes)
+                    self.assertEqual(report["kind"], "bounded_local_check")
+                    self.assertEqual(report["status"], summary["status"])
+                    self.assertEqual(report["checks"], [summary["selected_argv"]])
+                    self.assertEqual(report["observations"][0]["status"],
+                                     summary["native_observation"])
+                    self.assertEqual(report["source_sha256"], record["source_and_candidate"]["source_sha256"])
+                    self.assertEqual(raw.read(base + "inputs/source.md"), SOURCE.read_bytes())
+                    self.assertEqual(report["candidate_tree"], record["source_and_candidate"]["proofline_candidate_tree"])
+                    self.assertEqual(report["boundary"]["assessment"]["status"], "OBSERVED")
+                    self.assertEqual(report["model_dispatches"], 0)
+                    observation, = report["observations"]
+                    receipt = raw.read(base + observation["receipt_ref"])
+                    self.assertEqual(hashlib.sha256(receipt).hexdigest(), summary["receipt_sha256"])
+                    self.assertEqual(observation["receipt_sha256"], summary["receipt_sha256"])
+                    self.assertEqual(json.loads(receipt), observation["receipts"][0])
+                    self.assertEqual(int(raw.read(prefix + ".exit")), summary["cli_exit"])
+                    for entry in report["selection"]["entries"]:
+                        contents = raw.read(base + "inputs/product/" + entry["path"])
+                        self.assertEqual(hashlib.sha256(contents).hexdigest(), entry["sha256"])
+                        self.assertEqual(contents, (CANDIDATE / entry["path"]).read_bytes())
 
 
     def test_refusals_are_proposals_not_invented_observations(self) -> None:

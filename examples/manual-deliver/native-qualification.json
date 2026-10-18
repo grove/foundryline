@@ -12,7 +12,8 @@
     "artifact_id": 12131743490,
     "artifact_sha256": "e4e9722c02f0bdfd35639e8045cf7f1a24bbf102055dc572d1628e9e9f358797",
     "artifact_expires_utc": "2026-10-25",
-    "raw_artifact_retained_in_git": false
+    "raw_artifact_retained_in_git": true,
+    "retained_artifact": "receipts/pr19-native.zip"
   },
   "host": {
     "os": "macOS 15.7.9 ARM64",
@@ -64,7 +65,9 @@
     "cli_exit": 2,
     "report_sha256": "d5d463fa3805feed4b3439483af978d6217c3f513902d189ec24b39bb9e155d4",
     "receipt_sha256": "ecc1021166907d7d012a95207dbc9e52b3f57c14d0acb85a5f1d7e2eaff69b19",
-    "selected_argv": ["/nonexistent/foundryline-negative-check"],
+    "selected_argv": [
+      "/nonexistent/foundryline-negative-check"
+    ],
     "native_observation": "UNAVAILABLE",
     "error": "No such file or directory",
     "product_defect_demonstrated": false

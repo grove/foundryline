@@ -1,0 +1,34 @@
+{
+  "native": {
+    "bundle_sha256": "d6545cf99b18b9a05a7234491718868d2307cf2ddaa83442fa5dea0b6ad20e3a",
+    "restore_argv": [
+      "git",
+      "clone",
+      "--bare",
+      "/private/tmp/foundryline-18/native-remote.bundle",
+      "/private/tmp/foundryline-18/native-restored.git"
+    ],
+    "verified_commit": "fc72c56a5ef98838df62626d687278be322f4518",
+    "verified_tree": "62f8517b004ba4c80b69da3f6e915cb5cab8518f",
+    "matched_manifest_file_count": 131,
+    "matched_implementation_commit": "01d2db090713a8852a66d1dfddca90bf7cac548a",
+    "result": "All selected blobs recovered from bundled Git objects match manifest hashes and implementation commit, including hidden files",
+    "portable_full_snapshot_replay": "NOT DEMONSTRATED \u2014 bundle restores Git objects, not original .git layout"
+  },
+  "negative": {
+    "bundle_sha256": "d6545cf99b18b9a05a7234491718868d2307cf2ddaa83442fa5dea0b6ad20e3a",
+    "restore_argv": [
+      "git",
+      "clone",
+      "--bare",
+      "/private/tmp/foundryline-18/negative-remote.bundle",
+      "/private/tmp/foundryline-18/negative-restored.git"
+    ],
+    "verified_commit": "fc72c56a5ef98838df62626d687278be322f4518",
+    "verified_tree": "62f8517b004ba4c80b69da3f6e915cb5cab8518f",
+    "matched_manifest_file_count": 131,
+    "matched_implementation_commit": "01d2db090713a8852a66d1dfddca90bf7cac548a",
+    "result": "All selected blobs recovered from bundled Git objects match manifest hashes and implementation commit, including hidden files",
+    "portable_full_snapshot_replay": "NOT DEMONSTRATED \u2014 bundle restores Git objects, not original .git layout"
+  }
+}

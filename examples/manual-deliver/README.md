@@ -2,6 +2,10 @@
 
 **AUTHORED EXAMPLE with one ACTUAL protected Proofline native check on macOS.** A [real check-only run and failure control](native-qualification.md) were independently inspected for this **prewritten** candidate. There was **no coding-agent implementation, no saved Intentline agreement, and no completed real issue-to-PR delivery**.
 
+A separate [real approved coding-agent task](agent-qualification/README.md) now
+implements durable receipt retention and identity validation in Foundryline. Its
+new candidate/check evidence does not change this teaching fixture's provenance.
+
 This is an easy way to see why **a successful check does not mean all requirements are proven**.
 
 ## The source and the candidate

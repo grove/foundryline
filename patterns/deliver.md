@@ -1,6 +1,6 @@
 # Deliver — from an approved task to check evidence and a reviewable PR
 
-**Status: manual reference implemented, with one real macOS Proofline native check of an AUTHORED fixture and an observed unavailable-command control.** See the [retained qualification evidence](../examples/manual-deliver/native-qualification.md) and [issue #18](https://github.com/grove/foundryline/issues/18). This is **not** a coding-agent implementation of an approved real issue, Intentline-export round trip, automated controller or authorized PR handoff; those remain unqualified. The [worked example](../examples/manual-deliver/README.md) also has separate ordinary Python CI checks, which are **not Proofline native receipts**.
+**Status: manual reference plus a bounded real coding-agent candidate and native check handoff.** PR #19 supplied the [authored fixture and original native check](../examples/manual-deliver/native-qualification.md). The separate [approved receipt-validation task](../examples/manual-deliver/agent-qualification/README.md) records actual coding-agent implementation, a frozen candidate, native Proofline checks and refusal evidence for independent review and an explicitly authorized PR. No automated controller, Intentline round trip, completeness certification or maintainer approval is implied. See [issue #18](https://github.com/grove/foundryline/issues/18).
 
 **In one sentence:** Choose an authorized task, let your existing coding agent implement it, check the exact candidate with [Proofline](https://github.com/grove/proofline), then decide separately whether to open or merge a pull request.
 
@@ -99,8 +99,23 @@ Get independent human/agent review as appropriate; it must evaluate the **origin
 
 For a small, routine task, just use your existing coding agent and chosen Proofline checks. Don't add a saved acceptance record when it adds no value.
 
-## What still needs qualification
+## Observed scope and remaining qualification
 
-This repository can run **authored Python fixture tests and structural checks on Linux**, but it cannot treat those as a live native Proofline run on its qualified macOS/Codex environment. This Deliver recipe and candidate are **copyable and testable as examples**, not proof of a completed Foundryline coding-agent → Proofline → PR delivery.
+The [real coding-agent follow-up](../examples/manual-deliver/agent-qualification/README.md)
+uses an actual user-approved part of issue #18: retaining original native receipts
+and validating their identities. The implementation commit/tree, complete original
+task, pinned tools, selected argv, raw reports, independent evidence review and
+publication boundaries are retained separately from PR #19's authored example.
+The selected repository suite passed through native Proofline on GitHub macOS;
+a missing executable was **CHECKS UNAVAILABLE**. A local macOS attempt first
+returned **EXECUTION UNAVAILABLE** because its canary boundary was not verified;
+no unsafe fallback was used.
 
-The [real macOS/Codex CLI 0.162.1 check and missing-executable control](../examples/manual-deliver/native-qualification.md) are now **observed and inspected** for the authored example only. To qualify **end-to-end Deliver**, independently review an actual authorized coding-agent implementation of a real request, its unchanged original source, frozen candidate and complete obligations, then perform Proofline checks against that candidate and prepare a separately authorized reviewable PR. If optional Intentline structured planning is used, its single-S1 export and actual R-to-argv links need their **own** verified round trip; none was executed here. No automatic merge or deployment. **If required evidence is absent, preserve NOT RUN/UNAVAILABLE rather than upgrading a claim.**
+These observations cover one bounded direct-route task. Linux reference tests
+remain ordinary checks. Evidence belongs to the exact frozen implementation,
+not the later PR evidence/status appendices. Independent maintainer approval,
+merge and deployment remain separate decisions. The optional Intentline
+single-S1 export/import route is **PROPOSED — NOT RUN**; it needs its own real
+round trip if used. Historical unlinked R2 evidence stays **NOT DEMONSTRATED**
+by the earlier selected R1 check, and `coverage_completeness: UNKNOWN` applies
+throughout. Keep absent evidence **NOT RUN/UNAVAILABLE**.

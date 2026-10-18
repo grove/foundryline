@@ -40,6 +40,7 @@ DOCUMENTS = (
     ROOT / "patterns/maintain.md",
     ROOT / "patterns/deliver.md",
     ROOT / "examples/manual-deliver/README.md",
+    ROOT / "examples/manual-deliver/macos-check-only.md",
     ROOT / "examples/manual-deliver/candidate/README.md",
     ROOT / "examples/manual-deliver/refusals.md",
     ROOT / "examples/manual-deliver/handoff-template.md",

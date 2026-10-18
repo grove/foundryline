@@ -9,8 +9,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import re
 import subprocess
 import sys
+import tempfile
 import unittest
 import zipfile
 from pathlib import Path
@@ -23,6 +26,52 @@ PLAN = EXAMPLE / "verification-plan.json"
 
 
 class ManualDeliverReferenceTests(unittest.TestCase):
+    def test_macos_walkthrough_maps_and_failed_output_retention(self) -> None:
+        # Ordinary snippet checks with a fake CLI, never native qualification.
+        guide = (EXAMPLE / "macos-check-only.md").read_text()
+        blocks = re.findall(r"```bash\n(.*?)\n```", guide, re.DOTALL)
+        for block in blocks:
+            subprocess.run(["bash", "-n"], input=block, text=True, check=True)
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            env = {**os.environ, "OUT": directory, "PYTHON": sys.executable,
+                   "PROOFLINE": directory, "PRODUCT": str(ROOT)}
+            for snippet in re.findall(r"<<'PY'\n(.*?)\nPY", guide, re.DOTALL):
+                subprocess.run([sys.executable, "-B", "-"], input=snippet,
+                               text=True, env=env, check=True)
+            checks = json.loads((out / "r1-r2-checks.json").read_text())
+            historical = json.loads((EXAMPLE / "intentline-trace/linked-checks.json").read_text())
+            for argv in historical:
+                argv[0] = sys.executable
+            self.assertEqual(checks, historical)
+            linked = json.loads((out / "linked-links.json").read_text())
+            gap = json.loads((out / "gap-links.json").read_text())
+            wrong = json.loads((out / "wrong-links.json").read_text())
+            self.assertEqual(list(gap), ["R1"])
+            self.assertEqual(list(linked), ["R1", "R2"])
+            for index, requirement in enumerate(("R1", "R2")):
+                self.assertEqual(linked[requirement], [{"index": index, "argv": checks[index]}])
+            self.assertNotEqual(wrong["R1"][0]["argv"], checks[0])
+            (out / "proofline.py").write_text(
+                "import pathlib, sys\n"
+                "if sys.argv[1] == 'check':\n"
+                "    record = pathlib.Path(sys.argv[sys.argv.index('--output') + 1])\n"
+                "    record.mkdir()\n"
+                "    (record / 'report.json').write_text('original report')\n"
+                "    (record / 'evidence.json').write_text('original evidence')\n"
+                "print('CHECKS FAILED')\n"
+                "print('original stderr', file=sys.stderr)\n"
+                "sys.exit(1)\n"
+            )
+            helper = blocks[1].split("check_candidate()", 1)[1]
+            subprocess.run(["bash", "-euo", "pipefail", "-c", "check_candidate()" + helper],
+                           env=env, check=True, capture_output=True, text=True)
+            self.assertEqual((out / "direct.exit").read_text(), "1\n")
+            self.assertEqual((out / "direct-status.exit").read_text(), "1\n")
+            self.assertEqual((out / "direct.stderr").read_text(), "original stderr\n")
+            self.assertEqual((out / "direct-record/report.json").read_text(), "original report")
+            self.assertEqual((out / "direct-record/evidence.json").read_text(), "original evidence")
+
     def test_original_source_identity_and_citations(self) -> None:
         raw = SOURCE.read_bytes()
         plan = json.loads(PLAN.read_text(encoding="utf-8"))

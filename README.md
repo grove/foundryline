@@ -115,6 +115,8 @@ attempt. The [worked proposal](examples/repo-maintenance/issue-proposal.md) asks
 whether a contribution guide would help; a warning does not make it mandatory.
 Nothing in this recipe applies fixes or publishes issues.
 
+**Want to run that check from GitHub instead of your computer?** We're testing a [read-only GitHub Actions example](docs/manual-intake.md). After it's merged and the real runner has been qualified, you can use GitHub's **Run workflow** button to get a report artifact. The [actual pull-request runner test](https://github.com/grove/foundryline/actions/runs/39112223810) completed with 5 PASS and 8 advisory WARN results, plus an observed missing-target refusal. **The manual button launch is still unverified until the workflow is merged and dispatched**; there are no schedules, automatic fixes, or GitHub issue writes.
+
 ## The tools behind the recipes
 
 Foundryline doesn't replace these tools. It helps you choose when to use them.

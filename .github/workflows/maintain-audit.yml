@@ -1,0 +1,174 @@
+name: Manual RepoTend maintenance audit
+
+# The first real-run qualification is exercised on PRs touching this example.
+# After merge, the same job is available through Actions > Run workflow.
+# No schedule, issue writing, remediation, or model invocation.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/maintain-audit.yml"
+      - "docs/manual-intake.md"
+      - "checks/test_manual_intake.py"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Read-only RepoTend audit and failure control
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Check out exactly the selected repository revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: target
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Check out pinned trusted RepoTend separately
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: grove/repotend
+          ref: 2d69cce901475380775f674b9cc5755f1f89f82e
+          path: tool
+          persist-credentials: false
+
+      - name: Set up supported Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22.20.0"
+
+      - name: Install only RepoTend's locked tool dependencies
+        working-directory: tool
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Capture actual audit, provenance and missing-source control
+        shell: bash
+        env:
+          TARGET_DIR: ${{ github.workspace }}/target
+          TOOL_DIR: ${{ github.workspace }}/tool
+          REPORT_DIR: ${{ runner.temp }}/foundryline-maintain
+          PINNED_TOOL_SHA: 2d69cce901475380775f674b9cc5755f1f89f82e
+        run: |
+          set -euo pipefail
+          mkdir -p "$REPORT_DIR"
+          test "$(git -C "$TOOL_DIR" rev-parse HEAD)" = "$PINNED_TOOL_SHA"
+          test "$(git -C "$TARGET_DIR" rev-parse HEAD)" = "$GITHUB_SHA"
+          git -C "$TARGET_DIR" status --porcelain --untracked-files=all > "$REPORT_DIR/target-status.before"
+
+          python3 - <<'PY'
+          import json, os, platform, subprocess
+          from pathlib import Path
+
+          root = Path(os.environ["REPORT_DIR"])
+          identity = {
+              "runner": platform.platform(),
+              "run_id": os.environ["GITHUB_RUN_ID"],
+              "attempt": os.environ["GITHUB_RUN_ATTEMPT"],
+              "event": os.environ["GITHUB_EVENT_NAME"],
+              "repository": os.environ["GITHUB_REPOSITORY"],
+              "target_commit": subprocess.check_output(["git", "-C", os.environ["TARGET_DIR"], "rev-parse", "HEAD"], text=True).strip(),
+              "tool_repository": "grove/repotend",
+              "tool_commit": subprocess.check_output(["git", "-C", os.environ["TOOL_DIR"], "rev-parse", "HEAD"], text=True).strip(),
+              "node": subprocess.check_output(["node", "--version"], text=True).strip(),
+              "npm": subprocess.check_output(["npm", "--version"], text=True).strip(),
+              "audit_command": ["node", "skills/repotend/scripts/audit.mjs", "--root", os.environ["TARGET_DIR"], "--format", "json"],
+              "negative_command": ["node", "skills/repotend/scripts/audit.mjs", "--root", str(root / "absent-target"), "--format", "json"]
+          }
+          (root / "identity.json").write_text(json.dumps(identity, indent=2) + "\n", encoding="utf-8")
+          PY
+
+          cd "$TOOL_DIR"
+          test ! -e "$REPORT_DIR/absent-target"
+          set +e
+          node skills/repotend/scripts/audit.mjs --root "$TARGET_DIR" --format json \
+            > "$REPORT_DIR/report.json" 2> "$REPORT_DIR/audit.stderr"
+          audit_exit=$?
+          node skills/repotend/scripts/audit.mjs --root "$REPORT_DIR/absent-target" --format json \
+            > "$REPORT_DIR/negative.stdout" 2> "$REPORT_DIR/negative.stderr"
+          negative_exit=$?
+          set -e
+
+          printf '%s\n' "$audit_exit" > "$REPORT_DIR/audit.exit"
+          printf '%s\n' "$negative_exit" > "$REPORT_DIR/negative.exit"
+          git -C "$TARGET_DIR" status --porcelain --untracked-files=all > "$REPORT_DIR/target-status.after"
+
+      - name: Validate statuses and summarize actual evidence
+        shell: bash
+        env:
+          REPORT_DIR: ${{ runner.temp }}/foundryline-maintain
+        run: |
+          python3 - <<'PY'
+          import collections
+          import json
+          import os
+          from pathlib import Path
+
+          base = Path(os.environ["REPORT_DIR"])
+          audit_exit = int((base / "audit.exit").read_text().strip())
+          negative_exit = int((base / "negative.exit").read_text().strip())
+
+          # Unlike an advisory WARN, execution error exit 2 is never a valid audit.
+          if audit_exit not in (0, 1):
+              raise SystemExit(f"UNAVAILABLE / INCOMPLETE: audit exit {audit_exit}")
+          if not (base / "report.json").stat().st_size:
+              raise SystemExit("UNAVAILABLE / INCOMPLETE: missing JSON audit report")
+
+          try:
+              report = json.loads((base / "report.json").read_text())
+          except (ValueError, UnicodeError) as exc:
+              raise SystemExit(f"UNAVAILABLE / INCOMPLETE: invalid JSON report: {exc}")
+          if not isinstance(report, dict) or report.get("schemaVersion") != "0.1" or report.get("mode") != "audit":
+              raise SystemExit("UNAVAILABLE / INCOMPLETE: unsupported audit contract")
+          if report.get("errors") != []:
+              raise SystemExit(f"UNAVAILABLE / INCOMPLETE: audit errors: {report.get('errors')!r}")
+
+          findings = report.get("findings")
+          if not isinstance(findings, list):
+              raise SystemExit("UNAVAILABLE / INCOMPLETE: findings array missing")
+          allowed = {"PASS", "WARN", "FAIL", "UNKNOWN", "NOT_APPLICABLE", "SUPPRESSED"}
+          counts = collections.Counter()
+          for item in findings:
+              if not isinstance(item, dict) or item.get("status") not in allowed:
+                  raise SystemExit("UNAVAILABLE / INCOMPLETE: invalid finding status")
+              if item.get("confidence") not in ("verified", "heuristic", None):
+                  raise SystemExit("UNAVAILABLE / INCOMPLETE: invalid evidence confidence")
+              counts[item["status"]] += 1
+          if audit_exit == 1 and not any(f.get("status") == "FAIL" and f.get("enforced") for f in findings):
+              raise SystemExit("UNAVAILABLE / INCOMPLETE: unexpected enforced-failure exit")
+
+          # A negative control must really fail without providing a completed report.
+          if negative_exit != 2 or (base / "negative.stdout").stat().st_size != 0:
+              raise SystemExit("Negative control failed: missing-source audit was not unavailable")
+          if not (base / "negative.stderr").stat().st_size:
+              raise SystemExit("Negative control failed: missing error diagnostic")
+          if (base / "target-status.before").read_bytes() != (base / "target-status.after").read_bytes():
+              raise SystemExit("Target working tree changed during read-only audit")
+
+          receipt = {
+              "result": "COMPLETED", "audit_exit": audit_exit,
+              "negative_result": "UNAVAILABLE / INCOMPLETE",
+              "negative_exit": negative_exit, "finding_counts": dict(counts),
+              "target_git_status_unchanged": True
+          }
+          (base / "validation.json").write_text(json.dumps(receipt, indent=2) + "\n")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write("## RepoTend read-only audit\n\n")
+              summary.write(f"**Completed:** audit exit {audit_exit}; {len(findings)} narrow rule results.\n\n")
+              summary.write("| Status | Count |\n| --- | ---: |\n")
+              for status in sorted(allowed):
+                  summary.write(f"| {status} | {counts[status]} |\n")
+              summary.write("\n**Negative control:** unavailable source, exit 2, no report (expected).\n\n")
+              summary.write("**No fixes or issues published.** This is a static audit, not a security certification. Download the artifact for identities, raw results and errors.\n")
+          PY
+
+      - name: Upload short-lived report (also after failure)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: repotend-maintain-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/foundryline-maintain/
+          retention-days: 7
+          if-no-files-found: warn

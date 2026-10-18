@@ -126,7 +126,12 @@ is **optional**. The [small username example](examples/manual-deliver/README.md)
 has source-linked R1/R2 expectations and runnable Python tests, and illustrates
 why one passing selected check does **not** demonstrate an unlinked requirement.
 
-The username example remains **authored**, with PR #19's [native check-only receipt](examples/manual-deliver/native-qualification.md). A separate [approved coding-agent follow-up](examples/manual-deliver/agent-qualification/README.md) now retains those original receipts and validates their identities. Its frozen implementation passed the selected 27-test suite through native Proofline on macOS, with an actual missing-command control and a retained local boundary refusal. This is bounded direct-route evidence for human review; optional Intentline execution and overall requirement completeness remain unproven.
+The username example remains **authored**, with PR #19's [native check-only receipt](examples/manual-deliver/native-qualification.md). A separate [approved coding-agent follow-up](examples/manual-deliver/agent-qualification/README.md) now retains those original receipts and validates their identities. Its frozen implementation passed the selected 27-test suite through native Proofline on macOS, with an actual missing-command control and a retained local boundary refusal. This is bounded direct-route evidence for human review.
+
+The [issue #21 trace](examples/manual-deliver/intentline-trace/README.md) adds a
+real Intentline initial S1 draft/export from the complete approved issue and
+separate source/export integrity checks. Native consumer execution is pending;
+overall requirement completeness remains unknown.
 
 ## The tools behind the recipes
 

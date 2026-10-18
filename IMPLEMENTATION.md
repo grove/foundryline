@@ -140,6 +140,10 @@ This snippet **does not run an agent**. A future example must pin/install a comp
 **Bounded direct-route implementation and native checks observed; maintainer decision pending in [issue #18](https://github.com/grove/foundryline/issues/18):** PR #19 supplied the [Deliver recipe](patterns/deliver.md), [authored username example](examples/manual-deliver/README.md), its native macOS check and missing-command control. The separate [approved coding-agent follow-up](examples/manual-deliver/agent-qualification/README.md) implements durable raw-receipt retention and validation, freezes the actual implementation, and records a new native Proofline run of all 27 selected repository tests, a missing-command result and a local boundary refusal. The original task, candidate/argv identities, raw reports and independent evidence review are retained for a separately authorized reviewable PR. Native evidence covers the exact implementation commit, not later evidence appendices. Optional Intentline export/import remains **NOT RUN**; `coverage_completeness: UNKNOWN`. Keep issue #18 open pending independent maintainer review; passing selected checks is not overall acceptance.
 
 
+The [issue #21 trace](examples/manual-deliver/intentline-trace/README.md) now
+retains a genuine complete initial S1 Intentline draft/export and source/export
+identity checks. Native consumer execution and gap/refusal observations are pending.
+
 **Goal:** Document one end-to-end candidate-and-check handoff without rebuilding the existing P2P controller.
 
 **Deliverables:**

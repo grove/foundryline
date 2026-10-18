@@ -1,0 +1,56 @@
+## In plain English
+
+Show, on **one genuine approved coding change**, the difference between:
+
+1. **What the user actually asked for.**
+2. **What the coding agent changed.**
+3. **Which exact tests ran on that exact version of the code.**
+4. **What still has no convincing test evidence.**
+
+A green test suite must **never** be silently promoted to “all requirements satisfied.” The result should be easy for a maintainer to read without understanding the tools' internal record formats.
+
+This is a focused improvement to [Deliver issue #18](https://github.com/grove/foundryline/issues/18), not a replacement for Deliver or a new software-factory controller.
+
+## What already works — do not redo it
+
+- [PR #19](https://github.com/grove/foundryline/pull/19) added the manual [Deliver recipe](https://github.com/grove/foundryline/blob/main/patterns/deliver.md), authored username example, **real native macOS Proofline check-only receipt**, and unavailable-command control.
+- [PR #20](https://github.com/grove/foundryline/pull/20) implemented a **real user-approved coding-agent task** in Foundryline, frozen at `01d2db090713a8852a66d1dfddca90bf7cac548a`, with [native Proofline run #39117358329](https://github.com/grove/foundryline/actions/runs/39117358329) (27 selected tests passed), an unavailable-command control, preserved raw receipts and a separate same-operator agent review. That **direct Proofline route was real**.
+- What is **not** demonstrated yet: a **genuine Intentline-produced acceptance record exported into Proofline**, with exact R-to-selected-command mapping and observed per-requirement results. PR #20 deliberately skipped Intentline. [Issue #18](https://github.com/grove/foundryline/issues/18) stays open until its broader acceptance is judged separately.
+
+## Scope: one useful, bounded end-to-end example
+
+Use a **real, expressly authorized** small task in `grove/foundryline`, preferably advancing issue #18 rather than inventing an unrelated feature. Capture the **full original request** as a single source `S1` with exact bytes and provenance. If the needed task or execution grant has not been authorized, request it or label the task **BLOCKED**; do not manufacture a user request, adoption, approval or coding-agent run.
+
+Have the existing coding agent implement the approved task, freezing the resulting **exact implementation commit/tree** before checking. Preserve the full source obligations (ideally at least two independently meaningful R IDs). Do not invent requirements or deliberately drop a real original obligation to make the demonstration attractive.
+
+**Use the actual supported optional producer → consumer route:**
+
+- Intentline at pinned revision [`25e926f57e69395193fc0ac258f9e6dd2332cb18`](https://github.com/grove/intentline/tree/25e926f57e69395193fc0ac258f9e6dd2332cb18): make and structurally check a genuine *initial, complete, single-S1, schema-1/revision-1* draft; independently inspect its source citations, exclusions, constraints and open decisions. Run its real `export --format json` CLI. Retain the unedited export, completion marker, original source bytes, manifest, hashes and CLI inputs/outputs. A valid export is still **advisory**, not human approval.
+- Proofline at pinned revision [`8e117fff4de2459637fe7f74f47ab17fc3341d84`](https://github.com/grove/proofline/tree/8e117fff4de2459637fe7f74f47ab17fc3341d84): use the real **`check --intentline-export DIR --intentline-links FILE`** interface with `--source` equal to the exact exported `source-S1.txt`, selected explicit `--checks` argv arrays, and exact zero-based `index`/complete `argv` links for each mapped R ID. The full Proofline checkout and required product tools must exist; a skill installation alone is not an executable runtime.
+- The **supported native check host is macOS, Python 3.11+, Codex CLI exactly 0.162.1, with a verified native sandbox**. Linux offline/structural CI is **not** native Proofline evidence. No unsandboxed fallback.
+
+Do not alter amended, sliced/child, multi-source, revised, partial, tampered or otherwise unsupported exports into artificial initial S1 records; **refuse and report the limitation**. Do not make Intentline mandatory for the ordinary direct Proofline path.
+
+## Acceptance criteria
+
+- [ ] **R1 — Genuine source and coding provenance.** Record actual GitHub task URL/full original request, authorization for the specific coding scope, source SHA-256, upstream tool revisions, coding-agent identity/environment where observed, and the exact implementation commit/tree. No synthetic task or approved status presented as real.
+- [ ] **R2 — Real producer/export.** Run Intentline's actual prepare/propose/check/review/export steps as appropriate for the supported initial S1 record, not a handcrafted mock. Preserve exact source, contract, IDs/source citations, full unedited JSON export and hash/manifest identities. Independently review semantic fidelity to the *complete* user request.
+- [ ] **R3 — Real consumer/mapping.** On a genuinely qualified macOS/Codex native host, run Proofline using the **real exported files** and an explicit exact `R-id → selected command index/argv` map. Retain the *actual* reported per-R results. A linked passing test is **limited selected-check evidence**, not proof of a whole user request or of complete R inventory.
+- [ ] **R4 — Demonstrate a meaningful evidence gap.** At least two source-grounded obligations if genuinely present: show what happens to a requirement **without** a matching selected check (**NOT DEMONSTRATED**), and, *when the underlying task justifies it*, add/execute an authorized behavior-focused check, relink and observe the new candidate-bound result. Never call an unlinked R PASS, manufacture an artificial obligation, or claim `coverage_completeness` is known.
+- [ ] **R5 — Actual refusal/negative.** Witness at least one safe export/mapping/executable/sandbox/record-integrity refusal without altering the good record. Report `CHECKS UNAVAILABLE`, `EXECUTION UNAVAILABLE`, `STALE CHECKS` or import rejection exactly as the actual tool does. A failure to start is not evidence of a product defect.
+- [ ] **R6 — Clear maintainer handoff.** Produce an easy-to-read table: **original request/source line → R ID → implementation change → selected argv/receipt → observed evidence/remaining gap**. Also record source/candidate hashes, platform/tool pins, approval status, check-only model calls and observed time/cost limits. State **`coverage_completeness: UNKNOWN`**.
+- [ ] **R7 — Independent review and bounded PR.** A separately started reviewer checks the *raw* source, export, map, candidate, Proofline receipts and counterevidence (not only an agent summary); disclose if reviewer shares operator/provider. Run Foundryline's ordinary reference tests and link checks. Open a reviewable PR referencing **#18 and this issue**, but **do not merge, close #18, deploy, schedule anything or automatically publish other issues**.
+
+## Verification steps — PROPOSED, NOT YET RUN
+
+1. Re-read the latest #18 / PR #19 / PR #20 evidence and the pinned [Intentline integration guide](https://github.com/grove/intentline/blob/25e926f57e69395193fc0ac258f9e6dd2332cb18/docs/INTEGRATIONS.md) and [Proofline importer contract](https://github.com/grove/proofline/blob/8e117fff4de2459637fe7f74f47ab17fc3341d84/README.md).
+2. Choose an actually authorized, useful small Foundryline coding change. Freeze original S1 bytes. Review the proposed Intentline requirements against the source; do not let a model silently approve them.
+3. Implement and freeze the candidate, then perform the **actual** export/import on the required native host. Retain command arguments, exits, raw outputs and hashes; add a minimal truthful structural test to Foundryline if useful.
+4. Witness an evidence gap and a safe negative/refusal. If the expected host or approval is missing, retain the blocker and stop short of qualification rather than forging receipts.
+5. Have an independent agent/maintainer inspect the evidence and create an **unmerged** PR with supported/partial/unobserved R1–R7 assessment and plain-language what-passed/what-is-unknown summary.
+
+## Non-goals and safeguards
+
+No new controller, hosted service, auto-issued GitHub tasks, auto-merge, deployment, mandatory planning layer, automatic fix executor, cross-provider sandbox certification, universal Intentline/P2P adapter, or conversion of amended/sliced history. Foundryline is a **recipe that composes tools**, not a replacement for their native contracts.
+
+**Definition of done:** A real, inspectable **original requirement → Intentline S1 export → Proofline exact requirement/check evidence → independently reviewed coding candidate and unmerged PR**. If access/authorization prevents a live step, partial docs/tests are valuable but **do not close this issue as end-to-end qualified**.

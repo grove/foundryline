@@ -137,6 +137,9 @@ This snippet **does not run an agent**. A future example must pin/install a comp
 
 ## 5. Milestone E — Document Deliver (optional for initial release)
 
+**Manual reference and bounded native check now observed; end-to-end delivery remains open in [issue #18](https://github.com/grove/foundryline/issues/18):** [Deliver recipe](patterns/deliver.md) and its [authored source/candidate example](examples/manual-deliver/README.md) document direct Proofline `check`, optional initial single-S1 Intentline JSON export and exact R-to-argv mapping. Ordinary Linux fixture tests pass separately. A [real GitHub-hosted macOS/Proofline check-only run](https://github.com/grove/foundryline/actions/runs/39114778567), exact **Codex CLI 0.162.1**, passed **one selected R1 check** on the frozen authored fixture and a negative missing-executable control returned **CHECKS UNAVAILABLE**; [real receipts and limits](examples/manual-deliver/native-qualification.md) were independently inspected. **NOT OBSERVED:** any coding-agent implementation of an actual admitted task, actual Intentline exporter/importer with mapped R IDs, or separately authorized delivery PR. Do not close issue #18 or call full Deliver qualified on this bounded check.
+
+
 **Goal:** Document one end-to-end candidate-and-check handoff without rebuilding the existing P2P controller.
 
 **Deliverables:**

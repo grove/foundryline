@@ -39,7 +39,7 @@ You don't have to use everything. Start with the part that's useful to you.
 | Recipe | In plain English | Where it stands |
 | --- | --- | --- |
 | **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Scoped v0.1 accepted:** manual guide, worked examples, and a recorded macOS/Codex pilot |
-| **Deliver** | Start with an agreed task, use your coding agent to make a change, and gather evidence about what was checked. | **Planned:** design described, no Foundryline delivery automation yet |
+| **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Partial manual reference:** authored candidate, observed native macOS check and refusal; full delivery **not yet qualified** |
 | **[Maintain](patterns/maintain.md)** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Manual reference:** real pinned RepoTend audit, failure control, and separate-agent adoption record; pending maintainer review |
 
 All three are designed to be **copied into other projects**, not tied to this repository or to one AI provider.
@@ -117,6 +117,17 @@ Nothing in this recipe applies fixes or publishes issues.
 
 **Want to run that check from GitHub instead of your computer?** Use the [read-only GitHub Actions example](docs/manual-intake.md): open the **Manual RepoTend maintenance audit** workflow, select your branch, and click **Run workflow**. We [verified an actual manual launch](https://github.com/grove/foundryline/actions/runs/39112708357) on GitHub-hosted Ubuntu: **5 PASS, 8 advisory WARN**, plus a correctly handled missing-target failure and a downloadable report. It **does not** schedule itself, publish issues, apply fixes, or certify your entire repository. Other projects must review their own permissions and privacy.
 
+## Try the Deliver example
+
+When you already have an **approved task** and a coding agent has implemented it,
+the [manual Deliver recipe](patterns/deliver.md) shows how to check the exact
+candidate using Proofline and prepare a reviewable handoff. Intentline planning
+is **optional**. The [small username example](examples/manual-deliver/README.md)
+has source-linked R1/R2 expectations and runnable Python tests, and illustrates
+why one passing selected check does **not** demonstrate an unlinked requirement.
+
+**Important:** This is an authored example, not coding-agent output. It now has a [real, model-free macOS Proofline check-only receipt](examples/manual-deliver/native-qualification.md) for one selected test and an observed unavailable-command control. The broader **coding-agent-to-PR Deliver journey is NOT qualified yet**. No automatic coding, PR creation or merge is supplied.
+
 ## The tools behind the recipes
 
 Foundryline doesn't replace these tools. It helps you choose when to use them.
@@ -136,7 +147,7 @@ Other tools can fit too. You can use your preferred coding assistant, and **you 
 
 **Manual Discover v0.1 has been accepted for the specific macOS/Codex setup we tested.** This is a modest, evidence-backed milestone—not a claim that every coding-agent setup is safe or that the full software factory is running. See the [scope and maintainer decision](docs/discover-v0.1-qualification-review.md) and [published Foundryline v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0).
 
-In particular, Foundryline does **not** currently run scheduled audits, publish GitHub issues automatically, implement code, or merge changes for you. The Deliver recipe and automated Maintain options are future work.
+In particular, Foundryline does **not** currently run scheduled audits, publish GitHub issues automatically, implement code, or merge changes for you. A **copyable Deliver example** and a bounded native macOS Proofline check are observed, but full coding-agent-to-PR delivery and autonomous publication are **not qualified**; automated Maintain options remain future work.
 
 We would rather explain what we've actually tested than promise magic.
 

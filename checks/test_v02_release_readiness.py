@@ -39,7 +39,7 @@ class ManualV02ReadinessChecks(unittest.TestCase):
         self.assertIn("Explicitly approve", draft)
         self.assertIn("exact v0.2.0 release commit", draft)
         self.assertIn("scheduled intake", draft.lower())
-        self.assertIn("DEFER", draft)
+        self.assertIn("defers scheduling", draft)
         self.assertIn("coverage_completeness: UNKNOWN", draft)
         self.assertIn("v0.1.0", draft)
         self.assertNotIn("v0.2.0 is now published", draft.lower())

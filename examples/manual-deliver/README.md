@@ -115,6 +115,12 @@ cmp "$WORK/source-S1.txt" "$WORK/intentline-export/source-S1.txt"
 
 For the consumer's actual export format and validation, see [Intentline integration guide at its pinned commit](https://github.com/grove/intentline/blob/25e926f57e69395193fc0ac258f9e6dd2332cb18/docs/INTEGRATIONS.md) and [Proofline's exact pinned CLI documentation](https://github.com/grove/proofline/blob/8e117fff4de2459637fe7f74f47ab17fc3341d84/README.md).
 
+## Observed ordinary fixture tests — not a native Proofline run
+
+On 2026-10-18, [Foundryline's PR #19 reference-check run](https://github.com/grove/foundryline/actions/runs/39114196028) actually executed this **authored example** under Python **3.12.3** on a GitHub-hosted Linux runner. The repository-owned Python test `test_authored_candidate_unit_tests_actually_run_as_regular_python` invoked the R1-only check (**1 unittest passed**) and the complete authored candidate suite (**2 unittests passed**). All **25 Foundryline reference/fixture tests passed**.
+
+This is real execution of small fixture Python tests, **not** a native Proofline `check` on a frozen macOS/Codex candidate. It does not supply a Proofline `report.json`, native receipts, Intentline export or coding-agent implementation record, and it does not make R2 **demonstrated** by the hypothetical selected Proofline R1-only check.
+
 ## Read the handoff, not a fictitious success
 
 The [authored handoff template](handoff-template.md) deliberately says **CHECK NOT RUN** and **NOT PUBLISHED**. It explains what a qualified coding agent/operator must replace with actual receipts before asking for PR publication. The [refusal and uncertainty examples](refusals.md) are also **PROPOSED — NOT RUN**, not fabricated observed failures.

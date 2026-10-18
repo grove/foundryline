@@ -1,6 +1,6 @@
 {
   "kind": "foundryline.authored-deliver-example",
-  "status": "AUTHORED TEACHING EXAMPLE — NO PROOFLINE NATIVE RUN",
+  "status": "AUTHORED PRE-RUN PLAN — ACTUAL CHECK RECORDED SEPARATELY",
   "source": {
     "path": "original-request.md",
     "sha256": "12ee949075e5faaf1d260055cc0ffe193b0c18259f68a06d4e4b4d81b1f0a9b6",
@@ -22,7 +22,7 @@
       "unittest",
       "tests.test_username_validation.UsernameValidationTests.test_rejects_blank"
     ],
-    "execution": "PROPOSED — NOT RUN IN PROOFLINE",
+    "execution": "PROPOSED AT PLAN CREATION; MATCHING DIRECT NATIVE CHECK OBSERVED LATER",
     "mapping_note": "replace HOST_ABSOLUTE_PYTHON with the same actual interpreter path in checks.json and links.json"
   },
   "illustrative_requirements": [
@@ -31,8 +31,10 @@
       "source_id": "S1",
       "line": 1,
       "quote": "Reject usernames that are empty or contain only whitespace.",
-      "selected_check_indices": [0],
-      "proofline_evidence": "PROPOSED — NOT RUN"
+      "selected_check_indices": [
+        0
+      ],
+      "proofline_evidence": "NATIVE DIRECT CHECK PASSED; illustrative R ID not imported via Intentline"
     },
     {
       "id": "R2",
@@ -45,5 +47,7 @@
   ],
   "proofline_native_host": "macOS, Python 3.11+, Codex CLI exactly 0.162.1",
   "optional_intentline_input": "one unamended S1 initial revision-1/schema-1 JSON export, produced by the real CLI only",
-  "intended_handoff_state": "NOT PUBLISHED; external coding, checks, PR and merge authorizations not provided by this example"
+  "intended_handoff_state": "NOT PUBLISHED; external coding, checks, PR and merge authorizations not provided by this example",
+  "created_before_native_qualification": true,
+  "observed_follow_up": "native-qualification.json"
 }

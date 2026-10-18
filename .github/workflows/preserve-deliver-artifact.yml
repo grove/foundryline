@@ -1,34 +1,52 @@
-name: Temporary preserve Deliver audit artifact probe
+name: Temporary one-time preservation of verified Deliver native artifact
 
-# One-time read-only transfer capability check; remove before review PR.
+# Restricted to one branch and one artifact. Delete immediately after completion.
 on:
   push:
     branches: [docs/qualify-manual-deliver-v02]
     paths: [.github/workflows/preserve-deliver-artifact.yml]
 
 permissions:
-  contents: read
+  contents: write
   actions: read
 
 jobs:
-  verify:
-    name: Verify exact external workflow archive
+  preserve:
+    name: Copy exact verified public artifact into Foundryline evidence
     runs-on: ubuntu-24.04
-    timeout-minutes: 4
+    timeout-minutes: 5
     steps:
-      - name: Test whether this token can read a public Proofline artifact
+      - name: Check out only the target review branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Verify original artifact and commit exact ZIP once
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           umask 077
+          test "$GITHUB_REF" = "refs/heads/docs/qualify-manual-deliver-v02"
+          test -z "$(git status --porcelain)"
           archive="$RUNNER_TEMP/proofline-39123644533.zip"
+          target="examples/manual-deliver/receipts/repotend-issue15-native-39123644533.zip"
+          test ! -e "$target"
           curl --fail-with-body --location --silent --show-error --max-time 65 \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GH_TOKEN" \
             "https://api.github.com/repos/grove/proofline/actions/artifacts/12134224973/zip" \
             --output "$archive"
-          echo "archive size: $(wc -c < "$archive")"
-          echo "archive sha256: $(sha256sum "$archive")"
           echo "31f8eb7ce91eb2a647a2e6af4e12050dddb47a3a73df619c7c24c8410c1883e8  $archive" | sha256sum -c -
+          unzip -tqq "$archive"
+          mkdir -p "$(dirname "$target")"
+          cp "$archive" "$target"
+          echo "31f8eb7ce91eb2a647a2e6af4e12050dddb47a3a73df619c7c24c8410c1883e8  $target" | sha256sum -c -
+          git add -- "$target"
+          git diff --cached --check
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "docs: retain exact native Deliver ZIP from Proofline Actions"
+          git push --no-verify origin HEAD:refs/heads/docs/qualify-manual-deliver-v02
+          echo "Exact verified evidence archive committed to review branch" >> "$GITHUB_STEP_SUMMARY"

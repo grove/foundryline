@@ -54,14 +54,19 @@ class ManualMaintainActionsTests(unittest.TestCase):
         self.assertNotIn("remediate.mjs --apply", self.workflow)
         self.assertNotIn("gh issue create", self.workflow)
 
-    def test_real_artifacts_and_no_false_qualification(self):
+    def test_real_artifacts_and_bounded_qualification_claim(self):
         self.assertIn("actions/upload-artifact@", self.workflow)
         self.assertIn("if: always()", self.workflow)
         self.assertIn("retention-days: 7", self.workflow)
         self.assertIn("identity.json", self.workflow)
         self.assertIn("negative.stderr", self.workflow)
         self.assertIn("report.json", self.workflow)
-        self.assertIn("NOT YET VERIFIED", self.guide)
+        # A real manual launch is linked, but this structural test does not reproduce it.
+        self.assertIn("39112708357", self.guide)
+        self.assertIn("workflow_dispatch", self.guide)
+        self.assertIn("2026-10-18", self.guide)
+        self.assertIn("not a universal sandbox", self.guide.lower())
+        self.assertNotIn("manual button launch is NOT YET VERIFIED", self.guide)
         self.assertIn("Run workflow", self.guide)
         self.assertIn("no target repository dependencies", self.guide.lower())
         self.assertIn("**Privacy:**", self.guide)

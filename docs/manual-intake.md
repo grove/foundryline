@@ -1,6 +1,6 @@
 # Run a read-only repository health check from GitHub
 
-**Status: implementation and qualification in progress.** This page describes the workflow proposed in [Foundryline issue #15](https://github.com/grove/foundryline/issues/15). A PR or local check cannot prove that the **Run workflow** button works: qualification requires an observed real GitHub-hosted job **and**, after merge, an observed manual dispatch. Until then, describe the button-driven flow as **NOT YET VERIFIED**.
+**Status: real GitHub-hosted PR audit passed; the manual button launch is NOT YET VERIFIED.** This page tracks [Foundryline issue #15](https://github.com/grove/foundryline/issues/15). The identical audit job has run successfully on GitHub's Ubuntu 24.04 runner in PR mode, including its negative case. A PR run does **not** demonstrate that the **Run workflow** button has been clicked: after merge, a separate observed `workflow_dispatch` execution is required for that claim.
 
 You do **not** need an AI account to run this check. It uses [RepoTend](https://github.com/grove/repotend), a deterministic auditor that checks useful GitHub repository basics. It never creates issues or applies fixes on your behalf.
 
@@ -54,8 +54,23 @@ The selected GitHub runner must permit the pinned GitHub Actions and outbound do
 
 **Privacy:** In a private repository, audit results and file paths may reveal private project structure. Artifacts are stored by GitHub for seven days and their availability depends on repository permissions. Do not upload secret files, make them public, or copy receipts to an issue without authorization. This example has only been exercised with public Foundryline source; another host/visibility context needs its own review.
 
+## Observed GitHub-hosted PR qualification — 2026-10-18
+
+This section records an **actual** workflow run, not authored sample output.
+
+- **Run:** [PR #16's RepoTend audit, GitHub Actions run 39112223810](https://github.com/grove/foundryline/actions/runs/39112223810), event `pull_request`. All job steps, including pinned-tool setup, audit validation and artifact upload, completed successfully.
+- **Source actually audited:** GitHub's PR merge commit `d7f15d7d72d769ee425d35360131f54e3521185c` for Foundryline, **not** the feature branch head or moving `main`. RepoTend: `2d69cce901475380775f674b9cc5755f1f89f82e`.
+- **Runner and toolchain:** Linux `6.17.0-1022-azure` / Ubuntu 24.04, Node `v22.20.0`, npm `10.9.3`, RepoTend report version `0.1.0`, default `small-oss` profile.
+- **Real output:** Audit exit `0`, `errors: []`, **5 PASS, 8 WARN**, 0 enforced FAIL. The `report.json` retained all 13 actual rule records. Advisory warnings do not imply failed execution or approved fixes.
+- **Witnessed failure control:** Audit against an intentionally missing source returned **exit 2**, an ENOENT diagnostic, and **zero stdout bytes**. Its validation explicitly recorded **UNAVAILABLE / INCOMPLETE**.
+- **Mutation observation:** Both captured Git status files were empty/identical; no target repository changes observed. This is not an OS-level write trace or proof of host isolation.
+- **Artifact:** [`repotend-maintain-39112223810-1`](https://github.com/grove/foundryline/actions/runs/39112223810/artifacts/12130584153), SHA-256 ZIP digest `0825279c93bfa73aeba6df9e4d4705129b692b60c7cc1c76fd7f8d3066ce6379`, expires 2026-10-25. The archive was **downloaded and inspected**: `identity.json`, `validation.json`, `report.json`, stderr, both exits, and before/after Git statuses matched the above observations.
+- **Reference checks:** [The same PR's structural validation run](https://github.com/grove/foundryline/actions/runs/39112223790) passed all **20 Python tests**. Those tests alone cannot demonstrate real runner behavior.
+
+**Unqualified:** No `workflow_dispatch` event has yet been observed, no separately administered second runner/operator repeated this job, and no generic network/filesystem sandbox guarantee is asserted. The runner's Node 20-based pinned setup/upload actions emitted a deprecation warning while the hosted runner used the Node 24 override; both steps nevertheless passed. Review tool-action versions on future updates.
+
 ## What this example does not do
 
 No automatic GitHub issue publishing, fix application, self-scheduling, Gapline skill/model execution, PR creation, merging or deployment. A report is **information for a human decision**, not permission to change the repository.
 
-**Qualification records:** Once actual runs exist, link their GitHub Actions URLs, tool/target identities, observed counts, negative-path result and caveats here. Before that, any expected outcome is **PROPOSED — NOT RUN**. See the separately qualified [manual Maintain pilot](../examples/repo-maintenance/README.md), which is useful prior evidence but **does not substitute** for a real GitHub-hosted workflow run.
+**Qualification boundary:** The PR-run evidence above is observed and archived in GitHub Actions; `workflow_dispatch` verification remains **PROPOSED — NOT RUN** until a separately observed manual launch. See the previously tested [local Maintain pilot](../examples/repo-maintenance/README.md), which has separate host/runner limits.

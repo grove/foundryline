@@ -1,0 +1,91 @@
+name: One-time Foundryline v0.1.0 publication
+
+# Runs only when its own workflow file is merged into main.
+# Tags the already-qualified source commit, not the automation commit.
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publish-v0.1.0-once.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: foundryline-publish-v0.1.0
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'grove/foundryline' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      RELEASE_TAG: v0.1.0
+      RELEASE_TARGET: 085ed37739b1eaed7933205a99c0ba220a1e13b6
+      GH_REPO: grove/foundryline
+    steps:
+      - name: Check out the exact accepted release source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: 085ed37739b1eaed7933205a99c0ba220a1e13b6
+          persist-credentials: false
+
+      - name: Build publication notes from the accepted notes
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$RELEASE_TARGET"
+          python3 - <<'PY'
+          import os
+          import posixpath
+          import re
+          from pathlib import Path
+
+          source = Path("docs/releases/v0.1.0.md")
+          notes = source.read_text(encoding="utf-8")
+          preparation = "**Release notes: prepared for review; no Git tag or GitHub Release has been published.**\n\n"
+          postscript = ("**Publishing this release is a separate action:** these notes prepare "
+                        "the release candidate only. No tag, GitHub Release or remote "
+                        "publication is implied by the maintainer's approval of the v0.1 scope.")
+          if preparation not in notes or postscript not in notes:
+              raise SystemExit("Release-note preparation markers do not match reviewed source")
+          notes = notes.replace(preparation, "", 1).replace(postscript, "", 1)
+
+          def rewrite_relative_link(match):
+              relative, anchor = match.group(2), match.group(3) or ""
+              path = posixpath.normpath(posixpath.join("docs/releases", relative))
+              if path.startswith("../") or path.startswith("/") or not Path(path).is_file():
+                  raise ValueError(f"Invalid release-note local link: {relative}")
+              return f"{match.group(1)}https://github.com/grove/foundryline/blob/v0.1.0/{path}{anchor}{match.group(4)}"
+
+          notes = re.sub(r"(\]\()((?:\.\./)+[^)#]+)(#[^)]*)?(\))", rewrite_relative_link, notes)
+          destination = Path(os.environ["RUNNER_TEMP"]) / "foundryline-v0.1.0-notes.md"
+          destination.write_text(notes.rstrip() + "\n", encoding="utf-8")
+          print("Prepared publication notes with verified, tag-pinned source links.")
+          PY
+
+      - name: Create exactly one public v0.1.0 release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # Refuse a conflicting pre-existing tag rather than retargeting it.
+          existing_tag="$(gh api "repos/${GH_REPO}/git/ref/tags/${RELEASE_TAG}" --jq '.object.sha' 2>/dev/null || true)"
+          if [[ -n "$existing_tag" && "$existing_tag" != "$RELEASE_TARGET" ]]; then
+            echo "::error::Existing v0.1.0 tag points to an unexpected object; refusing to publish."
+            exit 1
+          fi
+          # Reruns leave an existing release untouched.
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "Release exists. Leaving it unchanged:"
+            gh release view "$RELEASE_TAG" --json url,tagName,isDraft
+            exit 0
+          fi
+          gh release create "$RELEASE_TAG" \
+            --target "$RELEASE_TARGET" \
+            --title "Foundryline v0.1.0 — Manual Discover Blueprint" \
+            --notes-file "$RUNNER_TEMP/foundryline-v0.1.0-notes.md"
+          echo "Published GitHub release:"
+          gh release view "$RELEASE_TAG" --json url,tagName,isDraft

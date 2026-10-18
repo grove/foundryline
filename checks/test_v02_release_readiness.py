@@ -88,11 +88,11 @@ class ManualV02ReadinessChecks(unittest.TestCase):
             self.assertIn('"'+publisher+'"', once)
             self.assertIn("RELEASE_TARGET: 8409eebe0389461ec60a4bef6a5ce2aec6fb0903", once)
             self.assertIn("RELEASE_TAG: v0.2.0", once)
-            self.assertIn("permissions:\\n  contents: write", once)
+            self.assertIn("permissions:\n  contents: write", once)
             self.assertIn("git/matching-refs/tags/", once)
             self.assertIn("gh release create", once)
             self.assertIn("persist-credentials: false", once)
-            for disallowed in ("\\n  schedule:", "\\n  workflow_dispatch:", "\\n  issues:", "\\n  workflow_run:"):
+            for disallowed in ("\n  schedule:", "\n  workflow_dispatch:", "\n  issues:", "\n  workflow_run:"):
                 self.assertNotIn(disallowed, once)
         workflow = WORKFLOW.read_text()
         self.assertIn("workflow_dispatch:", workflow)

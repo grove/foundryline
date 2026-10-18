@@ -40,6 +40,7 @@ DOCUMENTS = (
     ROOT / "examples/manual-deliver/candidate/README.md",
     ROOT / "examples/manual-deliver/refusals.md",
     ROOT / "examples/manual-deliver/handoff-template.md",
+    ROOT / "examples/manual-deliver/native-qualification.md",
     ROOT / "examples/repo-maintenance/README.md",
     ROOT / "examples/repo-maintenance/issue-proposal.md",
     ROOT / "examples/repo-maintenance/adoption.md",

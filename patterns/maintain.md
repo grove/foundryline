@@ -5,9 +5,12 @@ deserves a reviewable issue. This recipe uses [RepoTend](https://github.com/grov
 existing deterministic auditor. **No AI model, GitHub token, or Foundryline service
 is required for the audit.** An assistant is optional for interpretation.
 
-**Status:** Executed manual reference, pending maintainer review; see the
-[real example and adoption attempt](../examples/repo-maintenance/README.md).
-This does not qualify scheduled audits, automatic issue creation, or remediation.
+**Status: ACCEPTED for the observed narrow manual Maintain scope.** See the
+[recorded acceptance and host limits](../docs/maintain-v0.2-qualification-review.md),
+[real local example and adoption attempt](../examples/repo-maintenance/README.md),
+and [separately witnessed GitHub Actions Run workflow event](https://github.com/grove/foundryline/actions/runs/39112708357).
+This does **not** qualify scheduled audits, automatic issue creation, remediation,
+general host isolation, or blanket cross-platform operation.
 The [Discover recipe](discover.md) provides the related source-grounding workflow.
 
 ## 1. Prepare trusted tools separately

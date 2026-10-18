@@ -1,8 +1,8 @@
-# Foundryline Deliver — proposed scoped manual qualification for v0.2
+# Foundryline Deliver — accepted scoped manual qualification for v0.2
 
-**Status: EVIDENCE REVIEW PREPARED; MAINTAINER ACCEPTANCE NOT YET RECORDED.**  
+**Status: ACCEPTED — NARROW, MANUAL DELIVER REFERENCE (2026-10-18).**  
 **Review date:** 2026-10-18 (Europe/Oslo).  
-**Decision requested:** Accept a **manual, optional, host-qualified Deliver blueprint**, **not** an autonomous coding controller, complete-requirements proof, universally isolated runner or publication/merge authority.
+**Decision recorded:** Accept a **manual, optional, specifically host-qualified Deliver blueprint**, **not** an autonomous coding controller, complete-requirements proof, universally isolated runner or publication/merge authority. This project-direction acceptance follows the merged [review PR #23](https://github.com/grove/foundryline/pull/23); it is not an independently administered human/security attestation or proof that any particular person personally re-executed the tests.
 
 **Tracking:** [Foundryline #18](https://github.com/grove/foundryline/issues/18) · [#21](https://github.com/grove/foundryline/issues/21) · [Deliver guide](../patterns/deliver.md) · [RepoTend #15](https://github.com/grove/repotend/issues/15) · [Proofline PR #60](https://github.com/grove/proofline/pull/60).
 
@@ -22,7 +22,7 @@ The entire **original GitHub Actions ZIP**, **byte for byte**, is preserved unde
 - [Source/run/member checksum manifest](../examples/manual-deliver/receipts/repotend-issue15-native-39123644533.manifest.json) — pins original artifact ID, run, candidate, host, and individually hashed raw member bytes.
 - [Offline ZIP/receipt integrity reference checks](../checks/test_deliver_external_qualification.py) — use only the Python standard library; verify full ZIP identity, selected raw reports, exact check mapping, canary observations, source hashes and refusal. **Passing these offline tests is not a new native check.**
 
-**Original source:** [Proofline Actions run #39123644533](https://github.com/grove/proofline/actions/runs/39123644533), [artifact 12134224973](https://github.com/grove/proofline/actions/runs/39123644533/artifacts/12134224973), originally scheduled to expire **October 25, 2026**. The original ZIP digest and its Git object hash were independently computed locally and matched the verified GitHub blob added by a **one-time checksum-guarded Foundryline Actions transfer** ([verified transfer job](https://github.com/grove/foundryline/actions/runs/39125313131)). Its write-enabled workflow was **removed immediately** from the review branch after committing the byte-identical ZIP. No permanent privileged workflow or schedule remains in the proposed change. This committed copy becomes durable on `main` only once the PR is merged.
+**Original source:** [Proofline Actions run #39123644533](https://github.com/grove/proofline/actions/runs/39123644533), [artifact 12134224973](https://github.com/grove/proofline/actions/runs/39123644533/artifacts/12134224973), originally scheduled to expire **October 25, 2026**. The original ZIP digest and its Git object hash were independently computed locally and matched the verified GitHub blob added by a **one-time checksum-guarded Foundryline Actions transfer** ([verified transfer job](https://github.com/grove/foundryline/actions/runs/39125313131)). Its write-enabled workflow was **removed immediately** from the review branch after committing the byte-identical ZIP. No permanent privileged workflow or schedule remains in the proposed change. The [review PR #23](https://github.com/grove/foundryline/pull/23) **has merged**; the original byte-identical ZIP is now durably committed on `main`, independent of GitHub's seven-day Actions artifact retention.
 
 **Archive retention note:** The ZIP contains exact raw input/source/export bytes, check selection/mapping JSON, native `report.json` and `evidence.json`, receipts, before/after and positive/negative startup probes. It also includes an immutable original prior local/refusal record. Review it as data; do not execute arbitrary extracted code, trust archived paths as authenticated host identities or interpret the historical failures as successes. The blob is larger than normal documentation because this is one deliberately bounded, real-host qualification record.
 
@@ -70,21 +70,21 @@ I compared the retrieved artifact's original ZIP checksum, GitHub blob SHA-1, me
 
 **Independence limit:** The review conducted here is a read-only desk inspection by an assistant; the earlier independent agent reviews shared operators/providers. No separately administered human reviewer, full adversarial security evaluation or general cross-host repeatability is established by this record.
 
-## Decision requested and boundaries
+## Decision recorded and boundaries
 
-**Recommendation: ACCEPT A NARROW MANUAL DELIVER REFERENCE**, conditioned on maintainer inspection of the raw records, code/permission difference and approval boundaries. This document is a **proposal**, not the maintainer's actual acceptance.
+**Decision: ACCEPT the narrow manual Deliver reference described below.** This is the project/operator's explicit scope decision following merged PR #23 and a read-only review of the retained records. It does **not** independently authenticate a human maintainer's personal inspection, certify the host security boundary or turn limited selected-check evidence into overall requirements acceptance. The evidence and its limitations remain visible for future reviewer challenge.
 
-Recommended scope if accepted:
+**Accepted scope:**
 
 - Documented **manual** Deliver route: original full request → optional Intentline draft/export → authorized existing coding agent → frozen candidate → actual selected Proofline checks → human-reviewed, separately authorized PR.
 - Observed direct Proofline route from [Foundryline PR #20](https://github.com/grove/foundryline/pull/20) and optional S1 producer/consumer route from [PR #22](https://github.com/grove/foundryline/pull/22), with this stronger **external RepoTend user-facing behavior** test.
 - The specific macOS/Codex/Node and pinned tool revisions above only. Explicit preservation of refusal, stale/unavailable/not-demonstrated evidence. No authoritative promise inventory, complete user-request acceptance or all-host security warranty.
 
-**Not accepted or not built by this recommendation:** scheduled issue intake, automatic publication, autonomous coding orchestration, full product requirement attestation, P2P-native contract conversion, Linux/Windows native Proofline execution, broad host isolation, deploy or merge automation.
+**Excluded from this acceptance (not qualified or not built):** scheduled issue intake, automatic publication, autonomous coding orchestration, full product requirement attestation, P2P-native contract conversion, Linux/Windows native Proofline execution, broad host isolation, deploy or merge automation.
 
-**After maintainer acceptance**, close Foundryline [#21](https://github.com/grove/foundryline/issues/21) and [#18](https://github.com/grove/foundryline/issues/18) as *completed for their explicitly scoped manual reference*, recording the accepted boundaries in both issues. Resolve [RepoTend #15](https://github.com/grove/repotend/issues/15) and [Proofline #59](https://github.com/grove/proofline/issues/59) independently for their actual product fixes while retaining historical failures. Do not use an issue closure as evidence of wider behavior.
+**Issue disposition:** Foundryline [#21](https://github.com/grove/foundryline/issues/21) and [#18](https://github.com/grove/foundryline/issues/18) may be closed **only as completed for this explicitly scoped manual reference**, with links to the original and negative evidence. Resolve [RepoTend #15](https://github.com/grove/repotend/issues/15) and [Proofline #59](https://github.com/grove/proofline/issues/59) independently for their own actually merged product fixes, keeping their historical failed receipts. An issue closure is not additional runtime evidence.
 
-**Release readiness:** The three recipes now have meaningful observations, but [Maintain](../patterns/maintain.md)'s formal acceptance and the README's release wording also need explicit review. A future `v0.2.0` tag/release is **not** authorized or created by this PR. The previous roadmap's conditional `v0.2` description mentions scheduled intake; **scheduling is not qualified or enabled**, and a manual-only release must say so in its own acceptance/release decision.
+**Release readiness:** [Maintain's scoped acceptance](maintain-v0.2-qualification-review.md) is now documented separately, and the three manual recipes have real but different evidence boundaries. The [v0.2.0 draft release notes](releases/v0.2.0.md) describe a **manual-only** release candidate. **No v0.2.0 tag or published release is created by this acceptance**. The older conditional roadmap described scheduled intake, but **scheduling is explicitly deferred, not qualified and not enabled**.
 
 ## How a maintainer can verify the archived record
 

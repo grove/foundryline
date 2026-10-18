@@ -6,6 +6,23 @@
 
 You can use the direct Proofline route without Intentline. Structured acceptance is an **optional** extra when a task deserves it.
 
+## First run
+
+| Before the detailed steps | Short path |
+| --- | --- |
+| Environment | **macOS, Python 3.11+, exact native Codex CLI `0.162.1`**, full reviewed Proofline checkout and successful native preflight. Linux reference CI is not native Proofline qualification. |
+| Pinned source | Start with the [Python teaching path](../examples/manual-deliver/README.md) and [Proofline `8e117fff4de2459637fe7f74f47ab17fc3341d84`](https://github.com/grove/proofline/tree/8e117fff4de2459637fe7f74f47ab17fc3341d84). That pin **failed for Node** on the observed Mac; Node users must read [Step 3's tested precursor/merged-fix distinction](#3-choose-checks-use-proofline-only-on-a-qualified-native-host) before choosing a pin. |
+| Inputs | Complete approved request bytes, identifiable frozen Git candidate, existing authorized test command and a new private output path outside the product. |
+| First action | Record the original request and allowed effects in [Step 1](#1-admit-one-real-request--no-automatic-approval). After authorized implementation/setup, confirm the frozen candidate and selected test permissions, then run the [minimal direct check-only template](#minimal-check-only-path--intentline-not-required). |
+| Expected artifact | `report.json` and native receipts binding source, candidate, selected argv and outcomes; inspect with `status --show-source`. Passing selected checks leaves overall coverage **UNKNOWN**. |
+| Stop / unavailable | Missing native boundary: **EXECUTION UNAVAILABLE**, no unprotected fallback. Missing executable/inadequate receipts: **CHECKS UNAVAILABLE**. Retain failures and **NOT DEMONSTRATED** obligations. |
+| Separate approval | Setup/dependency installation, implementation and selected test execution require scoped permission. Saving an Intentline draft/export is optional and separately authorized; no saved contract is needed for direct check-only. Push/PR CREATE, merge and deployment each need explicit authority. |
+
+An installed skill or manually following its document is not native execution
+evidence. No prompt is an enforcement boundary. The [accepted receipts](../docs/deliver-v0.2-qualification-review.md)
+are historical host-specific observations, not a new cold-start adoption result;
+that claim needs an actually new agent/session and a separate record.
+
 ## 1. Admit one real request — no automatic approval
 
 Start with the complete applicable original issue or request, including its comments, policies, constraints and exceptions. Freeze the source bytes/revision you intend to act on; if the task is disputed, first ask for a decision. A Gapline hypothesis or a RepoTend warning is not automatically an approved coding task.
@@ -146,8 +163,9 @@ integrity: the R1-only native check passed while R2 was **NOT DEMONSTRATED**;
 then separate actual R1 and R2 tests both passed on the exact same frozen
 coding-agent implementation using the original unaltered Intentline export.
 The archived evidence includes a real bad-map refusal and the earlier/paired
-OpenSSL failure controls. This supports a **proposed scoped manual Deliver
-acceptance**, pending independent maintainer review. Do not promote it to
+OpenSSL failure controls. This supports the **accepted scoped manual Deliver reference**
+in the [recorded decision](../docs/deliver-v0.2-qualification-review.md). The earlier
+pilot's pending-review language is historical. Do not promote acceptance to
 universal sandbox isolation, complete requirement satisfaction, PR/merge
 approval or a fully automatic controller.
 

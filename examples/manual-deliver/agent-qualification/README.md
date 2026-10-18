@@ -1,5 +1,11 @@
 # Real approved coding task: retain and validate Deliver receipts
 
+**Current scope:** [Accepted narrow manual Deliver reference](../../../docs/deliver-v0.2-qualification-review.md).
+**Historical record:** Pending-review and leave-open statements below describe this
+task's original handoff, before the later decision. Failures and unknowns remain
+evidence about their original candidates. Start a new run with the
+[Deliver first-run guide](../../../patterns/deliver.md#first-run).
+
 This is a separate follow-up to [PR #19](https://github.com/grove/foundryline/pull/19).
 That PR supplied the recipe, authored username fixture, native macOS check and
 missing-command control. None of those is a new coding-agent implementation.

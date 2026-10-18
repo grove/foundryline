@@ -13,6 +13,23 @@ This does **not** qualify scheduled audits, automatic issue creation, remediatio
 general host isolation, or blanket cross-platform operation.
 The [Discover recipe](discover.md) provides the related source-grounding workflow.
 
+## First run
+
+| Before the detailed steps | Short path |
+| --- | --- |
+| Environment | Git, npm, **Node.js >=22.16.0**, POSIX shell. Local evidence is macOS; the separate button run used Ubuntu 24.04 / Node 22.20.0. Upstream supports macOS/Linux and recommends WSL on Windows; other hosts need checks. **No AI, installed agent skill or GitHub token required.** |
+| Pinned source | [RepoTend `2d69cce901475380775f674b9cc5755f1f89f82e`](https://github.com/grove/repotend/tree/2d69cce901475380775f674b9cc5755f1f89f82e), with its locked dependencies. |
+| Inputs | Readable target/full SHA and dirty-file scope; separate tool and report directories outside the target. |
+| First action | In a new work directory, follow [Step 1's pinned setup](#1-prepare-trusted-tools-separately), then select the target and run [Step 3](#3-run-and-retain-actual-outputs) with an explicit `--root`. Authorize setup downloads/tool writes and report writes separately from target reads. |
+| Expected artifact | Raw `report.json`, `report.md`, stderr and exit files, plus tool/target identities. Warnings are advisory; a justified issue draft stays **NOT PUBLISHED**. |
+| Stop / unavailable | Missing tool, source or report: **UNAVAILABLE / NOT RUN**. Exit 2 or report errors: **UNAVAILABLE / INCOMPLETE**, never a clean audit. |
+| Separate approval | Fixes, remediation, issue/PR publication and any later merge or deployment need their own authorization. An assistant for triage and the [GitHub button path](../docs/manual-intake.md) are optional. |
+
+No prompt is an enforcement boundary; configure host permissions for your inputs.
+The [recorded adoption attempt](../examples/repo-maintenance/adoption.md) used a
+separate agent on the same host. A future uncoached adoption claim needs an actually
+new agent/session, disclosed inputs and its own record; this guide adds no such run.
+
 ## 1. Prepare trusted tools separately
 
 You need Git, npm, and **Node.js >=22.16.0** (built-in TypeScript stripping).

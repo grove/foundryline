@@ -29,6 +29,10 @@ Where this document says **SUPPORTED**, it means the described statement is supp
 
 ## Issue #4 acceptance assessment
 
+**Historical assessment:** The pending/owner-decision labels in this table record
+the review before the [final scoped acceptance](#final-decision-record--accepted).
+They remain evidence of that review stage, not current outstanding approval gates.
+
 The original issue's eight criteria were not mechanically checked off in its body; PR #5 closed it. This table assesses the **underlying requirements**, not issue-label history.
 
 | Criterion | Verdict | Supporting observations | Limits or next decision |

@@ -1,5 +1,10 @@
 # Real Intentline → Proofline trace for issue #21
 
+**Current scope:** [Accepted narrow manual Deliver reference](../../../docs/deliver-v0.2-qualification-review.md).
+**Historical record:** Pending-review and keep-open statements below predate the
+later decision. The original failures, unlinked R2 and unknown coverage stay
+unchanged. Start a new run with the [Deliver first-run guide](../../../patterns/deliver.md#first-run).
+
 This implements the user-authorized [issue #21](https://github.com/grove/foundryline/issues/21)
 follow-up to [Deliver #18](https://github.com/grove/foundryline/issues/18).
 The substantive coding change adds two ordinary Python reference checks for

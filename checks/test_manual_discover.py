@@ -44,6 +44,7 @@ DOCUMENTS = (
     ROOT / "examples/manual-deliver/refusals.md",
     ROOT / "examples/manual-deliver/handoff-template.md",
     ROOT / "examples/manual-deliver/native-qualification.md",
+    ROOT / "examples/manual-deliver/agent-qualification/README.md",
     ROOT / "examples/manual-deliver/intentline-trace/README.md",
     ROOT / "examples/repo-maintenance/README.md",
     ROOT / "examples/repo-maintenance/issue-proposal.md",
@@ -72,15 +73,20 @@ class ManualDiscoverReferenceTests(unittest.TestCase):
         checked = 0
         for document in DOCUMENTS:
             for raw_destination in LOCAL_LINK.findall(read(document)):
-                # Markdown local anchor links are not separate files.
-                if raw_destination.startswith("#"):
-                    continue
                 url = urlsplit(raw_destination)
-                if url.scheme or url.netloc or not url.path:
+                if url.scheme or url.netloc:
                     continue
-                path = (document.parent / unquote(url.path)).resolve()
+                path = (document.parent / unquote(url.path)).resolve() if url.path else document
                 with self.subTest(source=str(document.relative_to(ROOT)), link=raw_destination):
                     self.assertTrue(path.is_file(), f"broken local link: {raw_destination}")
+                    if url.fragment and path.suffix == ".md":
+                        headings = re.findall(r"^#{1,6} (.+)$", read(path), re.MULTILINE)
+                        anchors = {
+                            re.sub(r"[^\w -]", "", heading.lower()).replace(" ", "-")
+                            for heading in headings
+                        }
+                        self.assertIn(unquote(url.fragment), anchors,
+                                      f"broken heading link: {raw_destination}")
                 checked += 1
         self.assertGreaterEqual(checked, 10)
 

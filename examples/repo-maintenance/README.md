@@ -1,5 +1,10 @@
 # Real manual Maintain example
 
+**Current scope:** [Accepted narrow manual Maintain reference](../../docs/maintain-v0.2-qualification-review.md).
+**Historical record:** The pending-review language below predates that decision;
+the original outputs, failures and same-host adoption limits remain unchanged.
+For a new run, start with the [Maintain first-run guide](../../patterns/maintain.md#first-run).
+
 **ACTUAL EXECUTION, not an authored report fixture.** On 2026-10-18, a Codex
 operator ran RepoTend's deterministic auditor on a separate public Foundryline
 checkout. The [manual recipe](../../patterns/maintain.md) is the portable procedure.

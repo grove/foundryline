@@ -79,6 +79,52 @@ class ManualV02ReadinessChecks(unittest.TestCase):
         self.assertIn(ORIGINAL_ZIP_SHA256, DELIVER.read_text())
         self.assertIn(ORIGINAL_ZIP_SHA256, RELEASE.read_text())
 
+    def test_first_runs_expose_inputs_pins_stops_and_permissions(self):
+        readme = README.read_text()
+        required = {
+            "discover": ("0.163.0", "bd6a1dea3677482e2d4a305a5bf8084cb3c95e69",
+                         "installed `gapline-audit`", "NOT CHECKED"),
+            "maintain": ("22.16.0", "2d69cce901475380775f674b9cc5755f1f89f82e",
+                         "No AI", "--root", "report.json"),
+            "deliver": ("0.162.1", "8e117fff4de2459637fe7f74f47ab17fc3341d84",
+                        "no saved contract", "EXECUTION UNAVAILABLE", "failed for Node"),
+        }
+        for recipe, tokens in required.items():
+            with self.subTest(recipe=recipe):
+                self.assertIn(f"patterns/{recipe}.md#first-run", readme)
+                guide = (ROOT / f"patterns/{recipe}.md").read_text()
+                first_run = guide.split("\n## First run\n", 1)[1].split("\n## ", 1)[0]
+                for field in ("Environment", "Pinned source", "Inputs", "First action",
+                              "Expected artifact", "Stop / unavailable", "Separate approval"):
+                    self.assertIn(f"| {field} |", first_run)
+                for token in tokens:
+                    self.assertIn(token, first_run)
+                self.assertIn("No prompt is an enforcement boundary", first_run)
+        self.assertNotIn("skills@latest", readme + (ROOT / "patterns/discover.md").read_text())
+
+    def test_current_acceptance_is_distinct_from_historical_handoffs(self):
+        for recipe, decision in (
+            ("discover", "discover-v0.1-qualification-review.md"),
+            ("maintain", "maintain-v0.2-qualification-review.md"),
+            ("deliver", "deliver-v0.2-qualification-review.md"),
+        ):
+            with self.subTest(recipe=recipe):
+                intro = (ROOT / f"patterns/{recipe}.md").read_text().split("\n## ", 1)[0]
+                self.assertIn("ACCEPTED", intro)
+                self.assertIn(decision, intro)
+                self.assertNotIn("pending", intro.lower())
+        for example, decision in (
+            ("repotend-pilot", "discover-v0.1-qualification-review.md"),
+            ("repo-maintenance", "maintain-v0.2-qualification-review.md"),
+            ("manual-deliver/agent-qualification", "deliver-v0.2-qualification-review.md"),
+            ("manual-deliver/intentline-trace", "deliver-v0.2-qualification-review.md"),
+        ):
+            with self.subTest(example=example):
+                intro = (ROOT / f"examples/{example}/README.md").read_text().split("\n## ", 1)[0]
+                self.assertIn("Current scope", intro)
+                self.assertIn("Historical record", intro)
+                self.assertIn(decision, intro)
+
     def test_active_workflows_are_not_scheduled_or_publishers(self):
         names = {p.name for p in (ROOT / ".github/workflows").glob("*.yml")}
         self.assertEqual(names, {"maintain-audit.yml", "reference-checks.yml"})

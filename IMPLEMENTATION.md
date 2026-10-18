@@ -1,10 +1,10 @@
 # Foundryline — Implementation Plan
 
-**Status:** Manual Discover **v0.1 accepted with the tested macOS/Codex host scope** (maintainer decision recorded in [issue #6](https://github.com/grove/foundryline/issues/6) on 2026-10-18). Reference checks/CI and pilot receipts exist; no hosted controller, scheduler, autonomous issue publisher, broad host-isolation certification, or published release is implied.  
+**Status:** Manual Discover **v0.1 accepted with the tested macOS/Codex host scope** (maintainer decision recorded in [issue #6](https://github.com/grove/foundryline/issues/6) on 2026-10-18). Reference checks/CI and pilot receipts exist; no hosted controller, scheduler, autonomous issue publisher, or broad host-isolation certification is implied. The [v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0) was published separately on 2026-10-18.  
 **Decision date:** 2026-10-18.  
 **See:** [README](README.md) · [Design](DESIGN.md).
 
-**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. An [actual pinned RepoTend pilot record](examples/repotend-pilot/README.md) now retains a live read-only audit, fresh-agent reproduction, witnessed source-unavailable refusal, unpublished proposal and usage. The [Discover v0.1 evidence review](docs/discover-v0.1-qualification-review.md) recommended narrow host-specific acceptance; the maintainer **accepted that limited scope on 2026-10-18**. Host-visibility limits, shared-operator reproduction and unknown cost/model identity remain disclosed. [Prepared v0.1 release notes](docs/releases/v0.1.0.md) describe the supported manual blueprint; they do **not** create a tag or published release.
+**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. An [actual pinned RepoTend pilot record](examples/repotend-pilot/README.md) now retains a live read-only audit, fresh-agent reproduction, witnessed source-unavailable refusal, unpublished proposal and usage. The [Discover v0.1 evidence review](docs/discover-v0.1-qualification-review.md) recommended narrow host-specific acceptance; the maintainer **accepted that limited scope on 2026-10-18**. Host-visibility limits, shared-operator reproduction and unknown cost/model identity remain disclosed. The [v0.1.0 release notes](docs/releases/v0.1.0.md) describe the supported manual blueprint; the [public GitHub Release](https://github.com/grove/foundryline/releases/tag/v0.1.0) is published at the accepted commit `085ed37739b1eaed7933205a99c0ba220a1e13b6`.
 
 ## 0. Objective and development approach
 
@@ -205,7 +205,7 @@ Use the same source permissions, time/token limits, and review criteria. Collect
 
 **v0.3 (conditional):** Controlled issue publication when justified, with a scoped standing mandate and robust duplicate handling; optional bounded Deliver reference.
 
-These versions are **planning labels**, not tagged/published releases or commitments to implement all stages.
+**v0.1.0 is now a published, narrowly scoped release.** Later versions are planning labels, not tagged/published releases or commitments to implement all stages.
 
 ## 9. First issue to execute
 

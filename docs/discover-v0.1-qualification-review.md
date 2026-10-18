@@ -89,3 +89,7 @@ The omission of \`workflows.ts\` is a legitimate explicit *investigation scope* 
 - **Approval to document release readiness:** The user authorized recording this acceptance and preparing project-status updates. **No publication of a Git tag, public GitHub Release, RepoTend issue, repair, or deployment is implied.** See the [prepared release notes](releases/v0.1.0.md).
 
 Issue #4's original evidence classifications remain unchanged. A release decision cannot retroactively strengthen sandbox controls or convert proposed checks into executed proof.
+
+## Publication record — after acceptance
+
+On 2026-10-18, following the separately recorded maintainer acceptance, [Foundryline v0.1.0](https://github.com/grove/foundryline/releases/tag/v0.1.0) was **published** with a Git tag pointing to commit `085ed37739b1eaed7933205a99c0ba220a1e13b6`. The [one-time release workflow](https://github.com/grove/foundryline/actions/runs/39110116925) succeeded and the public release/tag were independently read back via GitHub. Publication is a separate effect and does not expand any underlying host/sandbox, reproduction, or product correctness claim. The one-time write-enabled publisher was removed from active workflows after success.

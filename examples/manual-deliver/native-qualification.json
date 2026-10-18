@@ -1,0 +1,87 @@
+{
+  "kind": "foundryline.observed-native-proofline-qualification",
+  "schema_version": 1,
+  "status": "OBSERVED — BOUNDED CHECK-ONLY, NOT AN END-TO-END DELIVERY",
+  "evidence_source": {
+    "workflow_run_id": 39114778567,
+    "workflow_event": "pull_request",
+    "run_url": "https://github.com/grove/foundryline/actions/runs/39114778567",
+    "workflow_source_revision": "0dc58c86b3aceca96e65fb73eb8debb9f23e7b4f",
+    "foundryline_checked_commit": "14c20409f89993e52d45a0946f48d10364c95d58",
+    "proofline_commit": "8e117fff4de2459637fe7f74f47ab17fc3341d84",
+    "artifact_id": 12131743490,
+    "artifact_sha256": "e4e9722c02f0bdfd35639e8045cf7f1a24bbf102055dc572d1628e9e9f358797",
+    "artifact_expires_utc": "2026-10-25",
+    "raw_artifact_retained_in_git": false
+  },
+  "host": {
+    "os": "macOS 15.7.9 ARM64",
+    "python": "3.12",
+    "node": "22.23.2",
+    "codex_cli": "0.162.1",
+    "codex_invocation": "native Mach-O binary of pinned Codex npm package; no Node shebang in sandbox",
+    "model_dispatches": 0
+  },
+  "source_and_candidate": {
+    "source_file": "original-request.md",
+    "source_sha256": "12ee949075e5faaf1d260055cc0ffe193b0c18259f68a06d4e4b4d81b1f0a9b6",
+    "authored_fixture": true,
+    "coding_agent_implementation": "NOT OBSERVED",
+    "candidate_initial_commit": "828b8d9327e6a3d7fc2af5f4a43b15bf50ce4756",
+    "proofline_candidate_commit": "cdd45db5149b9a4f9c2ef1315d9f49352c455907",
+    "proofline_candidate_tree": "16aebbdc8d43a23049ada8182ca7b6651fbcdfc6"
+  },
+  "positive": {
+    "kind": "bounded_local_check",
+    "native_boundary": "OBSERVED — NARROW CANARIES",
+    "status": "CHECKS PASSED",
+    "cli_exit": 0,
+    "status_readback_exit": 0,
+    "report_sha256": "e28e5a799ee3101765cbadb9e19eabd8552fa4589012d07cd2d202f115c2da78",
+    "receipt_sha256": "f914d652e03437541fbf6a62a51e16827676dc1609228a59fe0090a2036977e0",
+    "check_count": 1,
+    "selected_argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_username_validation.UsernameValidationTests.test_rejects_blank"
+    ],
+    "native_observation": "PASSED",
+    "native_check_returncode": 0,
+    "elapsed_seconds": 1.8400461249999864,
+    "selected_check_elapsed_seconds": 0.2115507080000043,
+    "source_coverage": {
+      "R1": "LIMITED SELECTED-CHECK EVIDENCE — illustrative only, no Intentline import",
+      "R2": "NOT DEMONSTRATED BY SELECTED CHECK",
+      "completeness": "UNKNOWN"
+    }
+  },
+  "negative": {
+    "kind": "bounded_local_check",
+    "native_boundary": "OBSERVED — NARROW CANARIES",
+    "status": "CHECKS UNAVAILABLE",
+    "cli_exit": 2,
+    "report_sha256": "d5d463fa3805feed4b3439483af978d6217c3f513902d189ec24b39bb9e155d4",
+    "receipt_sha256": "ecc1021166907d7d012a95207dbc9e52b3f57c14d0acb85a5f1d7e2eaff69b19",
+    "selected_argv": ["/nonexistent/foundryline-negative-check"],
+    "native_observation": "UNAVAILABLE",
+    "error": "No such file or directory",
+    "product_defect_demonstrated": false
+  },
+  "prior_blocked_run": {
+    "workflow_run_id": 39114638979,
+    "status": "CHECKS FAILED in raw report but test was NOT EXECUTED",
+    "reason": "Npm JavaScript Codex wrapper could not resolve node inside native sandbox",
+    "product_failure": false
+  },
+  "not_demonstrated": [
+    "coding agent implementation of an actual admitted request",
+    "saved initial Intentline JSON export and actual importer-link round trip",
+    "independent complete source requirement review",
+    "passing selected native check for R2",
+    "authorized PR CREATE or merge",
+    "universal host sandbox or operating system qualification",
+    "model or monetary cost of coding stage"
+  ]
+}

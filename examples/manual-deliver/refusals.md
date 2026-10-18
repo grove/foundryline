@@ -33,3 +33,10 @@ contains missing executable `/nonexistent/foundryline-negative-check`, CLI exit
 `2`, a native `UNAVAILABLE` observation and no product assertion. The original
 npm-wrapper launch failure is separately recorded as an infrastructure issue;
 neither is a product defect.
+
+**Separate coding-agent follow-up observations:** The [approved task's retained
+runs](agent-qualification/README.md) include a new native missing-command control
+(**CHECKS UNAVAILABLE**) and a local macOS boundary refusal (**EXECUTION UNAVAILABLE**,
+actual-oracle read allowed, no selected checks executed). The historical matrix
+above describes PR #19's evidence; unsupported exports, deliberately stale or
+truncated receipts and missing publication permission remain **PROPOSED — NOT RUN**.

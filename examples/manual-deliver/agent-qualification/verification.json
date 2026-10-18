@@ -1,0 +1,245 @@
+{
+  "kind": "foundryline.observed-coding-agent-deliver-follow-up",
+  "schema_version": 1,
+  "status": "OBSERVED bounded direct-route coding candidate and native checks; independent maintainer decision pending",
+  "original_task": {
+    "path": "approved-task.md",
+    "sha256": "5d3e04a3699f9adafa4b65c0178943509f78e3a8e6a82ebe69360dd3aaa8ed5e",
+    "provenance": "Transcribed from actual authorizing user message in this Codex session; not externally authenticated by Intentline",
+    "issue_snapshot": "issue-18.json",
+    "issue_snapshot_sha256": "1c81f84fcda278503adda6e44a6f67ce3ae237552436a42bcc546db42b86564d"
+  },
+  "baseline_commit": "c802795918900735a95aa7b9faf05454feb9cce5",
+  "implementation_commit": "01d2db090713a8852a66d1dfddca90bf7cac548a",
+  "implementation_tree": "62f8517b004ba4c80b69da3f6e915cb5cab8518f",
+  "coding_agent": "Active Codex session implementing receipt retention and validation; separate from model-free Proofline",
+  "proofline_commit": "8e117fff4de2459637fe7f74f47ab17fc3341d84",
+  "intentline": {
+    "pin": "25e926f57e69395193fc0ac258f9e6dd2332cb18",
+    "execution": "NOT RUN — optional, direct route used"
+  },
+  "host": {
+    "host": "macOS-15.7.9-arm64-arm-64bit",
+    "run_id": "39117358329",
+    "event": "push",
+    "foundryline_commit": "01d2db090713a8852a66d1dfddca90bf7cac548a",
+    "foundryline_tree": "62f8517b004ba4c80b69da3f6e915cb5cab8518f",
+    "proofline_commit": "8e117fff4de2459637fe7f74f47ab17fc3341d84",
+    "selected_argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "checks",
+      "-v"
+    ],
+    "python": "3.12.10 (v3.12.10:0cc81280367, Apr  8 2025, 08:46:59) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "source_sha256": "5d3e04a3699f9adafa4b65c0178943509f78e3a8e6a82ebe69360dd3aaa8ed5e",
+    "codex": "codex-cli 0.162.1",
+    "model_use": "NONE: Proofline check-only; coding agent is external",
+    "saved_intentline_export": "NONE",
+    "coding_agent_execution": "Active user-authorized Codex session; see implementation commit and original request"
+  },
+  "remote_evidence": {
+    "run_id": 39117358329,
+    "url": "https://github.com/grove/foundryline/actions/runs/39117358329",
+    "workflow_commit": "77709987ecb0e6915eb0d57186f6a3d7987febfc",
+    "workflow_path": ".github/workflows/deliver-native-probe.yml",
+    "artifact_id": 12132358034,
+    "artifact": "native-run.zip",
+    "sha256": "26fee247cd924aa3c23952d356bf3e38be3402c0e2dcfd95f6d82f9811352326",
+    "github_digest": "sha256:26fee247cd924aa3c23952d356bf3e38be3402c0e2dcfd95f6d82f9811352326",
+    "expires_at": "2026-10-25T09:57:54Z",
+    "raw_retained_in_git": true
+  },
+  "coverage_completeness": "UNKNOWN",
+  "effects": {
+    "coding": "Explicitly authorized by original task",
+    "checks": "Explicitly authorized by original task; one selected suite plus negative command",
+    "pr_create": "Explicitly authorized by original task; independent evidence review retained; actual publication state is the GitHub PR, not a verifier grant",
+    "merge": "NOT AUTHORIZED",
+    "deploy": "NOT AUTHORIZED",
+    "unrelated_repositories": "NOT AUTHORIZED"
+  },
+  "limitations": [
+    "Only selected command evidence; no overall source acceptance certification",
+    "Receipt integrity validates retained observations, not completeness or broad sandbox security",
+    "Historical username R2 remains NOT DEMONSTRATED by its earlier selected R1 native check",
+    "Optional Intentline export/import round trip NOT RUN",
+    "Independent agent review is not independent maintainer approval",
+    "Final evidence and status documentation appendices are added after the checked implementation commit; native evidence does not describe later PR HEAD",
+    "Coding-stage model usage and monetary cost unavailable; check-only model_dispatches is 0",
+    "Actions upload omits dotfiles; exact candidate trees, including .gitattributes, are retained in native-candidate.bundle and negative-candidate.bundle, not solely as visible ZIP product members"
+  ],
+  "positive": {
+    "report": "native-record/report.json",
+    "report_sha256": "e2cca77070bef32eba6a4cb039952886de1b41f3b8eecc36e823807be60381a1",
+    "receipt": "native-record/receipts/check-000.json",
+    "receipt_sha256": "22629934760ad01ff509eb4f87d430c497b3d5cf07101b8bba0fd470114de039",
+    "status": "CHECKS PASSED",
+    "cli_exit": 0,
+    "native_boundary": "OBSERVED",
+    "candidate_commit": "fc72c56a5ef98838df62626d687278be322f4518",
+    "candidate_tree": "62f8517b004ba4c80b69da3f6e915cb5cab8518f",
+    "snapshot_sha256": "07eb117bc022c4e90b0168314f40fe46862ec7bc70d9ba107f0aafd41523d785",
+    "selected_argv": [
+      [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "checks",
+        "-v"
+      ]
+    ],
+    "observation": "PASSED",
+    "returncode": 0,
+    "elapsed_seconds": 2.7709597080000066,
+    "selected_check_elapsed_seconds": 0.39003125000000693,
+    "model_dispatches": 0,
+    "status_readback_exit": 0,
+    "observed_unittest_count": 27,
+    "native_receipt_stderr_truncated": false,
+    "proofline_cli": {
+      "cwd": "/Users/runner/work/foundryline/foundryline/tool",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-B",
+        "proofline.py",
+        "check",
+        "--repo",
+        "/Users/runner/work/foundryline/foundryline/source",
+        "--source",
+        "/Users/runner/work/_temp/foundryline-deliver-native/source-S1.txt",
+        "--checks",
+        "/Users/runner/work/_temp/foundryline-deliver-native/checks.json",
+        "--seconds",
+        "240",
+        "--check-seconds",
+        "70",
+        "--output",
+        "/Users/runner/work/_temp/foundryline-deliver-native/native-record"
+      ],
+      "provenance": "Exact shell argv expansion from retained tested workflow and runner paths; selected argv also recorded directly in raw Proofline report"
+    }
+  },
+  "negative": {
+    "report": "negative-record/report.json",
+    "report_sha256": "9f7b951aca4fde17bf3eaf39ace65c1f507e29627192f47d23e4e37ba1b12740",
+    "receipt": "negative-record/receipts/check-000.json",
+    "receipt_sha256": "6cfea7d6e53fead6f99a0cd7f7f6492d34ab6e5e4d5e066ba5330a9cd12c3380",
+    "status": "CHECKS UNAVAILABLE",
+    "cli_exit": 2,
+    "native_boundary": "OBSERVED",
+    "candidate_commit": "fc72c56a5ef98838df62626d687278be322f4518",
+    "candidate_tree": "62f8517b004ba4c80b69da3f6e915cb5cab8518f",
+    "snapshot_sha256": "a480b97b93de3fbce71dbb89126c6c680e5692ce9e0f75cb0b999afec079512f",
+    "selected_argv": [
+      [
+        "/nonexistent/foundryline-negative-check"
+      ]
+    ],
+    "observation": "UNAVAILABLE",
+    "returncode": null,
+    "elapsed_seconds": 1.1384429160000025,
+    "selected_check_elapsed_seconds": 0.15595958400000143,
+    "model_dispatches": 0,
+    "proofline_cli": {
+      "cwd": "/Users/runner/work/foundryline/foundryline/tool",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-B",
+        "proofline.py",
+        "check",
+        "--repo",
+        "/Users/runner/work/foundryline/foundryline/source",
+        "--source",
+        "/Users/runner/work/_temp/foundryline-deliver-native/source-S1.txt",
+        "--checks",
+        "/Users/runner/work/_temp/foundryline-deliver-native/negative-checks.json",
+        "--seconds",
+        "100",
+        "--check-seconds",
+        "25",
+        "--output",
+        "/Users/runner/work/_temp/foundryline-deliver-native/negative-record"
+      ],
+      "provenance": "Exact shell argv expansion from retained tested workflow and runner paths; selected argv also recorded directly in raw Proofline report"
+    }
+  },
+  "local_refusal": {
+    "artifact": "local-refusal.zip",
+    "sha256": "9e09034115131e87f75729aa4b229562eb8e889f72587a4ecc0b562a7b4f69fd",
+    "host": "macOS 26.6.2 arm64, Python 3.14.8, native Codex CLI 0.162.1",
+    "reports": {
+      "native": {
+        "report_sha256": "20f8bb057016326e9e86c93520025f5f59a4db26b545681981f121a9da6b4166",
+        "status": "EXECUTION UNAVAILABLE",
+        "error": "Native check boundary unavailable; no unprotected fallback",
+        "native_boundary": "NOT VERIFIED",
+        "observations": {
+          "nonce": "c01bea1c7ea241108a109965f530664b",
+          "writes": {
+            "source": "denied",
+            "input": "denied",
+            "candidate": "denied",
+            "git_head": "denied",
+            "receipt": "denied"
+          },
+          "reads": {
+            "receipt-canary": "denied",
+            "oracle-canary": "denied",
+            "other-role-canary": "denied",
+            "actual_oracle": "allowed"
+          },
+          "mode_change": "denied",
+          "scratch": true,
+          "network": "denied"
+        },
+        "selected_checks_executed": 0,
+        "elapsed_seconds": 0.828400750644505
+      },
+      "negative": {
+        "report_sha256": "270618de6b1ab72813e48c59302e21dffceaadac5695d4003790ac88cae5a854",
+        "status": "EXECUTION UNAVAILABLE",
+        "error": "Native check boundary unavailable; no unprotected fallback",
+        "native_boundary": "NOT VERIFIED",
+        "observations": {
+          "nonce": "cb28dc62f7cd478292dad066394c214b",
+          "writes": {
+            "source": "denied",
+            "input": "denied",
+            "candidate": "denied",
+            "git_head": "denied",
+            "receipt": "denied"
+          },
+          "reads": {
+            "receipt-canary": "denied",
+            "oracle-canary": "denied",
+            "other-role-canary": "denied",
+            "actual_oracle": "allowed"
+          },
+          "mode_change": "denied",
+          "scratch": true,
+          "network": "denied"
+        },
+        "selected_checks_executed": 0,
+        "elapsed_seconds": 0.9849533746019006
+      }
+    },
+    "meaning": "Both attempts refused before selected checks because actual_oracle read was allowed; no sandbox bypass or unprotected fallback"
+  },
+  "independent_review": {
+    "path": "independent-review.md",
+    "reviewer": "Fresh read-only /root/independent_evidence_review; same operator/model family",
+    "finding": "Incorrect reconstructed CLI path level in initial authored readback; corrected and independently confirmed in addendum",
+    "implementation_defects_found": 0,
+    "maintainer_approval": false
+  },
+  "bundle_recovery": "bundle-recovery.json",
+  "final_ordinary_validation": "final-validation.json"
+}

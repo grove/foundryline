@@ -1,0 +1,30 @@
+{
+  "kind": "foundryline.ordinary-final-validation",
+  "status": "PASSED \u2014 ordinary checks only, not native qualification of PR HEAD",
+  "test_argv": [
+    "python3.14",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "checks",
+    "-v"
+  ],
+  "test_exit": 0,
+  "observed_test_count": 27,
+  "test_output": "final-tests.txt",
+  "test_output_sha256": "de251d5793382889e8642ac505195d0fb1f559c5cdd2b0afb20e0d1410940122",
+  "local_links": "final-links.json",
+  "git_diff_check_exit": 0,
+  "python_changes_after_native_checked_implementation": [],
+  "native_checked_implementation": "01d2db090713a8852a66d1dfddca90bf7cac548a",
+  "scope": "Final documentation/evidence appendix ordinary validation; no native status promotion to later PR HEAD",
+  "not_checked": [
+    "Remote HTTP link content revalidation",
+    "Markdown anchor targets",
+    "Optional Intentline runtime",
+    "Portable original native snapshot replay",
+    "Independent maintainer acceptance"
+  ]
+}

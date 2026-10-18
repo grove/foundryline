@@ -1,16 +1,16 @@
 # Foundryline Discover v0.1 — Evidence Review and Release Recommendation
 
-**Status:** REVIEW COMPLETE AS A SOURCE/RECEIPT ASSESSMENT; **MAINTAINER DECISION PENDING**.  
+**Status:** REVIEW COMPLETE; **SCOPED MANUAL DISCOVER V0.1 ACCEPTED BY MAINTAINER on 2026-10-18**, limited to the recorded macOS/Codex setup.  
 **Review date:** 2026-10-18 (Europe/Oslo).  
 **Related:** [Issue #6](https://github.com/grove/foundryline/issues/6) · [Issue #4](https://github.com/grove/foundryline/issues/4) · [PR #5](https://github.com/grove/foundryline/pull/5) · [Discover runbook](../patterns/discover.md) · [Retained pilot](../examples/repotend-pilot/README.md).
 
 ## Executive conclusion
 
-**Recommendation: QUALIFY WITH STATED SCOPE, subject to a maintainer's explicit acceptance.**
+**Decision: ACCEPT SCOPED V0.1.** This was the review's conditional recommendation; the maintainer accepted it on 2026-10-18, [recorded in issue #6](https://github.com/grove/foundryline/issues/6). The acceptance does **not** add new technical evidence or broaden the test scope.
 
 The retained records support a **real, bounded, manual Discover demonstration** on the specified macOS/Codex setup: an explicitly invoked Gapline skill, source-grounded read-only investigation of a fixed RepoTend snapshot, a useful *source-supported* finding, a separately configured fresh-agent reproduction, an observed missing-source refusal, and an unpublished issue proposal. The project-owned reference and receipt tests also passed in GitHub Actions.
 
-This is **not** a certification of a general-purpose secure agent host, universally reproducible performance, complete product correctness, a demonstrated wrong-root write, or the entire Discover → GitHub issue-publication lifecycle. The fresh-agent reproduction shared an operator and model/provider environment; the full host tool boundary was not adversarially validated. The operator must decide whether a **narrow first-use v0.1 qualification** is useful on these stated terms or whether an independently administered rerun is a prerequisite. Until that decision is made, retain **qualification pending maintainer review** in product-facing status.
+This is **not** a certification of a general-purpose secure agent host, universally reproducible performance, complete product correctness, a demonstrated wrong-root write, or the entire Discover → GitHub issue-publication lifecycle. The fresh-agent reproduction shared an operator and model/provider environment; the full host tool boundary was not adversarially validated. The maintainer has chosen to **accept the narrow first-use manual Discover v0.1 qualification with those limits**. An independently administered rerun would be needed to claim stronger independence, not for this scoped first use. Do not imply universal security or broader host qualification.
 
 This review does not itself create a new audit receipt or approve any effect.
 
@@ -62,13 +62,13 @@ The present review PR should run the same project-owned checks in CI. A passing 
 
 ## Release options for the maintainer
 
-### Recommended: accept a narrowly scoped manual Discover v0.1
+### Accepted: a narrowly scoped manual Discover v0.1
 
 An accurate release statement would be:
 
 > Foundryline's **manual Discover reference** has been exercised on macOS with Codex CLI 0.163.0 using a pinned, operator-prepared read-only source bundle. It produced one supported source-level issue proposal, a fresh-agent same-host reproduction, and a witnessed missing-source refusal. The approach has **not** been qualified for general host isolation, autonomous issue publication, schedules, automatic skill discovery, or end-to-end coding and delivery.
 
-This recommendation is **conditional**, not an assertion that such approval was given. The release is eligible for a limited *manual reference* claim only. Additional execution environments and adopters require their own qualification.
+The maintainer **accepted this limited manual reference claim** on 2026-10-18. This approval does not qualify additional execution environments or adopters; those need their own supporting evidence.
 
 ### If stronger independence or isolation is a requirement: remain pending
 
@@ -79,12 +79,13 @@ Request only the evidence that changes the decision:
 
 The omission of \`workflows.ts\` is a legitimate explicit *investigation scope* limit; it only blocks a claim about the entire RepoTend preview call graph, **not** the narrower finding about the generated command.
 
-## Final decision record — maintainer to complete
+## Final decision record — accepted
 
-- **Decision:** PENDING (choose \`ACCEPT SCOPED V0.1\` or \`REMAIN PENDING\`).
-- **Authorizing maintainer and date:** NOT RECORDED.
-- **Accepted host/scope boundaries:** NOT APPROVED.
-- **Additional evidence required, if any:** NOT DECIDED.
-- **Authorization to update public release status:** NOT GRANTED BY THIS REVIEW.
+- **Decision:** **ACCEPT SCOPED V0.1** on 2026-10-18, as expressly approved by the maintainer in the project discussion and recorded in [Foundryline issue #6](https://github.com/grove/foundryline/issues/6). This is an operator-reported approval in the connected project workflow, **not** independent cryptographic authentication of a person's identity.
+- **Accepted capability:** A manual, reproducible **Discover reference pattern** using the recorded macOS/Codex CLI 0.163.0 setup, pinned operator-prepared public source bundle, explicit Gapline invocation, evidence-calibrated findings, source-grounded **NOT PUBLISHED** issue proposal, fresh-agent same-host reproduction, and a source-unavailable refusal.
+- **Explicit limits accepted:** Reproduction shared operator, runtime and provider; exact model identity and billable cost were unavailable; additional host interfaces and transitive source behavior were not fully inspected. Source-level finding did **not** demonstrate a runtime wrong-root write. No full host isolation certification.
+- **Outside v0.1 qualification:** Automatic issue creation, schedules, coding/repair, PR merging, deployment, independent cross-host or cross-provider replication, and Proofline/Deliver or RepoTend/Maintain pattern qualification.
+- **Additional evidence required for this narrow decision:** None. Broader claims require new tests and authority.
+- **Approval to document release readiness:** The user authorized recording this acceptance and preparing project-status updates. **No publication of a Git tag, public GitHub Release, RepoTend issue, repair, or deployment is implied.** See the [prepared release notes](releases/v0.1.0.md).
 
-Do not change a checkbox, release claim or GitHub issue status merely to make the release appear complete. The next action is an explicit maintainer acceptance or a narrowly assigned additional qualification task. Separate RepoTend issue publication and any repair remain **out of scope**.
+Issue #4's original evidence classifications remain unchanged. A release decision cannot retroactively strengthen sandbox controls or convert proposed checks into executed proof.

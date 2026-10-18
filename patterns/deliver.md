@@ -1,6 +1,6 @@
 # Deliver — from an approved task to check evidence and a reviewable PR
 
-**Status: manual reference implemented; a Foundryline native Proofline pilot is NOT YET RUN.** This recipe is a guide, not an agent controller or permission-granting program. Follow [issue #18](https://github.com/grove/foundryline/issues/18) for actual host qualification. The [worked example](../examples/manual-deliver/README.md) is deliberately authored and its ordinary Python tests can run in CI; they are **not native Proofline receipts**.
+**Status: manual reference implemented, with one real macOS Proofline native check of an AUTHORED fixture and an observed unavailable-command control.** See the [retained qualification evidence](../examples/manual-deliver/native-qualification.md) and [issue #18](https://github.com/grove/foundryline/issues/18). This is **not** a coding-agent implementation of an approved real issue, Intentline-export round trip, automated controller or authorized PR handoff; those remain unqualified. The [worked example](../examples/manual-deliver/README.md) also has separate ordinary Python CI checks, which are **not Proofline native receipts**.
 
 **In one sentence:** Choose an authorized task, let your existing coding agent implement it, check the exact candidate with [Proofline](https://github.com/grove/proofline), then decide separately whether to open or merge a pull request.
 
@@ -43,7 +43,7 @@ PYTHON="$(python3 -B -c 'import os,sys; print(os.path.realpath(sys.executable))'
 
 The report's original-source SHA-256, candidate snapshot/commit/tree identity, **selected argv**, exit statuses, elapsed time and bounded native stdout/stderr receipts bind evidence to that one candidate. Capture actual CLI/version/host, record path, tool/command hashes when available, full source, remaining gaps, check/model costs where actually measurable, and effects observed. **A selected check passing is only evidence about that check.** A new candidate after a fix needs a new check; an old frozen record remains historical evidence about the *old* candidate.
 
-The concrete [teaching candidate](../examples/manual-deliver/README.md) supplies the actual Python test commands and a source with two requirements, but its native Proofline commands remain **PROPOSED — NOT RUN**.
+The [teaching candidate](../examples/manual-deliver/README.md) now has an **observed model-free native Proofline check-only run on macOS**: one selected R1 unit test passed on a frozen candidate, while the separate R2 requirement remains unselected and unproven by that check. Its [real receipts](../examples/manual-deliver/native-qualification.md) bind the result to source/candidate identities. The optional Intentline-import path is **PROPOSED — NOT RUN**; no coding agent performed this example's implementation.
 
 ### Optional Intentline JSON export → Proofline evidence map
 
@@ -89,7 +89,7 @@ Read the full `report.json` and bounded receipts using `status`; do not infer an
 
 A check failure is not automatically a runtime product bug; a passed check does not certify all promised behavior. If needed, choose additional behavior-focused checks with known authorization, re-freeze/re-run and retain the new record separately. Old check records refer to their original frozen candidate; don't retroactively overwrite them.
 
-The [authored refusal matrix](../examples/manual-deliver/refusals.md) defines expected behaviors. **None of those specific Foundryline/Proofline native negative controls have been executed as part of this PR.** They must be witnessed on a qualified host before claiming Deliver is live-qualified.
+The [refusal matrix](../examples/manual-deliver/refusals.md) now has **one witnessed native negative control**: an intentionally absent selected executable returned **CHECKS UNAVAILABLE**, not failed product behavior, on the same macOS/Codex setup. The other scenarios remain **PROPOSED — NOT RUN**. A single negative control and one selected check do **not** qualify the complete software-delivery journey.
 
 ## 5. Prepare a reviewable handoff — publication remains separate
 
@@ -103,4 +103,4 @@ For a small, routine task, just use your existing coding agent and chosen Proofl
 
 This repository can run **authored Python fixture tests and structural checks on Linux**, but it cannot treat those as a live native Proofline run on its qualified macOS/Codex environment. This Deliver recipe and candidate are **copyable and testable as examples**, not proof of a completed Foundryline coding-agent → Proofline → PR delivery.
 
-To qualify Deliver, independently inspect one **real macOS/Codex CLI 0.162.1 native check-only run**, the exact frozen candidate and original source, a real refusal/failure case, the full Intentline export if used, and a reviewable **NOT PUBLISHED** handoff. Record actual host model calls, if any, separately from model-free checks. **If the host or receipts are unavailable, report NOT RUN/UNAVAILABLE rather than upgrading the claim.**
+The [real macOS/Codex CLI 0.162.1 check and missing-executable control](../examples/manual-deliver/native-qualification.md) are now **observed and inspected** for the authored example only. To qualify **end-to-end Deliver**, independently review an actual authorized coding-agent implementation of a real request, its unchanged original source, frozen candidate and complete obligations, then perform Proofline checks against that candidate and prepare a separately authorized reviewable PR. If optional Intentline structured planning is used, its single-S1 export and actual R-to-argv links need their **own** verified round trip; none was executed here. No automatic merge or deployment. **If required evidence is absent, preserve NOT RUN/UNAVAILABLE rather than upgrading a claim.**

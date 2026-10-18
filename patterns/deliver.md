@@ -1,6 +1,6 @@
 # Deliver — from an approved task to check evidence and a reviewable PR
 
-**Status: manual reference plus a bounded real coding-agent candidate and native check handoff.** PR #19 supplied the [authored fixture and original native check](../examples/manual-deliver/native-qualification.md). The separate [approved receipt-validation task](../examples/manual-deliver/agent-qualification/README.md) records actual coding-agent implementation, a frozen candidate, native Proofline checks and refusal evidence for independent review and an explicitly authorized PR. No automated controller, Intentline round trip, completeness certification or maintainer approval is implied. See [issue #18](https://github.com/grove/foundryline/issues/18).
+**Status: manual reference plus a bounded real coding-agent candidate and native check handoff.** PR #19 supplied the [authored fixture and original native check](../examples/manual-deliver/native-qualification.md). The separate [approved receipt-validation task](../examples/manual-deliver/agent-qualification/README.md) records actual coding-agent implementation, a frozen candidate, native Proofline checks and refusal evidence for independent review and an explicitly authorized PR. The [issue #21 trace](../examples/manual-deliver/intentline-trace/README.md) adds an actual initial S1 Intentline draft/export, native import, gap/relink comparison and safe map rejection. No automated controller, completeness certification or maintainer approval is implied. See [issue #18](https://github.com/grove/foundryline/issues/18).
 
 **In one sentence:** Choose an authorized task, let your existing coding agent implement it, check the exact candidate with [Proofline](https://github.com/grove/proofline), then decide separately whether to open or merge a pull request.
 
@@ -43,7 +43,7 @@ PYTHON="$(python3 -B -c 'import os,sys; print(os.path.realpath(sys.executable))'
 
 The report's original-source SHA-256, candidate snapshot/commit/tree identity, **selected argv**, exit statuses, elapsed time and bounded native stdout/stderr receipts bind evidence to that one candidate. Capture actual CLI/version/host, record path, tool/command hashes when available, full source, remaining gaps, check/model costs where actually measurable, and effects observed. **A selected check passing is only evidence about that check.** A new candidate after a fix needs a new check; an old frozen record remains historical evidence about the *old* candidate.
 
-The [teaching candidate](../examples/manual-deliver/README.md) now has an **observed model-free native Proofline check-only run on macOS**: one selected R1 unit test passed on a frozen candidate, while the separate R2 requirement remains unselected and unproven by that check. Its [real receipts](../examples/manual-deliver/native-qualification.md) bind the result to source/candidate identities. The optional Intentline-import path is **PROPOSED — NOT RUN**; no coding agent performed this example's implementation.
+The [teaching candidate](../examples/manual-deliver/README.md) now has an **observed model-free native Proofline check-only run on macOS**: one selected R1 unit test passed on a frozen candidate, while the separate R2 requirement remains unselected and unproven by that check. Its [real receipts](../examples/manual-deliver/native-qualification.md) bind the result to source/candidate identities. The optional Intentline-import path for this authored username fixture is **PROPOSED — NOT RUN**; no coding agent performed this example's implementation. The separate [real issue #21 trace](../examples/manual-deliver/intentline-trace/README.md) exercises the genuine producer/consumer path.
 
 ### Optional Intentline JSON export → Proofline evidence map
 
@@ -89,7 +89,7 @@ Read the full `report.json` and bounded receipts using `status`; do not infer an
 
 A check failure is not automatically a runtime product bug; a passed check does not certify all promised behavior. If needed, choose additional behavior-focused checks with known authorization, re-freeze/re-run and retain the new record separately. Old check records refer to their original frozen candidate; don't retroactively overwrite them.
 
-The [refusal matrix](../examples/manual-deliver/refusals.md) now has **one witnessed native negative control**: an intentionally absent selected executable returned **CHECKS UNAVAILABLE**, not failed product behavior, on the same macOS/Codex setup. The other scenarios remain **PROPOSED — NOT RUN**. A single negative control and one selected check do **not** qualify the complete software-delivery journey.
+The [refusal matrix](../examples/manual-deliver/refusals.md) records PR #19's **one witnessed native negative control**: an intentionally absent selected executable returned **CHECKS UNAVAILABLE**, not failed product behavior. The later [issue #21 trace](../examples/manual-deliver/intentline-trace/README.md) adds an actual mismatched-map import rejection and retains a local native-boundary refusal. Other matrix scenarios remain **PROPOSED — NOT RUN**. These controls do **not** qualify the complete software-delivery journey.
 
 ## 5. Prepare a reviewable handoff — publication remains separate
 
@@ -115,7 +115,10 @@ These observations cover one bounded direct-route task. Linux reference tests
 remain ordinary checks. Evidence belongs to the exact frozen implementation,
 not the later PR evidence/status appendices. Independent maintainer approval,
 merge and deployment remain separate decisions. The optional Intentline
-single-S1 export/import route is **PROPOSED — NOT RUN**; it needs its own real
-round trip if used. Historical unlinked R2 evidence stays **NOT DEMONSTRATED**
+single-S1 export/import route was skipped for that direct-route task. The separate
+[issue #21 trace](../examples/manual-deliver/intentline-trace/README.md) now retains
+a real producer export, native consumer, R2 gap/relink comparison and mismatched-map
+rejection against its own frozen implementation. That does not execute the
+authored username fixture's proposed import path or certify all requirements. Historical unlinked R2 evidence stays **NOT DEMONSTRATED**
 by the earlier selected R1 check, and `coverage_completeness: UNKNOWN` applies
 throughout. Keep absent evidence **NOT RUN/UNAVAILABLE**.

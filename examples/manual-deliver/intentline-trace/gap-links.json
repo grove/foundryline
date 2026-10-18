@@ -1,0 +1,21 @@
+{
+  "R1": [
+    {
+      "index": 0,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "checks",
+        "-p",
+        "test_intentline_trace.py",
+        "-k",
+        "test_complete_source_and_citations",
+        "-v"
+      ]
+    }
+  ]
+}

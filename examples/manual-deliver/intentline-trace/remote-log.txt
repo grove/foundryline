@@ -1,0 +1,495 @@
+Model-free Proofline check on macOS	Set up job	﻿2026-10-18T10:20:51.0056640Z Current runner version: '2.337.0'
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0078050Z ##[group]Runner Image Provisioner
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0079790Z Hosted Compute Agent
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0080800Z Version: 20260828.587
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0081900Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0084590Z Build Date: 2026-08-28T16:44:25Z
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0086060Z Worker ID: {ea97d720-4006-4909-9dee-590c42ffd0a0}
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0086640Z Azure Region: westus
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0087030Z ##[endgroup]
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0088310Z ##[group]Operating System
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0088730Z macOS
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0089080Z 15.7.9
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0089420Z 24G830
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0089770Z ##[endgroup]
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0090130Z ##[group]Runner Image
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0090510Z Image: macos-15-arm64
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0090900Z Version: 20260907.0337.1
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0091640Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260907.0337/images/macos/macos-15-arm64-Readme.md
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0092850Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260907.0337
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0093520Z ##[endgroup]
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0094320Z ##[group]GITHUB_TOKEN Permissions
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0095770Z Contents: read
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0096160Z Metadata: read
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0096530Z ##[endgroup]
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0098040Z Secret source: Actions
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0098650Z Cache mode: write
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0099130Z Prepare workflow directory
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0356660Z Prepare all required actions
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.0393870Z Getting action download info
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.4855270Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:51.8270450Z Download action repository 'actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c' (SHA:e797f83bcb11b83ae66e0230d6156d7c80228e7c)
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:52.0325180Z Download action repository 'actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444' (SHA:a0853c24544627f65ddf259abe73b1d18a591444)
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:52.2037820Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Model-free Proofline check on macOS	Set up job	2026-10-18T10:20:52.5846900Z Complete job name: Model-free Proofline check on macOS
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	﻿2026-10-18T10:20:52.6783400Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6787400Z with:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6788570Z   path: source
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6789890Z   ref: f54d44eb1d21fae2d7cfd8aae4216e91019a87d3
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6790540Z   persist-credentials: false
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6791000Z   repository: grove/foundryline
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6795450Z   token: ***
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6795870Z   ssh-strict: true
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6796240Z   ssh-user: git
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6796600Z   clean: true
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6796970Z   sparse-checkout-cone-mode: true
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6797420Z   fetch-depth: 1
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6797950Z   fetch-tags: false
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6798380Z   show-progress: true
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6799630Z   lfs: false
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6800150Z   submodules: false
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6800530Z   set-safe-directory: true
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6800960Z   allow-unsafe-pr-checkout: false
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:52.6802350Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.1726690Z Syncing repository: grove/foundryline
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.1729510Z ##[group]Getting Git version info
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.1730230Z Working directory is '/Users/runner/work/foundryline/foundryline/source'
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.1731180Z [command]/opt/homebrew/bin/git version
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2344800Z git version 2.55.0
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2444330Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2452170Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/c4e013ff-8d83-4cbc-9f74-622d9c6f6348/.gitconfig'
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2454020Z Temporarily overriding HOME='/Users/runner/work/_temp/c4e013ff-8d83-4cbc-9f74-622d9c6f6348' before making global git config changes
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2455860Z Adding repository directory to the temporary git global config as a safe directory
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2508320Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/foundryline/foundryline/source
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2535050Z ##[group]Determining repository object format
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2536610Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2537510Z ##[group]Initializing the repository
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2540720Z [command]/opt/homebrew/bin/git init /Users/runner/work/foundryline/foundryline/source
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2996650Z hint: Using 'master' as the name for the initial branch. This default branch name
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.2999520Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3002140Z hint: to use in all of your new repositories, which will suppress this warning,
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3004220Z hint: call:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3038340Z hint:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3040040Z hint: 	git config --global init.defaultBranch <name>
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3041760Z hint:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3043180Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3045400Z hint: 'development'. The just-created branch can be renamed via this command:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3047920Z hint:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3049560Z hint: 	git branch -m <name>
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3050870Z hint:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3052340Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3055090Z Initialized empty Git repository in /Users/runner/work/foundryline/foundryline/source/.git/
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3059530Z [command]/opt/homebrew/bin/git remote add origin https://github.com/grove/foundryline
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3123210Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3131890Z ##[group]Disabling automatic garbage collection
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3134280Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3188680Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3191640Z ##[group]Setting up auth
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3192490Z Removing SSH command configuration
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3193380Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.3267410Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.4474010Z Removing HTTP extra header
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.4477170Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.4541370Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.5515780Z Removing includeIf entries pointing to credentials config files
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.5523820Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.5705760Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.6737800Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.6829150Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/foundryline/foundryline/source/.git.path /Users/runner/work/_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.6927640Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/foundryline/foundryline/source/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.7003860Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/source/.git.path /github/runner_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.7074550Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/source/.git/worktrees/*.path /github/runner_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.7140670Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.7141480Z ##[group]Fetching the repository
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:53.7145800Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin f54d44eb1d21fae2d7cfd8aae4216e91019a87d3
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2244100Z From https://github.com/grove/foundryline
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2245340Z  * branch            f54d44eb1d21fae2d7cfd8aae4216e91019a87d3 -> FETCH_HEAD
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2255290Z [command]/opt/homebrew/bin/git rev-parse --verify --quiet f54d44eb1d21fae2d7cfd8aae4216e91019a87d3^{object}
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2338220Z f54d44eb1d21fae2d7cfd8aae4216e91019a87d3
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2341480Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2342360Z ##[group]Determining the checkout info
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2343310Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2343890Z [command]/opt/homebrew/bin/git sparse-checkout disable
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2434730Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2504010Z ##[group]Checking out the ref
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2507190Z [command]/opt/homebrew/bin/git checkout --progress --force f54d44eb1d21fae2d7cfd8aae4216e91019a87d3
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2839870Z HEAD is now at f54d44e Retain real Intentline S1 export and source-bound reference checks for issue 21
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2854400Z ##[endgroup]
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.2964150Z [command]/opt/homebrew/bin/git log -1 --format=%H
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.3033100Z f54d44eb1d21fae2d7cfd8aae4216e91019a87d3
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.3041440Z ##[group]Removing auth
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.3043480Z Removing SSH command configuration
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.3046820Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.3112160Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.4044440Z Removing HTTP extra header
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.4051580Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.4160870Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5327640Z Removing includeIf entries pointing to credentials config files
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5332330Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5396720Z includeif.gitdir:/Users/runner/work/foundryline/foundryline/source/.git.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5399060Z includeif.gitdir:/Users/runner/work/foundryline/foundryline/source/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5400990Z includeif.gitdir:/github/workspace/source/.git.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5402390Z includeif.gitdir:/github/workspace/source/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5405990Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/foundryline/foundryline/source/.git.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5468230Z /Users/runner/work/_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5476640Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/foundryline/foundryline/source/.git.path \/Users\/runner\/work\/_temp\/git\-credentials\-e9d004a2\-cec6\-4b5c\-a531\-451337929f9e\.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5558200Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/foundryline/foundryline/source/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5619960Z /Users/runner/work/_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5632050Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/foundryline/foundryline/source/.git/worktrees/*.path \/Users\/runner\/work\/_temp\/git\-credentials\-e9d004a2\-cec6\-4b5c\-a531\-451337929f9e\.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5717390Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/source/.git.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5789160Z /github/runner_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5803120Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/source/.git.path \/github\/runner_temp\/git\-credentials\-e9d004a2\-cec6\-4b5c\-a531\-451337929f9e\.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5883050Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/source/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5948550Z /github/runner_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.5960410Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/source/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-e9d004a2\-cec6\-4b5c\-a531\-451337929f9e\.config
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.6044490Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.7327810Z Removing credentials config '/Users/runner/work/_temp/git-credentials-e9d004a2-cec6-4b5c-a531-451337929f9e.config'
+Model-free Proofline check on macOS	Check out frozen coding-agent implementation	2026-10-18T10:20:54.7343510Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	﻿2026-10-18T10:20:54.7743370Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7744570Z with:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7745180Z   repository: grove/proofline
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7745970Z   ref: 8e117fff4de2459637fe7f74f47ab17fc3341d84
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7759010Z   path: tool
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7759720Z   persist-credentials: false
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7766930Z   token: ***
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7767620Z   ssh-strict: true
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7768250Z   ssh-user: git
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7768850Z   clean: true
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7769500Z   sparse-checkout-cone-mode: true
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7770220Z   fetch-depth: 1
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7770810Z   fetch-tags: false
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7771430Z   show-progress: true
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7772050Z   lfs: false
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7772630Z   submodules: false
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7773260Z   set-safe-directory: true
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7773970Z   allow-unsafe-pr-checkout: false
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.7774710Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9367050Z Syncing repository: grove/proofline
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9369020Z ##[group]Getting Git version info
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9370290Z Working directory is '/Users/runner/work/foundryline/foundryline/tool'
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9389480Z [command]/opt/homebrew/bin/git version
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9504190Z git version 2.55.0
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9530790Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9536400Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/3c6e8943-de18-4c11-ad33-363b92f3c9d4/.gitconfig'
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9548460Z Temporarily overriding HOME='/Users/runner/work/_temp/3c6e8943-de18-4c11-ad33-363b92f3c9d4' before making global git config changes
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9619820Z Adding repository directory to the temporary git global config as a safe directory
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9634610Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/foundryline/foundryline/tool
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9656580Z ##[group]Determining repository object format
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9660460Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9663470Z ##[group]Initializing the repository
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9669030Z [command]/opt/homebrew/bin/git init /Users/runner/work/foundryline/foundryline/tool
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9816330Z hint: Using 'master' as the name for the initial branch. This default branch name
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9819910Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9822010Z hint: to use in all of your new repositories, which will suppress this warning,
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9823230Z hint: call:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9823920Z hint:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9830950Z hint: 	git config --global init.defaultBranch <name>
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9835380Z hint:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9836500Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9841420Z hint: 'development'. The just-created branch can be renamed via this command:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9844280Z hint:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9846380Z hint: 	git branch -m <name>
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9848380Z hint:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9851980Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9856740Z Initialized empty Git repository in /Users/runner/work/foundryline/foundryline/tool/.git/
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9863770Z [command]/opt/homebrew/bin/git remote add origin https://github.com/grove/proofline
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9941400Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9944150Z ##[group]Disabling automatic garbage collection
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:54.9945470Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.0038300Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.0039690Z ##[group]Setting up auth
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.0040650Z Removing SSH command configuration
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.0050230Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.0140870Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.1185780Z Removing HTTP extra header
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.1192450Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.1262250Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.2697920Z Removing includeIf entries pointing to credentials config files
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.2699530Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.2795360Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.3938760Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.4027220Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git.path /Users/runner/work/_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.4131960Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.4348330Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/tool/.git.path /github/runner_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.4429830Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/tool/.git/worktrees/*.path /github/runner_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.4509940Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.4511380Z ##[group]Fetching the repository
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:55.4513280Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 8e117fff4de2459637fe7f74f47ab17fc3341d84
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4691620Z From https://github.com/grove/proofline
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4692660Z  * branch            8e117fff4de2459637fe7f74f47ab17fc3341d84 -> FETCH_HEAD
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4703000Z [command]/opt/homebrew/bin/git rev-parse --verify --quiet 8e117fff4de2459637fe7f74f47ab17fc3341d84^{object}
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4775280Z 8e117fff4de2459637fe7f74f47ab17fc3341d84
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4776480Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4776800Z ##[group]Determining the checkout info
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4777160Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4782140Z [command]/opt/homebrew/bin/git sparse-checkout disable
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4871410Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4964810Z ##[group]Checking out the ref
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.4968120Z [command]/opt/homebrew/bin/git checkout --progress --force 8e117fff4de2459637fe7f74f47ab17fc3341d84
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7390250Z HEAD is now at 8e117ff docs: add neighboring projects to README
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7432000Z ##[endgroup]
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7529290Z [command]/opt/homebrew/bin/git log -1 --format=%H
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7608210Z 8e117fff4de2459637fe7f74f47ab17fc3341d84
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7618670Z ##[group]Removing auth
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7619130Z Removing SSH command configuration
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7621670Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.7707510Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.9259410Z Removing HTTP extra header
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.9293890Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:56.9385260Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0428790Z Removing includeIf entries pointing to credentials config files
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0429620Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0544750Z includeif.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0548250Z includeif.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0553130Z includeif.gitdir:/github/workspace/tool/.git.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0554300Z includeif.gitdir:/github/workspace/tool/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0563790Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0637480Z /Users/runner/work/_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0651460Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git.path \/Users\/runner\/work\/_temp\/git\-credentials\-21121d38\-48f6\-466f\-a848\-85705425fd34\.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0746000Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0819760Z /Users/runner/work/_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0831700Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/foundryline/foundryline/tool/.git/worktrees/*.path \/Users\/runner\/work\/_temp\/git\-credentials\-21121d38\-48f6\-466f\-a848\-85705425fd34\.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0907240Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/tool/.git.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0970330Z /github/runner_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.0974580Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/tool/.git.path \/github\/runner_temp\/git\-credentials\-21121d38\-48f6\-466f\-a848\-85705425fd34\.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.1047040Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/tool/.git/worktrees/*.path
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.1108390Z /github/runner_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.1120680Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/tool/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-21121d38\-48f6\-466f\-a848\-85705425fd34\.config
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.1194300Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.2300640Z Removing credentials config '/Users/runner/work/_temp/git-credentials-21121d38-48f6-466f-a848-85705425fd34.config'
+Model-free Proofline check on macOS	Check out exact Proofline runtime	2026-10-18T10:20:57.2302760Z ##[endgroup]
+Model-free Proofline check on macOS	Python 3.12 on macOS	﻿2026-10-18T10:20:57.2489860Z ##[group]Run actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2490230Z with:
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2490360Z   python-version: 3.12
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2490520Z   check-latest: false
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2492630Z   token: ***
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2492780Z   update-environment: true
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2492970Z   allow-prereleases: false
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2493140Z   freethreaded: false
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.2493300Z ##[endgroup]
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.4121610Z ##[group]Installed versions
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.4193980Z (node:1665) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.4240270Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.4243940Z Successfully set up CPython (3.12.10)
+Model-free Proofline check on macOS	Python 3.12 on macOS	2026-10-18T10:20:57.4245300Z ##[endgroup]
+Model-free Proofline check on macOS	Node 22 for Codex package	﻿2026-10-18T10:20:57.4362420Z ##[group]Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4362750Z with:
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4362890Z   node-version: 22
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4363130Z   always-auth: false
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4363300Z   check-latest: false
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4365690Z   token: ***
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4365890Z   package-manager-cache: true
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4366080Z env:
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4366370Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4366890Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/arm64/lib/pkgconfig
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4367350Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4367960Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4368450Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.4368860Z ##[endgroup]
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.6179470Z Found in cache @ /Users/runner/hostedtoolcache/node/22.23.2/arm64
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.6182950Z (node:1668) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.6183700Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:57.6184590Z ##[group]Environment details
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:58.5098800Z node: v22.23.2
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:58.5099220Z npm: 10.9.8
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:58.5099440Z yarn: 1.22.22
+Model-free Proofline check on macOS	Node 22 for Codex package	2026-10-18T10:20:58.5100380Z ##[endgroup]
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	﻿2026-10-18T10:20:58.5242800Z ##[group]Run set -euo pipefail
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5243220Z ^[[36;1mset -euo pipefail^[[0m
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5243580Z ^[[36;1mnpm install -g @openai/codex@0.162.1 --ignore-scripts --no-audit --no-fund^[[0m
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5243980Z ^[[36;1mcodex --version^[[0m
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5244220Z ^[[36;1mtest "$(codex --version)" = "codex-cli 0.162.1"^[[0m
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5321540Z shell: /bin/bash -e {0}
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5321830Z env:
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5322190Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5322670Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/arm64/lib/pkgconfig
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5328340Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5328850Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5329360Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:20:58.5329800Z ##[endgroup]
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:21:04.3167510Z 
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:21:04.3189360Z added 2 packages in 6s
+Model-free Proofline check on macOS	Install exactly Codex CLI 0.162.1	2026-10-18T10:21:04.8293670Z codex-cli 0.162.1
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	﻿2026-10-18T10:21:04.9577740Z ##[group]Run set -euo pipefail
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9578370Z ^[[36;1mset -euo pipefail^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9578620Z ^[[36;1mcase "$(uname -m)" in^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9578990Z ^[[36;1m  arm64) triple=aarch64-apple-darwin ;;^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9580830Z ^[[36;1m  x86_64) triple=x86_64-apple-darwin ;;^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9581800Z ^[[36;1m  *) echo "Unsupported macOS architecture"; exit 1 ;;^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9582300Z ^[[36;1mesac^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9582670Z ^[[36;1m# Codex's npm entrypoint starts with /usr/bin/env node, which is not^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9583420Z ^[[36;1m# available inside Proofline's intentionally restricted sandbox.^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9583920Z ^[[36;1m# The identical-version native Mach-O binary is installed as an^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9584530Z ^[[36;1m# optional dependency; use it directly without changing permissions.^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9584990Z ^[[36;1mmodule_root="$(npm root -g)"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9585390Z ^[[36;1mnative="$(find "$module_root/@openai" -type f \^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9585960Z ^[[36;1m  -path "*/vendor/$triple/bin/codex" -print -quit)"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9586280Z ^[[36;1mtest -n "$native"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9586590Z ^[[36;1mtest -x "$native"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9586870Z ^[[36;1mmkdir -p "$RUNNER_TEMP/native-codex-bin"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9587340Z ^[[36;1mln -s "$native" "$RUNNER_TEMP/native-codex-bin/codex"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9587720Z ^[[36;1mecho "$RUNNER_TEMP/native-codex-bin" >> "$GITHUB_PATH"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9588150Z ^[[36;1m"$native" --version^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9588480Z ^[[36;1mtest "$("$native" --version)" = "codex-cli 0.162.1"^[[0m
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9645840Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9646280Z env:
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9646590Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9647190Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/arm64/lib/pkgconfig
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9647710Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9648250Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9648690Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:04.9649100Z ##[endgroup]
+Model-free Proofline check on macOS	Use installed native Codex binary instead of the Node wrapper	2026-10-18T10:21:05.2745000Z codex-cli 0.162.1
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	﻿2026-10-18T10:21:05.3060920Z ##[group]Run set -euo pipefail
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3061370Z ^[[36;1mset -euo pipefail^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3061730Z ^[[36;1mumask 077^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3062040Z ^[[36;1mmkdir -p "$WORK"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3062570Z ^[[36;1mpython3 -B - <<'PYRUN'^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3062970Z ^[[36;1mimport hashlib,json,os,platform,shutil,subprocess,sys,time^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3063390Z ^[[36;1mfrom pathlib import Path^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3063890Z ^[[36;1mroot=Path(os.environ["WORK"])^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3064320Z ^[[36;1msrc=Path(os.environ["SRC"])^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3064680Z ^[[36;1mtool=Path(os.environ["TOOL"])^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3065050Z ^[[36;1mdef save(name,value):^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3065550Z ^[[36;1m    (root/name).write_text(json.dumps(value,indent=2)+"\n")^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3065890Z ^[[36;1mdef git(path,ref):^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3066370Z ^[[36;1m    return subprocess.check_output(["git","-C",str(path),"rev-parse",ref],text=True).strip()^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3066980Z ^[[36;1massert git(src,"HEAD")=="f54d44eb1d21fae2d7cfd8aae4216e91019a87d3"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3067610Z ^[[36;1massert git(src,"HEAD^{tree}")=="a003d013419fd1f142f0d05175938c6b0d7008f3"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3079260Z ^[[36;1massert not subprocess.check_output(["git","-C",str(src),"status","--porcelain"])^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3079920Z ^[[36;1massert git(tool,"HEAD")=="8e117fff4de2459637fe7f74f47ab17fc3341d84"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3080260Z ^[[36;1mexport=root/"export"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3080600Z ^[[36;1mshutil.copytree(src/"examples/manual-deliver/intentline-trace/export",export)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3081240Z ^[[36;1mbefore={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in export.iterdir()}^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3081710Z ^[[36;1mpython=str(Path(sys.executable).resolve())^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3082320Z ^[[36;1mbase=[python,"-B","-m","unittest","discover","-s","checks","-p","test_intentline_trace.py","-k"]^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3082950Z ^[[36;1msource=base+["test_complete_source_and_citations","-v"]^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3083350Z ^[[36;1mintegrity=base+["test_export_completion_and_file_identities","-v"]^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3083890Z ^[[36;1msave("identity.json",{"host":platform.platform(),"python":sys.version,^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3084390Z ^[[36;1m     "codex":subprocess.check_output(["codex","--version"],text=True).strip(),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3084970Z ^[[36;1m     "run_id":os.environ["GITHUB_RUN_ID"],"run_attempt":os.environ["GITHUB_RUN_ATTEMPT"],^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3085470Z ^[[36;1m     "event":os.environ["GITHUB_EVENT_NAME"],"implementation_commit":git(src,"HEAD"),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3086010Z ^[[36;1m     "implementation_tree":git(src,"HEAD^{tree}"),"proofline_commit":git(tool,"HEAD"),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3086540Z ^[[36;1m     "source_sha256":before["source-S1.txt"],"export_hashes":before,^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3087040Z ^[[36;1m     "model_calls":"0: check-only; external coding-stage accounting unavailable"})^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3087570Z ^[[36;1mscenarios=[("gap",[source],{"R1":[{"index":0,"argv":source}]}),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3088120Z ^[[36;1m           ("linked",[source,integrity],{"R1":[{"index":0,"argv":source}],"R2":[{"index":1,"argv":integrity}]}),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3088660Z ^[[36;1m           ("invalid-map",[source],{"R1":[{"index":0,"argv":["/nonexistent/mismatched-argv"]}]})]^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3089150Z ^[[36;1mfor name,checks,links in scenarios:^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3089470Z ^[[36;1m    save(name+"-checks.json",checks)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3089910Z ^[[36;1m    save(name+"-links.json",links)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3090280Z ^[[36;1m    cmd=[python,"-B",str(tool/"proofline.py"),"check","--repo",str(src),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3090820Z ^[[36;1m         "--source",str(export/"source-S1.txt"),"--intentline-export",str(export),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3091420Z ^[[36;1m         "--intentline-links",str(root/(name+"-links.json")),"--checks",str(root/(name+"-checks.json")),^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3091990Z ^[[36;1m         "--seconds","200","--check-seconds","40","--output",str(root/(name+"-record"))]^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3093100Z ^[[36;1m    save(name+"-invocation.json",{"argv":cmd,"cwd":str(tool)})^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3093460Z ^[[36;1m    start=time.monotonic()^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3093850Z ^[[36;1m    p=subprocess.run(cmd,cwd=tool,capture_output=True,timeout=240)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3094240Z ^[[36;1m    (root/(name+".stdout")).write_bytes(p.stdout)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3094610Z ^[[36;1m    (root/(name+".stderr")).write_bytes(p.stderr)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3094930Z ^[[36;1m    (root/(name+".exit")).write_text(str(p.returncode)+"\n")^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3095310Z ^[[36;1m    save(name+"-elapsed.json",{"seconds":time.monotonic()-start})^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3095640Z ^[[36;1m    report=root/(name+"-record/report.json")^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3095900Z ^[[36;1m    if report.is_file():^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3096270Z ^[[36;1m        status_cmd=[python,"-B",str(tool/"proofline.py"),"status",str(report),"--show-source"]^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3096760Z ^[[36;1m        save(name+"-status-invocation.json",{"argv":status_cmd,"cwd":str(tool)})^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3097230Z ^[[36;1m        s=subprocess.run(status_cmd,cwd=tool,capture_output=True,timeout=60)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3097940Z ^[[36;1m        (root/(name+"-status.stdout")).write_bytes(s.stdout)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3098350Z ^[[36;1m        (root/(name+"-status.stderr")).write_bytes(s.stderr)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3098770Z ^[[36;1m        (root/(name+"-status.exit")).write_text(str(s.returncode)+"\n")^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3099270Z ^[[36;1m        product=root/(name+"-record/inputs/product")^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3099690Z ^[[36;1m        if (product/".git").exists():^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3100380Z ^[[36;1m            subprocess.run(["git","-C",str(product),"bundle","create",str(root/(name+"-candidate.bundle")),"--all"],check=True)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3100970Z ^[[36;1mafter={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in export.iterdir()}^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3101360Z ^[[36;1msave("export-integrity-after.json",after)^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3101630Z ^[[36;1massert before==after^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3101990Z ^[[36;1mfor name in ("gap","linked"):^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3102770Z ^[[36;1m    report=json.loads((root/(name+"-record/report.json")).read_bytes())^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3103320Z ^[[36;1m    assert report["status"]=="CHECKS PASSED",report["status"]^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3103820Z ^[[36;1m    assert report["boundary"]["assessment"]["status"]=="OBSERVED"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3104320Z ^[[36;1m    assert report["candidate_tree"]=="a003d013419fd1f142f0d05175938c6b0d7008f3"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3104900Z ^[[36;1m    assert report["model_dispatches"]==0^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3105300Z ^[[36;1m    assert (root/(name+".exit")).read_text().strip()=="0"^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3105610Z ^[[36;1mPYRUN^[[0m
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3149340Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3149680Z env:
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3150080Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3150590Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/arm64/lib/pkgconfig
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3151080Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3151570Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3152010Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3152470Z   WORK: /Users/runner/work/_temp/foundryline-21-native
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3152830Z   SRC: /Users/runner/work/foundryline/foundryline/source
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3153270Z   TOOL: /Users/runner/work/foundryline/foundryline/tool
+Model-free Proofline check on macOS	Run real exported S1 with a gap, expanded links, and invalid map	2026-10-18T10:21:05.3153610Z ##[endgroup]
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	﻿2026-10-18T10:21:12.1806700Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1807200Z with:
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1807400Z   name: foundryline-21-native-39118875068-1
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1807760Z   path: /Users/runner/work/_temp/foundryline-21-native/
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1808020Z   include-hidden-files: true
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1808200Z   retention-days: 7
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1808360Z   if-no-files-found: warn
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1808660Z   compression-level: 6
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1808850Z   overwrite: false
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1809080Z env:
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1809340Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1809760Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/arm64/lib/pkgconfig
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1810190Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1810550Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1810950Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/arm64
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.1811270Z ##[endgroup]
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.4288700Z (node:1838) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.4291070Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.6494990Z With the provided path, there will be 680 files uploaded
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.6498730Z Artifact name is valid!
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:12.6499410Z Root directory input is valid!
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:13.0249190Z Beginning upload of artifact content to blob storage
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:13.6265290Z (node:1838) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:14.5875150Z Uploaded bytes 8388608
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:14.8193570Z Uploaded bytes 13895202
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:14.8998450Z Finished uploading artifact content to blob storage!
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:14.9005680Z SHA256 digest of uploaded artifact zip is 278ba30ee5ec16aca688616eebb7c5d670d6ea5d7aaaa6e0f32fe5c277e246cd
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:14.9079870Z Finalizing artifact upload
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:15.2090190Z Artifact foundryline-21-native-39118875068-1.zip successfully finalized. Artifact ID 12133581853
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:15.2094680Z Artifact foundryline-21-native-39118875068-1 has been successfully uploaded! Final size is 13895202 bytes. Artifact ID is 12133581853
+Model-free Proofline check on macOS	Preserve results, including blocked attempts	2026-10-18T10:21:15.2096270Z Artifact download URL: https://github.com/grove/foundryline/actions/runs/39118875068/artifacts/12133581853
+Model-free Proofline check on macOS	Post Node 22 for Codex package	﻿2026-10-18T10:21:15.2193640Z Post job cleanup.
+Model-free Proofline check on macOS	Post Node 22 for Codex package	2026-10-18T10:21:15.3816270Z (node:1858) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Model-free Proofline check on macOS	Post Node 22 for Codex package	2026-10-18T10:21:15.3818720Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Model-free Proofline check on macOS	Post Python 3.12 on macOS	﻿2026-10-18T10:21:15.3917100Z Post job cleanup.
+Model-free Proofline check on macOS	Post Python 3.12 on macOS	2026-10-18T10:21:15.5371970Z (node:1859) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Model-free Proofline check on macOS	Post Python 3.12 on macOS	2026-10-18T10:21:15.5372890Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	﻿2026-10-18T10:21:15.5530020Z Post job cleanup.
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7337690Z [command]/opt/homebrew/bin/git version
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7440610Z git version 2.55.0
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7824060Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/9a59caeb-01a5-4db0-9633-b1ce283e5d23/.gitconfig'
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7825100Z Temporarily overriding HOME='/Users/runner/work/_temp/9a59caeb-01a5-4db0-9633-b1ce283e5d23' before making global git config changes
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7827900Z Adding repository directory to the temporary git global config as a safe directory
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7829590Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/foundryline/foundryline/tool
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7830920Z Removing SSH command configuration
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7831540Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.7833130Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.8885070Z Removing HTTP extra header
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.8887780Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:15.8970890Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:16.0654760Z Removing includeIf entries pointing to credentials config files
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:16.0655800Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Model-free Proofline check on macOS	Post Check out exact Proofline runtime	2026-10-18T10:21:16.0699820Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	﻿2026-10-18T10:21:16.1766850Z Post job cleanup.
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.2832190Z [command]/opt/homebrew/bin/git version
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.2907240Z git version 2.55.0
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.3412120Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/b5052765-414d-4037-918c-7591b25c356b/.gitconfig'
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.3514350Z Temporarily overriding HOME='/Users/runner/work/_temp/b5052765-414d-4037-918c-7591b25c356b' before making global git config changes
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.3618780Z Adding repository directory to the temporary git global config as a safe directory
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.3654890Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/foundryline/foundryline/source
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.3668880Z Removing SSH command configuration
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.3669860Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.3674540Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.4499820Z Removing HTTP extra header
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.4502030Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.4508350Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.5445980Z Removing includeIf entries pointing to credentials config files
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.5455590Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Model-free Proofline check on macOS	Post Check out frozen coding-agent implementation	2026-10-18T10:21:16.5530800Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Model-free Proofline check on macOS	Complete job	﻿2026-10-18T10:21:16.6935520Z Cleaning up orphan processes
+Model-free Proofline check on macOS	Complete job	2026-10-18T10:21:17.4462020Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

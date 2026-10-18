@@ -1,0 +1,25 @@
+{
+  "kind": "ordinary final repository validation, NOT native Proofline evidence",
+  "argv": [
+    "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "checks",
+    "-v"
+  ],
+  "cwd": "/Users/grove/projects/foundryline",
+  "unittest_exit": 0,
+  "test_count": 29,
+  "output_sha256": "9ca6b06e3d4637b3641c4673892c7615de323c9d7bce7709c8c9b049bc6bd65f",
+  "local_link_documents": 7,
+  "local_links_checked": 100,
+  "git_diff_check_exit": 0,
+  "no_python_changes_after_native_checked_implementation": true,
+  "native_checked_commit": "f54d44eb1d21fae2d7cfd8aae4216e91019a87d3",
+  "native_checked_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3",
+  "final_head_native_checked": false,
+  "coverage_completeness": "UNKNOWN"
+}

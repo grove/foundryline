@@ -1,9 +1,9 @@
 # Deliver — refusal and negative-path checklist
 
-**ONE ACTUAL NEGATIVE CONTROL OBSERVED.** The selected missing executable
+**ONE ACTUAL NEGATIVE CONTROL OBSERVED for the PR #19 teaching fixture.** The selected missing executable
 produced **CHECKS UNAVAILABLE** inside a qualified native Proofline check on
-[GitHub-hosted macOS](native-qualification.md). All other controls below are
-**PROPOSED — NOT RUN**; no native Intentline-export refusal was exercised. These are expected
+[GitHub-hosted macOS](native-qualification.md). Other controls below were
+**PROPOSED — NOT RUN** for that fixture; later observations are linked below. These are expected
 dispositions grounded in the current upstream interface; a live qualification
 must retain the actual tool response/exit and record any differences.
 
@@ -40,3 +40,11 @@ runs](agent-qualification/README.md) include a new native missing-command contro
 actual-oracle read allowed, no selected checks executed). The historical matrix
 above describes PR #19's evidence; unsupported exports, deliberately stale or
 truncated receipts and missing publication permission remain **PROPOSED — NOT RUN**.
+
+**Real producer/consumer follow-up:** The [issue #21 trace](intentline-trace/README.md)
+observed an actual mismatched `index`/complete `argv` map rejection (CLI exit 1,
+`Intentline R check index/argv differs from the selected command`) without
+altering its good export or native records. It also retains a real local boundary
+refusal and native R2 **NOT DEMONSTRATED → LINKED CHECKS PASSED (limited evidence)**
+comparison on the same implementation tree. Tampered exports and stale/truncated
+receipts remain unexecuted proposals.

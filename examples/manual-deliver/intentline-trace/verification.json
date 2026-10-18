@@ -1,0 +1,491 @@
+{
+  "run_url": "https://github.com/grove/foundryline/actions/runs/39118875068",
+  "artifact_id": 12133581853,
+  "artifact_sha256": "278ba30ee5ec16aca688616eebb7c5d670d6ea5d7aaaa6e0f32fe5c277e246cd",
+  "artifact_bytes": 13895202,
+  "workflow_commit": "951bf4bf2f81c2ab1afdb347191b71bea4ede301",
+  "implementation_commit": "f54d44eb1d21fae2d7cfd8aae4216e91019a87d3",
+  "implementation_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3",
+  "coverage_completeness": "UNKNOWN",
+  "approval_status": "user authorized implementation and PR creation; Intentline draft unapproved; no maintainer acceptance, merge or deploy",
+  "producer_zip_sha256": "65419073f2dae549c1c0992f2ae5d979390222a0bc5516993ad12613da78d0fb",
+  "local_refusal_zip_sha256": "dce7bbca3c234e5eb35a20cfd41794cba46ffcd06620e3f0a05d31b8f052fd33",
+  "scenarios": {
+    "gap": {
+      "cli_invocation": {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+          "-B",
+          "/Users/runner/work/foundryline/foundryline/tool/proofline.py",
+          "check",
+          "--repo",
+          "/Users/runner/work/foundryline/foundryline/source",
+          "--source",
+          "/Users/runner/work/_temp/foundryline-21-native/export/source-S1.txt",
+          "--intentline-export",
+          "/Users/runner/work/_temp/foundryline-21-native/export",
+          "--intentline-links",
+          "/Users/runner/work/_temp/foundryline-21-native/gap-links.json",
+          "--checks",
+          "/Users/runner/work/_temp/foundryline-21-native/gap-checks.json",
+          "--seconds",
+          "200",
+          "--check-seconds",
+          "40",
+          "--output",
+          "/Users/runner/work/_temp/foundryline-21-native/gap-record"
+        ],
+        "cwd": "/Users/runner/work/foundryline/foundryline/tool"
+      },
+      "cli_exit": 0,
+      "wall_seconds": 3.602622750000009,
+      "status": "CHECKS PASSED",
+      "report_sha256": "a02f0a0c39fc0d921570fb4b6e69567fbcf1d0ad94e921e070668973d02a197d",
+      "candidate_commit": "191c64bf4d7c785a668b5d035e8063dd257b7244",
+      "candidate_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3",
+      "source_sha256": "3c1a808cc0dfad337b88f47b61a7513182c829ab0a96efbcf8bc443c07a343bf",
+      "model_dispatches": 0,
+      "elapsed_seconds": 3.2795505419999955,
+      "native_boundary": {
+        "status": "OBSERVED",
+        "observations": {
+          "nonce": "4eddf38db84245538dfb6a824b7ef3d3",
+          "writes": {
+            "source": "denied",
+            "input": "denied",
+            "candidate": "denied",
+            "git_head": "denied",
+            "receipt": "denied"
+          },
+          "reads": {
+            "receipt-canary": "denied",
+            "oracle-canary": "denied",
+            "other-role-canary": "denied",
+            "actual_oracle": "denied"
+          },
+          "mode_change": "denied",
+          "scratch": true,
+          "network": "denied"
+        },
+        "inputs_unchanged": true,
+        "scope": "native process canaries only; no model or external-tool qualification"
+      },
+      "status_cli_exit": 0,
+      "receipts": [
+        {
+          "argv": [
+            "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "checks",
+            "-p",
+            "test_intentline_trace.py",
+            "-k",
+            "test_complete_source_and_citations",
+            "-v"
+          ],
+          "ref": "receipts/check-000.json",
+          "sha256": "1e705d0fa30b6458c67e3971e6c12b664f323da42752ac1d38d598686d564ec9",
+          "returncode": 0,
+          "elapsed_seconds": 0.3387509589999951
+        }
+      ],
+      "per_requirement": [
+        {
+          "id": "R1",
+          "status": "LINKED CHECKS PASSED (limited evidence)",
+          "reason": "Selected commands passed; linked behaviors are not proven in full",
+          "source_refs": [
+            {
+              "line_end": 36,
+              "line_start": 36,
+              "quote": "- [ ] **R1 — Genuine source and coding provenance.** Record actual GitHub task URL/full original request, authorization for the specific coding scope, source SHA-256, upstream tool revisions, coding-agent identity/environment where observed, and the exact implementation commit/tree. No synthetic task or approved status presented as real.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R2",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 37,
+              "line_start": 37,
+              "quote": "- [ ] **R2 — Real producer/export.** Run Intentline's actual prepare/propose/check/review/export steps as appropriate for the supported initial S1 record, not a handcrafted mock. Preserve exact source, contract, IDs/source citations, full unedited JSON export and hash/manifest identities. Independently review semantic fidelity to the *complete* user request.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R3",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 38,
+              "line_start": 38,
+              "quote": "- [ ] **R3 — Real consumer/mapping.** On a genuinely qualified macOS/Codex native host, run Proofline using the **real exported files** and an explicit exact `R-id → selected command index/argv` map. Retain the *actual* reported per-R results. A linked passing test is **limited selected-check evidence**, not proof of a whole user request or of complete R inventory.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R4",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 39,
+              "line_start": 39,
+              "quote": "- [ ] **R4 — Demonstrate a meaningful evidence gap.** At least two source-grounded obligations if genuinely present: show what happens to a requirement **without** a matching selected check (**NOT DEMONSTRATED**), and, *when the underlying task justifies it*, add/execute an authorized behavior-focused check, relink and observe the new candidate-bound result. Never call an unlinked R PASS, manufacture an artificial obligation, or claim `coverage_completeness` is known.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R5",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 40,
+              "line_start": 40,
+              "quote": "- [ ] **R5 — Actual refusal/negative.** Witness at least one safe export/mapping/executable/sandbox/record-integrity refusal without altering the good record. Report `CHECKS UNAVAILABLE`, `EXECUTION UNAVAILABLE`, `STALE CHECKS` or import rejection exactly as the actual tool does. A failure to start is not evidence of a product defect.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R6",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 41,
+              "line_start": 41,
+              "quote": "- [ ] **R6 — Clear maintainer handoff.** Produce an easy-to-read table: **original request/source line → R ID → implementation change → selected argv/receipt → observed evidence/remaining gap**. Also record source/candidate hashes, platform/tool pins, approval status, check-only model calls and observed time/cost limits. State **`coverage_completeness: UNKNOWN`**.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R7",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 42,
+              "line_start": 42,
+              "quote": "- [ ] **R7 — Independent review and bounded PR.** A separately started reviewer checks the *raw* source, export, map, candidate, Proofline receipts and counterevidence (not only an agent summary); disclose if reviewer shares operator/provider. Run Foundryline's ordinary reference tests and link checks. Open a reviewable PR referencing **#18 and this issue**, but **do not merge, close #18, deploy, schedule anything or automatically publish other issues**.",
+              "source_id": "S1"
+            }
+          ]
+        }
+      ],
+      "bundle_recovery": {
+        "bundle_sha256": "fd579a631e2310c52fa5baf54262b6e5eb96c1946525f69c615e9aeb7aab39fa",
+        "restored_commit": "191c64bf4d7c785a668b5d035e8063dd257b7244",
+        "restored_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3",
+        "tracked_blob_count": 150,
+        "all_tracked_bytes_match_zip": true,
+        "dotfiles_included": true
+      }
+    },
+    "linked": {
+      "cli_invocation": {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+          "-B",
+          "/Users/runner/work/foundryline/foundryline/tool/proofline.py",
+          "check",
+          "--repo",
+          "/Users/runner/work/foundryline/foundryline/source",
+          "--source",
+          "/Users/runner/work/_temp/foundryline-21-native/export/source-S1.txt",
+          "--intentline-export",
+          "/Users/runner/work/_temp/foundryline-21-native/export",
+          "--intentline-links",
+          "/Users/runner/work/_temp/foundryline-21-native/linked-links.json",
+          "--checks",
+          "/Users/runner/work/_temp/foundryline-21-native/linked-checks.json",
+          "--seconds",
+          "200",
+          "--check-seconds",
+          "40",
+          "--output",
+          "/Users/runner/work/_temp/foundryline-21-native/linked-record"
+        ],
+        "cwd": "/Users/runner/work/foundryline/foundryline/tool"
+      },
+      "cli_exit": 0,
+      "wall_seconds": 1.7346079999999944,
+      "status": "CHECKS PASSED",
+      "report_sha256": "6cf49773109c2d6120454a4fb1f0d09542e04eb5a5674a094435299a97767311",
+      "candidate_commit": "191c64bf4d7c785a668b5d035e8063dd257b7244",
+      "candidate_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3",
+      "source_sha256": "3c1a808cc0dfad337b88f47b61a7513182c829ab0a96efbcf8bc443c07a343bf",
+      "model_dispatches": 0,
+      "elapsed_seconds": 1.6369856659999868,
+      "native_boundary": {
+        "status": "OBSERVED",
+        "observations": {
+          "nonce": "2ef8efee5b5d4961a3840d42ddd11ae6",
+          "writes": {
+            "source": "denied",
+            "input": "denied",
+            "candidate": "denied",
+            "git_head": "denied",
+            "receipt": "denied"
+          },
+          "reads": {
+            "receipt-canary": "denied",
+            "oracle-canary": "denied",
+            "other-role-canary": "denied",
+            "actual_oracle": "denied"
+          },
+          "mode_change": "denied",
+          "scratch": true,
+          "network": "denied"
+        },
+        "inputs_unchanged": true,
+        "scope": "native process canaries only; no model or external-tool qualification"
+      },
+      "status_cli_exit": 0,
+      "receipts": [
+        {
+          "argv": [
+            "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "checks",
+            "-p",
+            "test_intentline_trace.py",
+            "-k",
+            "test_complete_source_and_citations",
+            "-v"
+          ],
+          "ref": "receipts/check-000.json",
+          "sha256": "33ce0e9ba416032757bafca29f2e5192df7bb25912474f1f9a53801259a94fc1",
+          "returncode": 0,
+          "elapsed_seconds": 0.19901012500000093
+        },
+        {
+          "argv": [
+            "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "checks",
+            "-p",
+            "test_intentline_trace.py",
+            "-k",
+            "test_export_completion_and_file_identities",
+            "-v"
+          ],
+          "ref": "receipts/check-001.json",
+          "sha256": "e136cda0f0e25ef45195663b4cb05dae98458c6c79a6d4d016c98736dbf86569",
+          "returncode": 0,
+          "elapsed_seconds": 0.3003029580000032
+        }
+      ],
+      "per_requirement": [
+        {
+          "id": "R1",
+          "status": "LINKED CHECKS PASSED (limited evidence)",
+          "reason": "Selected commands passed; linked behaviors are not proven in full",
+          "source_refs": [
+            {
+              "line_end": 36,
+              "line_start": 36,
+              "quote": "- [ ] **R1 — Genuine source and coding provenance.** Record actual GitHub task URL/full original request, authorization for the specific coding scope, source SHA-256, upstream tool revisions, coding-agent identity/environment where observed, and the exact implementation commit/tree. No synthetic task or approved status presented as real.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R2",
+          "status": "LINKED CHECKS PASSED (limited evidence)",
+          "reason": "Selected commands passed; linked behaviors are not proven in full",
+          "source_refs": [
+            {
+              "line_end": 37,
+              "line_start": 37,
+              "quote": "- [ ] **R2 — Real producer/export.** Run Intentline's actual prepare/propose/check/review/export steps as appropriate for the supported initial S1 record, not a handcrafted mock. Preserve exact source, contract, IDs/source citations, full unedited JSON export and hash/manifest identities. Independently review semantic fidelity to the *complete* user request.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R3",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 38,
+              "line_start": 38,
+              "quote": "- [ ] **R3 — Real consumer/mapping.** On a genuinely qualified macOS/Codex native host, run Proofline using the **real exported files** and an explicit exact `R-id → selected command index/argv` map. Retain the *actual* reported per-R results. A linked passing test is **limited selected-check evidence**, not proof of a whole user request or of complete R inventory.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R4",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 39,
+              "line_start": 39,
+              "quote": "- [ ] **R4 — Demonstrate a meaningful evidence gap.** At least two source-grounded obligations if genuinely present: show what happens to a requirement **without** a matching selected check (**NOT DEMONSTRATED**), and, *when the underlying task justifies it*, add/execute an authorized behavior-focused check, relink and observe the new candidate-bound result. Never call an unlinked R PASS, manufacture an artificial obligation, or claim `coverage_completeness` is known.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R5",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 40,
+              "line_start": 40,
+              "quote": "- [ ] **R5 — Actual refusal/negative.** Witness at least one safe export/mapping/executable/sandbox/record-integrity refusal without altering the good record. Report `CHECKS UNAVAILABLE`, `EXECUTION UNAVAILABLE`, `STALE CHECKS` or import rejection exactly as the actual tool does. A failure to start is not evidence of a product defect.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R6",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 41,
+              "line_start": 41,
+              "quote": "- [ ] **R6 — Clear maintainer handoff.** Produce an easy-to-read table: **original request/source line → R ID → implementation change → selected argv/receipt → observed evidence/remaining gap**. Also record source/candidate hashes, platform/tool pins, approval status, check-only model calls and observed time/cost limits. State **`coverage_completeness: UNKNOWN`**.",
+              "source_id": "S1"
+            }
+          ]
+        },
+        {
+          "id": "R7",
+          "status": "NOT DEMONSTRATED",
+          "reason": "No selected executable check linked",
+          "source_refs": [
+            {
+              "line_end": 42,
+              "line_start": 42,
+              "quote": "- [ ] **R7 — Independent review and bounded PR.** A separately started reviewer checks the *raw* source, export, map, candidate, Proofline receipts and counterevidence (not only an agent summary); disclose if reviewer shares operator/provider. Run Foundryline's ordinary reference tests and link checks. Open a reviewable PR referencing **#18 and this issue**, but **do not merge, close #18, deploy, schedule anything or automatically publish other issues**.",
+              "source_id": "S1"
+            }
+          ]
+        }
+      ],
+      "bundle_recovery": {
+        "bundle_sha256": "fd579a631e2310c52fa5baf54262b6e5eb96c1946525f69c615e9aeb7aab39fa",
+        "restored_commit": "191c64bf4d7c785a668b5d035e8063dd257b7244",
+        "restored_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3",
+        "tracked_blob_count": 150,
+        "all_tracked_bytes_match_zip": true,
+        "dotfiles_included": true
+      }
+    },
+    "invalid-map": {
+      "cli_invocation": {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+          "-B",
+          "/Users/runner/work/foundryline/foundryline/tool/proofline.py",
+          "check",
+          "--repo",
+          "/Users/runner/work/foundryline/foundryline/source",
+          "--source",
+          "/Users/runner/work/_temp/foundryline-21-native/export/source-S1.txt",
+          "--intentline-export",
+          "/Users/runner/work/_temp/foundryline-21-native/export",
+          "--intentline-links",
+          "/Users/runner/work/_temp/foundryline-21-native/invalid-map-links.json",
+          "--checks",
+          "/Users/runner/work/_temp/foundryline-21-native/invalid-map-checks.json",
+          "--seconds",
+          "200",
+          "--check-seconds",
+          "40",
+          "--output",
+          "/Users/runner/work/_temp/foundryline-21-native/invalid-map-record"
+        ],
+        "cwd": "/Users/runner/work/foundryline/foundryline/tool"
+      },
+      "cli_exit": 1,
+      "wall_seconds": 0.08973600000000204,
+      "stderr": "Intentline R check index/argv differs from the selected command\n",
+      "result": "import rejection; no product check or report"
+    }
+  },
+  "host_identity": {
+    "host": "macOS-15.7.9-arm64-arm-64bit",
+    "python": "3.12.10 (v3.12.10:0cc81280367, Apr  8 2025, 08:46:59) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "codex": "codex-cli 0.162.1",
+    "run_id": "39118875068",
+    "run_attempt": "1",
+    "event": "push",
+    "implementation_commit": "f54d44eb1d21fae2d7cfd8aae4216e91019a87d3",
+    "implementation_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3",
+    "proofline_commit": "8e117fff4de2459637fe7f74f47ab17fc3341d84",
+    "source_sha256": "3c1a808cc0dfad337b88f47b61a7513182c829ab0a96efbcf8bc443c07a343bf",
+    "export_hashes": {
+      "source-manifest.json": "9a0980a26d6cef5c8ab23d70e3acaa2dd91be01f552644ec52218a1c5568f82e",
+      "source-S1.txt": "3c1a808cc0dfad337b88f47b61a7513182c829ab0a96efbcf8bc443c07a343bf",
+      "export-manifest.json": "b4bdce24f1d88fdc98f1464aa0386a8c506830713478dd07b73458979ff873e1",
+      "contract.json": "597ec331556f645de14bd99dfe2a363fc6c83cc43da6f7cfe3e3a5b003a3ba95"
+    },
+    "model_calls": "0: check-only; external coding-stage accounting unavailable"
+  },
+  "local_refusal": {
+    "status": "EXECUTION UNAVAILABLE",
+    "cli_exit": 2,
+    "host": {
+      "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "python": "Python 3.14.8",
+      "codex": "codex-cli 0.162.1",
+      "candidate_commit": "f54d44eb1d21fae2d7cfd8aae4216e91019a87d3",
+      "candidate_tree": "a003d013419fd1f142f0d05175938c6b0d7008f3"
+    },
+    "native_boundary": {
+      "status": "NOT VERIFIED",
+      "observations": {
+        "nonce": "3634ccd196384a8ab4b4833e4bc175a7",
+        "writes": {
+          "source": "denied",
+          "input": "denied",
+          "candidate": "denied",
+          "git_head": "denied",
+          "receipt": "denied"
+        },
+        "reads": {
+          "receipt-canary": "denied",
+          "oracle-canary": "denied",
+          "other-role-canary": "denied",
+          "actual_oracle": "allowed"
+        },
+        "mode_change": "denied",
+        "scratch": true,
+        "network": "denied"
+      },
+      "inputs_unchanged": true,
+      "scope": "native process canaries only; no model or external-tool qualification"
+    },
+    "model_dispatches": 0,
+    "selected_checks_executed": 0,
+    "report_sha256": "9737d5db9d03720a4b3eaca01c9dfe385b6ff045058ef0cf184d717b3e34ea9c"
+  }
+}

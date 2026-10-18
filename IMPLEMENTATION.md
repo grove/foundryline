@@ -148,6 +148,21 @@ check; a separate mismatched map is rejected. All seven original obligations
 remain present and overall completeness stays UNKNOWN. Evidence belongs to the
 frozen implementation, with final evidence/status appendices checked ordinarily.
 
+**External-product qualification proposed, not maintainer-accepted:** The
+[Deliver v0.2 evidence review](docs/deliver-v0.2-qualification-review.md)
+now preserves the **full original GitHub-hosted macOS Proofline artifact** for
+[RepoTend's actual CLI feature](https://github.com/grove/repotend/pull/16).
+After [Proofline's narrowly scoped macOS OpenSSL read fix](https://github.com/grove/proofline/pull/60),
+the *same frozen candidate and unmodified original Intentline export* had R1
+linked passing-check evidence while R2 was **NOT DEMONSTRATED**, then separate
+R1/R2 behavior tests both gave **limited linked passing evidence**. A wrong
+argv map was refused, and a paired startup check reproduced the old system
+read denial without the exact read grant. Native canaries were OBSERVED only
+within their checked scope; `coverage_completeness: UNKNOWN`. Historical
+blocked outcomes remain genuine. **Foundryline #18/#21 remain open** until
+an explicit, independent maintainer acceptance decision. No release or
+automatic workflow is authorized by this evidence review.
+
 **Goal:** Document one end-to-end candidate-and-check handoff without rebuilding the existing P2P controller.
 
 **Deliverables:**
@@ -225,7 +240,7 @@ Use the same source permissions, time/token limits, and review criteria. Collect
 
 **v0.1 (accepted, limited scope):** Manual Discover reference and recorded macOS/Codex pilot with same-operator fresh-agent reproduction, witnessed withheld-source refusal, source-grounded unpublished issue proposal, and structural/receipt checks. See the [accepted qualification scope](docs/discover-v0.1-qualification-review.md). No scheduler, automatic issue publication, cross-host qualification or broader isolation certification is implied.
 
-**v0.2 (conditional):** Manual and scheduled intake example *actually qualified* on a specified host; optional RepoTend maintenance recipe; still no default issue-writing privileges.
+**v0.2 (proposed, manual-only scope pending acceptance):** Three copyable manual patterns (Discover, Maintain, Deliver) with specified host/tool evidence, including the genuinely button-triggered **read-only RepoTend** audit and optional direct/initial-S1 native Deliver check. **Scheduled intake is explicitly DEFERRED and NOT QUALIFIED.** Maintain formal acceptance, the Deliver review above, and a separate release/tag/publication decision remain prerequisites. No default issue-writing, automatic repair, code publication or merge privileges.
 
 **v0.3 (conditional):** Controlled issue publication when justified, with a scoped standing mandate and robust duplicate handling; optional bounded Deliver reference.
 

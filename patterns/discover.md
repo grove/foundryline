@@ -128,6 +128,10 @@ For a routine, well-supported issue, prefer issue-only drafting. For an unresolv
 
 ## Stage 5 — report and hand off
 
+For a brief summary, optionally copy the [shared evidence and decision handoff](../docs/evidence-handoff-template.md)
+and link existing receipts; its [Discover sample](../examples/evidence-handoff-samples.md#discover)
+summarizes the retained pilot. It complements the detailed record below without adding a stage.
+
 Use the [blank run-record template](../examples/manual-discover/run-record-template.md) in the agent's response or in an operator-authorized private record location. **Writing a record is not part of the Gapline read-only invocation.** If a record is persisted, obtain permission for the destination and exclude private text from public repos by default.
 
 The handoff must say:

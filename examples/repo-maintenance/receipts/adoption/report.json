@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "0.1",
+  "toolVersion": "0.1.0",
+  "repository": {
+    "path": "."
+  },
+  "mode": "audit",
+  "profile": "small-oss",
+  "findings": [
+    {
+      "ruleId": "repo.license-present",
+      "ruleVersion": "2",
+      "status": "PASS",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "License is present",
+      "evidence": [
+        {
+          "path": "LICENSE"
+        }
+      ],
+      "recommendation": null,
+      "enforced": false
+    },
+    {
+      "ruleId": "repo.contributing",
+      "ruleVersion": "2",
+      "status": "WARN",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "Contribution guide was not found",
+      "evidence": [
+        {
+          "path": "CONTRIBUTING.md"
+        },
+        {
+          "path": ".github/CONTRIBUTING.md"
+        },
+        {
+          "path": "docs/CONTRIBUTING.md"
+        },
+        {
+          "path": "docs/contributing.md"
+        },
+        {
+          "path": "docs/contributing.rst"
+        },
+        {
+          "path": "contributing.md"
+        }
+      ],
+      "recommendation": "Consider adding CONTRIBUTING.md if appropriate.",
+      "enforced": false
+    },
+    {
+      "ruleId": "repo.code-of-conduct",
+      "ruleVersion": "2",
+      "status": "WARN",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "Code of conduct was not found",
+      "evidence": [
+        {
+          "path": "CODE_OF_CONDUCT.md"
+        },
+        {
+          "path": ".github/CODE_OF_CONDUCT.md"
+        },
+        {
+          "path": "docs/CODE_OF_CONDUCT.md"
+        },
+        {
+          "path": "code_of_conduct.md"
+        }
+      ],
+      "recommendation": "Consider adding CODE_OF_CONDUCT.md if appropriate.",
+      "enforced": false
+    },
+    {
+      "ruleId": "repo.security-policy",
+      "ruleVersion": "2",
+      "status": "WARN",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "Security policy was not found",
+      "evidence": [
+        {
+          "path": "SECURITY.md"
+        },
+        {
+          "path": ".github/SECURITY.md"
+        },
+        {
+          "path": ".github/security.md"
+        },
+        {
+          "path": "docs/SECURITY.md"
+        },
+        {
+          "path": "security.md"
+        }
+      ],
+      "recommendation": "Consider adding SECURITY.md if appropriate.",
+      "enforced": false
+    },
+    {
+      "ruleId": "repo.pr-template",
+      "ruleVersion": "1",
+      "status": "WARN",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "Pull request template was not found",
+      "evidence": [
+        {
+          "path": ".github/pull_request_template.md"
+        },
+        {
+          "path": ".github/PULL_REQUEST_TEMPLATE.md"
+        },
+        {
+          "path": "PULL_REQUEST_TEMPLATE.md"
+        },
+        {
+          "path": "docs/PULL_REQUEST_TEMPLATE.md"
+        },
+        {
+          "path": "docs/pull_request_template.md"
+        }
+      ],
+      "recommendation": "Add a short PR template explaining motivation, changes, and testing.",
+      "enforced": false
+    },
+    {
+      "ruleId": "repo.issue-templates",
+      "ruleVersion": "1",
+      "status": "WARN",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "No issue templates found",
+      "evidence": [
+        {
+          "path": ".github/ISSUE_TEMPLATE"
+        }
+      ],
+      "recommendation": "Start with lightweight bug and feature forms.",
+      "enforced": false
+    },
+    {
+      "ruleId": "dx.editorconfig",
+      "ruleVersion": "2",
+      "status": "WARN",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "EditorConfig was not found",
+      "evidence": [
+        {
+          "path": ".editorconfig"
+        }
+      ],
+      "recommendation": "Consider adding .editorconfig if appropriate.",
+      "enforced": false
+    },
+    {
+      "ruleId": "ci.workflow-validity",
+      "ruleVersion": "1",
+      "status": "PASS",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "Workflow YAML and basic required structure are valid",
+      "evidence": [
+        {
+          "path": ".github/workflows/reference-checks.yml"
+        }
+      ],
+      "recommendation": "This is not a full GitHub Actions semantic check; consider actionlint.",
+      "enforced": false
+    },
+    {
+      "ruleId": "security.workflow-permissions",
+      "ruleVersion": "2",
+      "status": "PASS",
+      "severity": "warning",
+      "confidence": "heuristic",
+      "summary": "An explicit token permissions policy applies to each job",
+      "evidence": [
+        {
+          "path": ".github/workflows/reference-checks.yml"
+        }
+      ],
+      "recommendation": "This establishes configuration presence, not that every scope is least-privilege.",
+      "enforced": false
+    },
+    {
+      "ruleId": "ci.concurrency",
+      "ruleVersion": "1",
+      "status": "WARN",
+      "severity": "warning",
+      "confidence": "heuristic",
+      "summary": "PR workflows may run superseded jobs without cancellation",
+      "evidence": [
+        {
+          "path": ".github/workflows/reference-checks.yml",
+          "line": 6
+        }
+      ],
+      "recommendation": "Consider a PR-scoped concurrency group and cancel-in-progress; ensure release/deployment jobs are not unintentionally cancelled.",
+      "enforced": false
+    },
+    {
+      "ruleId": "ci.duplicate-triggers",
+      "ruleVersion": "1",
+      "status": "PASS",
+      "severity": "warning",
+      "confidence": "heuristic",
+      "summary": "No obvious overlapping push and pull_request triggers found",
+      "evidence": [
+        {
+          "path": ".github/workflows/reference-checks.yml"
+        }
+      ],
+      "recommendation": "This is a static heuristic, not a measurement of duplicated CI minutes.",
+      "enforced": false
+    },
+    {
+      "ruleId": "ci.path-filter-safety",
+      "ruleVersion": "1",
+      "status": "PASS",
+      "severity": "warning",
+      "confidence": "heuristic",
+      "summary": "No event-level workflow path filters detected",
+      "evidence": [
+        {
+          "path": ".github/workflows/reference-checks.yml"
+        }
+      ],
+      "recommendation": "Absence of path filters does not prove optimal CI efficiency.",
+      "enforced": false
+    },
+    {
+      "ruleId": "security.action-pinning",
+      "ruleVersion": "1",
+      "status": "PASS",
+      "severity": "warning",
+      "confidence": "verified",
+      "summary": "External action references are pinned to full SHAs or use local paths",
+      "evidence": [
+        {
+          "path": ".github/workflows/reference-checks.yml"
+        }
+      ],
+      "recommendation": "Pinning reduces ref-mutation risks, but does not establish that a particular action is safe.",
+      "enforced": false
+    }
+  ],
+  "errors": []
+}

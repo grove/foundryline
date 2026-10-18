@@ -1,0 +1,36 @@
+{
+  "operator": "Codex agent /root/maintain_adoption, delegated solely for adoption",
+  "startedAt": "2026-10-18T08:15:52+00:00",
+  "finishedAt": "2026-10-18T08:17:44.208664+00:00",
+  "elapsedSeconds": 112.209,
+  "timingScope": "First observed clock through receipt validation; initial guide reading before the first observed clock is additional untimed effort.",
+  "workDirectory": "/private/tmp/foundryline-maintain-adoption-1ib6ldm1",
+  "guide": "patterns/maintain.md",
+  "toolCommit": "2d69cce901475380775f674b9cc5755f1f89f82e",
+  "targetCommit": "5dc1dd15836584a1112caec224d479df8deffc9f",
+  "toolLockfileSha256": "f17806903690e3f2058655ff974ed45a27ee894cceccd8f54ac50e8c8108d0b6",
+  "commandElapsedSeconds": 7.693,
+  "jsonAuditElapsedSeconds": 0.22,
+  "markdownAuditElapsedSeconds": 0.194,
+  "observations": {
+    "findingCount": 13,
+    "PASS": 6,
+    "WARN": 7,
+    "FAIL": 0,
+    "UNKNOWN": 0,
+    "errors": []
+  },
+  "trustInspection": [
+    "package.json",
+    "package-lock.json",
+    "skills/repotend/scripts/audit.mjs",
+    "skills/repotend/scripts/cli.ts",
+    "skills/repotend/scripts/engine.ts"
+  ],
+  "limitations": [
+    "Separate agent task and checkout/install/cache; shared host, runtime, account, network and initiating operator.",
+    "No target dependencies, hooks, builds, scripts or remediation executed. No GitHub writes.",
+    "Read-only behavior inferred from inspected audit code and clean before/after Git status; no universal OS sandbox or network isolation claim.",
+    "Remote organization defaults, branch protection, runtime behavior and duplicate issue/PR lookup not assessed by this adoption task."
+  ]
+}

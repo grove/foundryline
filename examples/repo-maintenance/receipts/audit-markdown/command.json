@@ -1,0 +1,25 @@
+{
+  "record_kind": "observed process receipt",
+  "argv": [
+    "node",
+    "skills/repotend/scripts/audit.mjs",
+    "--root",
+    "/private/tmp/foundryline-maintain/target",
+    "--format",
+    "markdown"
+  ],
+  "cwd": "/private/tmp/foundryline-maintain/tool",
+  "started_at_utc": "2026-10-18T08:14:34.816456+00:00",
+  "elapsed_seconds": 0.1970771662890911,
+  "exit_code": 0,
+  "stdout": {
+    "file": "report.md",
+    "sha256": "9c5d94a2715bba5484bf2f901f3cd0f847b45e6ef0bc234e73dedc36ffaef396",
+    "bytes": 1363
+  },
+  "stderr": {
+    "file": "stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  }
+}

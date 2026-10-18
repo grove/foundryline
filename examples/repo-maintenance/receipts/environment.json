@@ -1,0 +1,416 @@
+{
+  "record_kind": "operator-captured environment and file identity",
+  "tool": {
+    "repository": "https://github.com/grove/repotend",
+    "commit": "2d69cce901475380775f674b9cc5755f1f89f82e",
+    "version": "0.1.0",
+    "lockfile_sha256": "f17806903690e3f2058655ff974ed45a27ee894cceccd8f54ac50e8c8108d0b6"
+  },
+  "target": {
+    "repository": "https://github.com/grove/foundryline",
+    "commit": "5dc1dd15836584a1112caec224d479df8deffc9f",
+    "path": "/private/tmp/foundryline-maintain/target",
+    "files_before": {
+      ".gitattributes": {
+        "sha256": "176eccc89c5dc39ec91133a4445a89f2968d698bdd66ea5ded7646d7737210ee",
+        "mode": "0o644"
+      },
+      ".github/workflows/reference-checks.yml": {
+        "sha256": "598909bccb04839e69a6505e7116e254a89a75396349c64415a03083a7fd1469",
+        "mode": "0o644"
+      },
+      "DESIGN.md": {
+        "sha256": "f56bbc7c3121e4f6c09ca3563ec1acc9d632f9a03ad6b4d9a070a11533210aab",
+        "mode": "0o644"
+      },
+      "IMPLEMENTATION.md": {
+        "sha256": "f519f9fa402e5408809f734c1a22c986bc3b646d07a68452dc86c1fbcc0b9f69",
+        "mode": "0o644"
+      },
+      "LICENSE": {
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mode": "0o644"
+      },
+      "README.md": {
+        "sha256": "ee529f148fc62277bfb1f2393eb89f555c617cdc0557266fcfe70573826ae2f9",
+        "mode": "0o644"
+      },
+      "checks/test_manual_discover.py": {
+        "sha256": "92c6dfeab3822a5bb98bd9d27f3d79aaf3b831a9017840e6a1380cca55bd4e11",
+        "mode": "0o644"
+      },
+      "checks/test_pilot_reader.py": {
+        "sha256": "1f7447453a4ede60f06e7afe8c93e313e41e86b9e6ea2487ab24fc7881940c5d",
+        "mode": "0o644"
+      },
+      "docs/discover-v0.1-qualification-review.md": {
+        "sha256": "70a59f10bcaa1ac5a6f13807abfb9ac502d161d91a1484a109a3d4c34dd752d3",
+        "mode": "0o644"
+      },
+      "docs/releases/v0.1.0.md": {
+        "sha256": "c07d8d3c46ad36c5b1dabfe992fdd244757dc39c23ee5bb677c68d3883195e76",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/README.md": {
+        "sha256": "592b0b6378950a5cf7c3cea636f0f0cae60c625f71f0e06963625eed13988d55",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-issue-proposal.md": {
+        "sha256": "182b9ceceab9afe7466d0bc308924b3f41a0ce5c4c2f0da61f08241ead5c3066",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-no-findings.md": {
+        "sha256": "8e39022bbe16428c706abf10788e4f73d54fa393b1878ae531343b355480466d",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-refusal.md": {
+        "sha256": "c1a648f74e54fe31f8aab8ec57e0ecad715d8ec03361e3cdd9d5a84b38515d62",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-report.md": {
+        "sha256": "144a29f5aa0f0b3d6cd7dcbfb6bdb09fa160d4669a6b35ffa5e1ac58bba33ef8",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/fixtures/docs/registration-policy.md": {
+        "sha256": "b0a3992ea6198aa9d2617fa6830c92ad8e5f311557cd9c02f458f3ccdc748b5b",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/fixtures/src/registration.py": {
+        "sha256": "cb591b8bb7891d8198805a042b0c6519225ab5f06d1dc7a1ee7c21592414b905",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/fixtures/tests/test_registration.py": {
+        "sha256": "9d7252e1e77f36198929a03f79f9cc7a0340be379023af4da520224f689c2a7b",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/run-record-template.md": {
+        "sha256": "ff2c4536f4c46133502633578b50a18fc5a0b6e8d5a6170686a428f26c5ebc1c",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/README.md": {
+        "sha256": "1bcbb464a24a8673b434284d40129fbef2ffc6af790ba38910759f6b65fedfcf",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/host/README.md": {
+        "sha256": "2d9ba8280592461ef445aad6ed47f258e34e8ba91eef6ed1b4a65e0bf5cef9ff",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/host/read_snapshot.py": {
+        "sha256": "591c15fc31ab3cffb609fe2794f394a64415b242497af9ccb77c062ce30bb445",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/issue-proposal.md": {
+        "sha256": "e4f60b049b3b94c17042d3f44ad5aa1ed5e02eb3e0ab1fa56fa3939a3b2ac12e",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/command.json": {
+        "sha256": "9e1df238bb6318266d8c1491c9170a202b78b525d2c9bae1ec949bf8db08b1ea",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/events.jsonl": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/measurement.json": {
+        "sha256": "52bc8f72d0bb9ed986ef5cea50246690e536b210133e05c3d843cd93bc00decc",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/stderr.txt": {
+        "sha256": "2d8b902fb51c4fb0108c58a40b037f3ed52641f00cdae67901d7cbda9b4b8473",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/command.json": {
+        "sha256": "4ba85cddb080fb1a20b59ef031b31232eb2d2245349680ed31ec2f3c08571382",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/events.jsonl": {
+        "sha256": "13256702c80fc4d10231ee74f915a1eb5dd1d3be82a3058313b9865c0df363c0",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/measurement.json": {
+        "sha256": "ee99e0d47bbe90aec42c76376c75c599d4e1bcc0aedf778ed923fbe2b914d246",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/prompt.txt": {
+        "sha256": "365446e5dd87bbf2ad4006cabfeaaa29f9bf7a9fd180f36ea1f4aa413266796c",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/report.md": {
+        "sha256": "a9a490411ff1c56c2b617e13dd94d306e16049ae844b409ac9f7439b6916e701",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/command.json": {
+        "sha256": "9e1df238bb6318266d8c1491c9170a202b78b525d2c9bae1ec949bf8db08b1ea",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/events.jsonl": {
+        "sha256": "e477e834b17eacb827f10459cf12602383ba7f1d2ce46834acba6523b02bd013",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/measurement.json": {
+        "sha256": "71426f30600e66e6aa2f5d887dbf9eae60006792f83f24aacdb424eeb8bf6331",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/prompt.txt": {
+        "sha256": "fb47305c5d042c9bd4e3955449278620e5f3736cbc4db5242cade88cf446f526",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/report.md": {
+        "sha256": "eb6da6c12ed290624b6ee24c42e4255ac88f9660ff7b4cfcd010abb9bcfb003f",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/repotend-issues.json": {
+        "sha256": "3408de3fd7760368fedd1e96fb2c26171daa9f90495758e5bee5fbe265fa1cb8",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/command.json": {
+        "sha256": "36a096a89910360c03613821c1120e72141b78f7465d9bad53b9a0ba2c86be0a",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/events.jsonl": {
+        "sha256": "4ce1110e30d11468b9116d080aaf4c8daae04f57b690b3b69fd05c46cf4e6622",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/measurement.json": {
+        "sha256": "d3249ced296d0f4e7e9e7bcd4e266655a145aac91288678f6afc91c23653f855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/prompt.txt": {
+        "sha256": "685b2a0edf0d71e231b4a565d8c0acacf99ee8be42e3de528afc808105a874ba",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/report.md": {
+        "sha256": "7d17556197b7e102d12471ecc8778ea255c84bc3f6d701c45e64a95dbd5a0eae",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/source-manifest.json": {
+        "sha256": "77e9a679b4b541fe1174a4c8010563c460eddc5d4fd0eeed368899a1852f7233",
+        "mode": "0o644"
+      },
+      "patterns/discover.md": {
+        "sha256": "35cdcf44418bbe78bfebc954b16221f1e2f752e9388891514975f1aa5535a4f0",
+        "mode": "0o644"
+      }
+    },
+    "files_after": {
+      ".gitattributes": {
+        "sha256": "176eccc89c5dc39ec91133a4445a89f2968d698bdd66ea5ded7646d7737210ee",
+        "mode": "0o644"
+      },
+      ".github/workflows/reference-checks.yml": {
+        "sha256": "598909bccb04839e69a6505e7116e254a89a75396349c64415a03083a7fd1469",
+        "mode": "0o644"
+      },
+      "DESIGN.md": {
+        "sha256": "f56bbc7c3121e4f6c09ca3563ec1acc9d632f9a03ad6b4d9a070a11533210aab",
+        "mode": "0o644"
+      },
+      "IMPLEMENTATION.md": {
+        "sha256": "f519f9fa402e5408809f734c1a22c986bc3b646d07a68452dc86c1fbcc0b9f69",
+        "mode": "0o644"
+      },
+      "LICENSE": {
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mode": "0o644"
+      },
+      "README.md": {
+        "sha256": "ee529f148fc62277bfb1f2393eb89f555c617cdc0557266fcfe70573826ae2f9",
+        "mode": "0o644"
+      },
+      "checks/test_manual_discover.py": {
+        "sha256": "92c6dfeab3822a5bb98bd9d27f3d79aaf3b831a9017840e6a1380cca55bd4e11",
+        "mode": "0o644"
+      },
+      "checks/test_pilot_reader.py": {
+        "sha256": "1f7447453a4ede60f06e7afe8c93e313e41e86b9e6ea2487ab24fc7881940c5d",
+        "mode": "0o644"
+      },
+      "docs/discover-v0.1-qualification-review.md": {
+        "sha256": "70a59f10bcaa1ac5a6f13807abfb9ac502d161d91a1484a109a3d4c34dd752d3",
+        "mode": "0o644"
+      },
+      "docs/releases/v0.1.0.md": {
+        "sha256": "c07d8d3c46ad36c5b1dabfe992fdd244757dc39c23ee5bb677c68d3883195e76",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/README.md": {
+        "sha256": "592b0b6378950a5cf7c3cea636f0f0cae60c625f71f0e06963625eed13988d55",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-issue-proposal.md": {
+        "sha256": "182b9ceceab9afe7466d0bc308924b3f41a0ce5c4c2f0da61f08241ead5c3066",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-no-findings.md": {
+        "sha256": "8e39022bbe16428c706abf10788e4f73d54fa393b1878ae531343b355480466d",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-refusal.md": {
+        "sha256": "c1a648f74e54fe31f8aab8ec57e0ecad715d8ec03361e3cdd9d5a84b38515d62",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/example-report.md": {
+        "sha256": "144a29f5aa0f0b3d6cd7dcbfb6bdb09fa160d4669a6b35ffa5e1ac58bba33ef8",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/fixtures/docs/registration-policy.md": {
+        "sha256": "b0a3992ea6198aa9d2617fa6830c92ad8e5f311557cd9c02f458f3ccdc748b5b",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/fixtures/src/registration.py": {
+        "sha256": "cb591b8bb7891d8198805a042b0c6519225ab5f06d1dc7a1ee7c21592414b905",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/fixtures/tests/test_registration.py": {
+        "sha256": "9d7252e1e77f36198929a03f79f9cc7a0340be379023af4da520224f689c2a7b",
+        "mode": "0o644"
+      },
+      "examples/manual-discover/run-record-template.md": {
+        "sha256": "ff2c4536f4c46133502633578b50a18fc5a0b6e8d5a6170686a428f26c5ebc1c",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/README.md": {
+        "sha256": "1bcbb464a24a8673b434284d40129fbef2ffc6af790ba38910759f6b65fedfcf",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/host/README.md": {
+        "sha256": "2d9ba8280592461ef445aad6ed47f258e34e8ba91eef6ed1b4a65e0bf5cef9ff",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/host/read_snapshot.py": {
+        "sha256": "591c15fc31ab3cffb609fe2794f394a64415b242497af9ccb77c062ce30bb445",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/issue-proposal.md": {
+        "sha256": "e4f60b049b3b94c17042d3f44ad5aa1ed5e02eb3e0ab1fa56fa3939a3b2ac12e",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/command.json": {
+        "sha256": "9e1df238bb6318266d8c1491c9170a202b78b525d2c9bae1ec949bf8db08b1ea",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/events.jsonl": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/measurement.json": {
+        "sha256": "52bc8f72d0bb9ed986ef5cea50246690e536b210133e05c3d843cd93bc00decc",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/failed-launch/stderr.txt": {
+        "sha256": "2d8b902fb51c4fb0108c58a40b037f3ed52641f00cdae67901d7cbda9b4b8473",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/command.json": {
+        "sha256": "4ba85cddb080fb1a20b59ef031b31232eb2d2245349680ed31ec2f3c08571382",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/events.jsonl": {
+        "sha256": "13256702c80fc4d10231ee74f915a1eb5dd1d3be82a3058313b9865c0df363c0",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/measurement.json": {
+        "sha256": "ee99e0d47bbe90aec42c76376c75c599d4e1bcc0aedf778ed923fbe2b914d246",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/prompt.txt": {
+        "sha256": "365446e5dd87bbf2ad4006cabfeaaa29f9bf7a9fd180f36ea1f4aa413266796c",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/report.md": {
+        "sha256": "a9a490411ff1c56c2b617e13dd94d306e16049ae844b409ac9f7439b6916e701",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/negative/stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/command.json": {
+        "sha256": "9e1df238bb6318266d8c1491c9170a202b78b525d2c9bae1ec949bf8db08b1ea",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/events.jsonl": {
+        "sha256": "e477e834b17eacb827f10459cf12602383ba7f1d2ce46834acba6523b02bd013",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/measurement.json": {
+        "sha256": "71426f30600e66e6aa2f5d887dbf9eae60006792f83f24aacdb424eeb8bf6331",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/prompt.txt": {
+        "sha256": "fb47305c5d042c9bd4e3955449278620e5f3736cbc4db5242cade88cf446f526",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/report.md": {
+        "sha256": "eb6da6c12ed290624b6ee24c42e4255ac88f9660ff7b4cfcd010abb9bcfb003f",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/pilot/stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/repotend-issues.json": {
+        "sha256": "3408de3fd7760368fedd1e96fb2c26171daa9f90495758e5bee5fbe265fa1cb8",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/command.json": {
+        "sha256": "36a096a89910360c03613821c1120e72141b78f7465d9bad53b9a0ba2c86be0a",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/events.jsonl": {
+        "sha256": "4ce1110e30d11468b9116d080aaf4c8daae04f57b690b3b69fd05c46cf4e6622",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/measurement.json": {
+        "sha256": "d3249ced296d0f4e7e9e7bcd4e266655a145aac91288678f6afc91c23653f855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/prompt.txt": {
+        "sha256": "685b2a0edf0d71e231b4a565d8c0acacf99ee8be42e3de528afc808105a874ba",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/report.md": {
+        "sha256": "7d17556197b7e102d12471ecc8778ea255c84bc3f6d701c45e64a95dbd5a0eae",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/reproduction/stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": "0o644"
+      },
+      "examples/repotend-pilot/receipts/source-manifest.json": {
+        "sha256": "77e9a679b4b541fe1174a4c8010563c460eddc5d4fd0eeed368899a1852f7233",
+        "mode": "0o644"
+      },
+      "patterns/discover.md": {
+        "sha256": "35cdcf44418bbe78bfebc954b16221f1e2f752e9388891514975f1aa5535a4f0",
+        "mode": "0o644"
+      }
+    }
+  },
+  "environment": {
+    "system": "Darwin",
+    "release": "25.6.0",
+    "machine": "arm64",
+    "node": "v26.12.0",
+    "npm": "11.20.0",
+    "git": "git version 2.54.0 (Apple Git-157)",
+    "python3": "Python 3.15.0"
+  },
+  "target_code_executed": false,
+  "target_dependency_install": false,
+  "remediation_invoked": false,
+  "github_writes_during_audit": false,
+  "limits": "Commands and before/after file bytes/modes observed; no syscall trace or universal OS isolation claim. Setup and receipt writes are outside target. No model used for audit."
+}

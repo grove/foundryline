@@ -1,0 +1,43 @@
+{
+  "record_kind": "operator-recorded read-only lookup metadata",
+  "recorded_at_utc": "2026-10-18T08:17:13.337646+00:00",
+  "scope": "all states, first 100 issue/PR titles and bodies; no comments or discussions; counts below cap",
+  "outputs": {
+    "issues.json": {
+      "argv": [
+        "gh",
+        "issue",
+        "list",
+        "--repo",
+        "grove/foundryline",
+        "--state",
+        "all",
+        "--limit",
+        "100",
+        "--json",
+        "number,title,body,state,url"
+      ],
+      "exit_code": 0,
+      "count": 4,
+      "sha256": "c0e1a65bea347bcf104ac86538a2892fe9e1be8559bd63f2407d34e9cbdb3d4b"
+    },
+    "pull-requests.json": {
+      "argv": [
+        "gh",
+        "pr",
+        "list",
+        "--repo",
+        "grove/foundryline",
+        "--state",
+        "all",
+        "--limit",
+        "100",
+        "--json",
+        "number,title,body,state,url"
+      ],
+      "exit_code": 0,
+      "count": 9,
+      "sha256": "93d859f1e634b162b7c517e2e0aabaf07b01cff875448333cae988641328ad39"
+    }
+  }
+}

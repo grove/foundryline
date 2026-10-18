@@ -1,5 +1,11 @@
 # RepoTend Discover pilot — actual run record
 
+**Current scope:** [Accepted narrow macOS/Codex Discover reference](../../docs/discover-v0.1-qualification-review.md).
+**Historical record:** The pending-review statements below describe the original
+pilot before that decision. They and the failed/unknown observations are retained;
+acceptance adds no execution evidence. For a new run, start with the
+[Discover first-run guide](../../patterns/discover.md#first-run).
+
 **Actual runs, not authored fixtures. Qualification: PENDING MAINTAINER REVIEW.**
 This record addresses [Foundryline #4](https://github.com/grove/foundryline/issues/4)
 using the [Discover runbook](../../patterns/discover.md) and

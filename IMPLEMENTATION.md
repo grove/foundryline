@@ -72,7 +72,8 @@ Do not claim any of those tools was invoked by Foundryline merely because its in
 
 **Goal:** Give repositories a second, deterministic source of work proposals without requiring a coding agent to run the audit.
 
-**Implementation evidence (2026-10-18, pending maintainer review):** The
+**Implementation evidence (2026-10-18, accepted for narrow manual Maintain):** See the
+[recorded decision and host limits](docs/maintain-v0.2-qualification-review.md). The
 [manual Maintain recipe](patterns/maintain.md) and
 [real pinned Foundryline audit](examples/repo-maintenance/README.md) retain
 RepoTend JSON/Markdown outputs, exact commands/environment, source-grounded

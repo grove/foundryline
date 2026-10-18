@@ -44,6 +44,34 @@ You don't have to use everything. Start with the part that's useful to you.
 
 All three are designed to be **copied into other projects**, not tied to this repository or to one AI provider.
 
+## First run: choose one path
+
+| Recipe | Required setup and inputs | First action and expected result |
+| --- | --- | --- |
+| **[Discover first run](patterns/discover.md#first-run)** | Recorded host: macOS / Codex CLI `0.163.0`; installed Gapline `bd6a1dea3677482e2d4a305a5bf8084cb3c95e69`; readable repository at a full SHA and one investigation question. | Authorize skill setup separately, then restrict the host to source reads and explicitly invoke `gapline-audit`. Expect a bounded report, including no-findings or refusal; issue drafting is a later step. |
+| **[Maintain first run](patterns/maintain.md#first-run)** | Git, npm, Node.js >=22.16.0; RepoTend `2d69cce901475380775f674b9cc5755f1f89f82e`; readable pinned target and an outside report directory. **No AI or GitHub token required.** | In a new work directory, follow the pinned tool setup, then audit with an explicit `--root`. Expect raw JSON/Markdown reports, stderr and exits. |
+| **[Deliver first run](patterns/deliver.md#first-run)** | macOS, Python 3.11+, exact native Codex CLI `0.162.1`; pinned Proofline and working native boundary; full approved request, frozen Git candidate and selected authorized check. | Confirm source/candidate and check permissions, then run the direct `proofline.py check` template. Expect `report.json` and native receipts. **Intentline planning/export is optional.** |
+
+The linked first-run sections give exact sources, setup steps and stop conditions.
+Tool download/installation and private report writes need scoped permission;
+Discover's audit permits only source reads, while Deliver needs permission to
+execute the selected tests. Missing required skill activation, source or execution boundary
+means **UNAVAILABLE**, not success. Issue publication, target fixes, PR publication,
+merge and deployment each need their own effect authorization.
+
+**A recipe, a witnessed execution and uncoached agent adoption are different evidence.**
+Following a skill document manually is **not** evidence of native installed skill
+activation. No prompt is an enforcement boundary; configure actual host permissions.
+A repeat in this conversation cannot establish independent adoption: that needs an
+actually new agent/session without the earlier conversation or results, with its
+inputs and coaching disclosed. A same-host fresh agent still shares administration.
+Future cold-start qualification must retain its own run record separately from the
+existing [Discover](docs/discover-v0.1-qualification-review.md),
+[Maintain](docs/maintain-v0.2-qualification-review.md) and
+[Deliver](docs/deliver-v0.2-qualification-review.md) decisions and receipts.
+This documentation update records no new live activation, independent review or
+fresh-agent success, and leaves the published v0.2.0 tag and acceptance scope unchanged.
+
 ## Try your first Discover
 
 Imagine you maintain a small GitHub project. You suspect there are things worth improving, but you don't know where to start.
@@ -52,21 +80,15 @@ With Foundryline, you can ask your coding assistant to **look for a few importan
 
 ### 1. Get your assistant ready
 
-You need a coding assistant that can read the repository you want to inspect and supports agent *skills* (reusable instructions for the assistant). The manual pilot used Codex on macOS; other setups need their own checks.
+You need a coding assistant that can read the repository and activate installed
+agent *skills* (reusable instructions). The accepted pilot used macOS / Codex CLI
+`0.163.0`; other setups need their own checks. Follow the
+[pinned skill setup](patterns/discover.md#what-you-need), then confirm actual
+`gapline-audit` invocation under host-enforced read-only permissions.
 
-Install the [Gapline](https://github.com/grove/gapline) skill using the instructions for your assistant. For a compatible Skills CLI setup, you can start with:
-
-~~~sh
-npx skills@latest add grove/gapline
-~~~
-
-When you're ready to turn a finding into a proposed issue, you can also install the [Intentline](https://github.com/grove/intentline) skills:
-
-~~~sh
-npx skills@latest add grove/intentline
-~~~
-
-These commands install **agent instructions**, not an AI model or a running Foundryline service. Installing a skill does not mean the assistant has actually used it. For issue drafting alone, you do **not** need the separate Intentline Python program.
+Gapline is required for the audit. Intentline `25e926f57e69395193fc0ac258f9e6dd2332cb18`'s
+`intentline-issue` guidance is needed only if you continue to issue drafting;
+no saved contract or Intentline Python runtime is required for that route.
 
 ### 2. Ask for a careful investigation
 

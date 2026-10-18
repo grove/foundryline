@@ -1,7 +1,9 @@
 # Deliver — refusal and negative-path checklist
 
-**AUTHORED NEGATIVE EXAMPLES. PROPOSED — NOT RUN.** No native Proofline or
-Intentline refusal was exercised by this Foundryline PR. These are expected
+**ONE ACTUAL NEGATIVE CONTROL OBSERVED.** The selected missing executable
+produced **CHECKS UNAVAILABLE** inside a qualified native Proofline check on
+[GitHub-hosted macOS](native-qualification.md). All other controls below are
+**PROPOSED — NOT RUN**; no native Intentline-export refusal was exercised. These are expected
 dispositions grounded in the current upstream interface; a live qualification
 must retain the actual tool response/exit and record any differences.
 
@@ -25,3 +27,9 @@ statement is **NOT RUN**; if it ran but could not establish its necessary
 native boundary, preserve **EXECUTION UNAVAILABLE**, not a made-up passing
 receipt. The [manual Deliver guide](../../patterns/deliver.md) describes which
 separate authorizations are required.
+
+**Witnessed control detail:** The [actual macOS report](native-qualification.md)
+contains missing executable `/nonexistent/foundryline-negative-check`, CLI exit
+`2`, a native `UNAVAILABLE` observation and no product assertion. The original
+npm-wrapper launch failure is separately recorded as an infrastructure issue;
+neither is a product defect.

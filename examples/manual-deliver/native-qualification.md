@@ -59,7 +59,7 @@ independently read back as:
   behavior were observed. This is a limited probe, **not** a general OS security
   certificate or every possible host permission inspection.
 - Proofline report SHA-256:
-  `e28e5a799ee3101767fd1473223280d4780361067287dc256d427471b9dad995` **(verify against artifact for full raw record)**.
+  `e28e5a799ee3101765cbadb9e19eabd8552fa4589012d07cd2d202f115c2da78` **(verify against artifact for full raw record)**.
   The selected check process receipt is `receipts/check-000.json`.
 - **R1** (reject blank/whitespace-only names) has successful **limited selected-check
   evidence**. **R2** (preserve valid Unicode/spacing) has no selected native
@@ -83,7 +83,7 @@ and an observed `[Errno 2] No such file or directory` diagnostic. Its
 native boundary preflight separately reported **`OBSERVED`**; absence of the
 selected tool was **not** upgraded into failed product behavior. The native
 negative report SHA-256 was
-`d5d463fa3805feed35563fdfd34f5ef5b42c5394ca4e7dbc6568189354904661`
+`d5d463fa3805feed4b3439483af978d6217c3f513902d189ec24b39bb9e155d4`
 **(verify against artifact)**, with receipt at `receipts/check-000.json`.
 The negative frozen candidate tree matched the positive tree
 `16aebbdc8d43a23049ada8182ca7b6651fbcdfc6`.

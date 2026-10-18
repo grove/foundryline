@@ -33,6 +33,10 @@ DOCUMENTS = (
     ROOT / "examples/repotend-pilot/README.md",
     ROOT / "examples/repotend-pilot/issue-proposal.md",
     ROOT / "examples/repotend-pilot/host/README.md",
+    ROOT / "patterns/maintain.md",
+    ROOT / "examples/repo-maintenance/README.md",
+    ROOT / "examples/repo-maintenance/issue-proposal.md",
+    ROOT / "examples/repo-maintenance/adoption.md",
 )
 
 LOCAL_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")

@@ -72,6 +72,16 @@ Do not claim any of those tools was invoked by Foundryline merely because its in
 
 **Goal:** Give repositories a second, deterministic source of work proposals without requiring a coding agent to run the audit.
 
+**Implementation evidence (2026-10-18, pending maintainer review):** The
+[manual Maintain recipe](patterns/maintain.md) and
+[real pinned Foundryline audit](examples/repo-maintenance/README.md) retain
+RepoTend JSON/Markdown outputs, exact commands/environment, source-grounded
+triage and an unpublished decision proposal, a missing-target execution error,
+and a separate-agent adoption attempt. The actual successful report has PASS
+and WARN outcomes; other statuses are explained without synthetic receipts.
+This is a manual reference, not a new release or qualification of schedules,
+automatic issue creation, remediation, or other platforms.
+
 **Deliverables:**
 
 - `patterns/maintain.md` and a real RepoTend invocation example using its current checkout and Node.js requirements.

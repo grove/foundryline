@@ -1,0 +1,26 @@
+{
+  "record_kind": "observed process receipt",
+  "argv": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "--cache",
+    "/private/tmp/foundryline-maintain/npm-cache"
+  ],
+  "cwd": "/private/tmp/foundryline-maintain/tool",
+  "started_at_utc": "2026-10-18T08:14:34.078702+00:00",
+  "elapsed_seconds": 0.5227394169196486,
+  "exit_code": 0,
+  "stdout": {
+    "file": "stdout.txt",
+    "sha256": "f79fdaf9d2d49cb0cf66a52252c843521b0f89f7c5384970c3c9cafdf2d0b058",
+    "bytes": 27
+  },
+  "stderr": {
+    "file": "stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  }
+}

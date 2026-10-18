@@ -1,0 +1,8 @@
+{
+  "toolSha": "2d69cce901475380775f674b9cc5755f1f89f82e",
+  "toolLockfileSha256": "f17806903690e3f2058655ff974ed45a27ee894cceccd8f54ac50e8c8108d0b6",
+  "targetSha": "5dc1dd15836584a1112caec224d479df8deffc9f",
+  "targetStatus": "",
+  "targetNodeModulesPresent": false,
+  "negativeTargetExists": false
+}

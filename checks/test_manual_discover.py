@@ -25,6 +25,8 @@ DOCUMENTS = (
     ROOT / "docs" / "deliver-v0.2-qualification-review.md",
     ROOT / "docs" / "maintain-v0.2-qualification-review.md",
     ROOT / "docs" / "manual-intake.md",
+    ROOT / "docs" / "evidence-handoff-template.md",
+    ROOT / "examples" / "evidence-handoff-samples.md",
     ROOT / "docs" / "releases" / "v0.1.0.md",
     ROOT / "docs" / "releases" / "v0.2.0.md",
     PATTERN,
@@ -108,6 +110,17 @@ class ManualDiscoverReferenceTests(unittest.TestCase):
         ):
             with self.subTest(required=required):
                 self.assertIn(required.lower(), pattern.lower())
+
+    def test_shared_handoff_stays_short_and_reachable_from_each_recipe(self) -> None:
+        template = read(ROOT / "docs/evidence-handoff-template.md")
+        detailed = read(EXAMPLE / "run-record-template.md")
+        self.assertLess(len(template.split()), len(detailed.split()))
+        self.assertLess(len(template.splitlines()), len(detailed.splitlines()))
+        for recipe in ("discover", "maintain", "deliver"):
+            pattern = read(ROOT / "patterns" / f"{recipe}.md")
+            with self.subTest(recipe=recipe):
+                self.assertIn("../docs/evidence-handoff-template.md", pattern)
+                self.assertIn(f"../examples/evidence-handoff-samples.md#{recipe}", pattern)
 
     def test_fixture_claim_is_source_grounded_and_not_runtime_proof(self) -> None:
         policy = read(EXAMPLE / "fixtures/docs/registration-policy.md").splitlines()

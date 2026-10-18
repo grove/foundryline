@@ -131,6 +131,10 @@ The [refusal matrix](../examples/manual-deliver/refusals.md) records PR #19's **
 
 ## 5. Prepare a reviewable handoff — publication remains separate
 
+Optionally use the [shared evidence and decision handoff](../docs/evidence-handoff-template.md)
+as a short receipt index; see the [Deliver sample](../examples/evidence-handoff-samples.md#deliver).
+It complements the recipe-specific template below without adding a stage or publication authority.
+
 Summarize the original request/authority, R IDs and source lines, candidate commit/tree and any uncommitted inputs, authorized edits, selected argv, native record/report and receipts, demonstrated check results, **NOT DEMONSTRATED** obligations, environment/unknowns and outstanding decisions. See the [handoff template](../examples/manual-deliver/handoff-template.md).
 
 Get independent human/agent review as appropriate; it must evaluate the **original behavior**, not just a passing checker output. To create a PR, obtain **separate explicit PR CREATE authorization**. A reviewer then decides on merge, and deploy/release needs another authorization. `intentline-plan`, a `proofline check` report, a GitHub issue and this recipe **never** grant those rights.

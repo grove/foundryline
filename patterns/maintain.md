@@ -169,6 +169,10 @@ For each finding worth pursuing:
 
 ## 5. Prepare an unpublished handoff
 
+Optionally use the [shared evidence and decision handoff](../docs/evidence-handoff-template.md)
+to summarize existing receipts; see the [Maintain sample](../examples/evidence-handoff-samples.md#maintain).
+This adds no required record format or execution stage.
+
 For a justified new task, draft an issue with a plain-language problem, pinned
 source/policy links, supporting and counterevidence, rule ID/confidence, priority
 rationale, proposed acceptance criteria, decisions/gaps, and verification labeled

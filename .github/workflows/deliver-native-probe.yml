@@ -1,0 +1,156 @@
+name: Temporary issue 21 Intentline native trace
+
+# One bounded push-triggered native qualification; removed before PR publication.
+on:
+  push:
+    branches: [feat/deliver-intentline-trace]
+    paths: [.github/workflows/deliver-native-probe.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    name: Model-free Proofline check on macOS
+    runs-on: macos-15
+    timeout-minutes: 12
+    steps:
+      - name: Check out frozen coding-agent implementation
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: source
+          ref: f54d44eb1d21fae2d7cfd8aae4216e91019a87d3
+          persist-credentials: false
+      - name: Check out exact Proofline runtime
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: grove/proofline
+          ref: 8e117fff4de2459637fe7f74f47ab17fc3341d84
+          path: tool
+          persist-credentials: false
+      - name: Python 3.12 on macOS
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: "3.12"
+      - name: Node 22 for Codex package
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: "22"
+      - name: Install exactly Codex CLI 0.162.1
+        run: |
+          set -euo pipefail
+          npm install -g @openai/codex@0.162.1 --ignore-scripts --no-audit --no-fund
+          codex --version
+          test "$(codex --version)" = "codex-cli 0.162.1"
+
+      - name: Use installed native Codex binary instead of the Node wrapper
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$(uname -m)" in
+            arm64) triple=aarch64-apple-darwin ;;
+            x86_64) triple=x86_64-apple-darwin ;;
+            *) echo "Unsupported macOS architecture"; exit 1 ;;
+          esac
+          # Codex's npm entrypoint starts with /usr/bin/env node, which is not
+          # available inside Proofline's intentionally restricted sandbox.
+          # The identical-version native Mach-O binary is installed as an
+          # optional dependency; use it directly without changing permissions.
+          module_root="$(npm root -g)"
+          native="$(find "$module_root/@openai" -type f \
+            -path "*/vendor/$triple/bin/codex" -print -quit)"
+          test -n "$native"
+          test -x "$native"
+          mkdir -p "$RUNNER_TEMP/native-codex-bin"
+          ln -s "$native" "$RUNNER_TEMP/native-codex-bin/codex"
+          echo "$RUNNER_TEMP/native-codex-bin" >> "$GITHUB_PATH"
+          "$native" --version
+          test "$("$native" --version)" = "codex-cli 0.162.1"
+
+      - name: Run real exported S1 with a gap, expanded links, and invalid map
+        shell: bash
+        env:
+          WORK: ${{ runner.temp }}/foundryline-21-native
+          SRC: ${{ github.workspace }}/source
+          TOOL: ${{ github.workspace }}/tool
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p "$WORK"
+          python3 -B - <<'PYRUN'
+          import hashlib,json,os,platform,shutil,subprocess,sys,time
+          from pathlib import Path
+          root=Path(os.environ["WORK"])
+          src=Path(os.environ["SRC"])
+          tool=Path(os.environ["TOOL"])
+          def save(name,value):
+              (root/name).write_text(json.dumps(value,indent=2)+"\n")
+          def git(path,ref):
+              return subprocess.check_output(["git","-C",str(path),"rev-parse",ref],text=True).strip()
+          assert git(src,"HEAD")=="f54d44eb1d21fae2d7cfd8aae4216e91019a87d3"
+          assert git(src,"HEAD^{tree}")=="a003d013419fd1f142f0d05175938c6b0d7008f3"
+          assert not subprocess.check_output(["git","-C",str(src),"status","--porcelain"])
+          assert git(tool,"HEAD")=="8e117fff4de2459637fe7f74f47ab17fc3341d84"
+          export=root/"export"
+          shutil.copytree(src/"examples/manual-deliver/intentline-trace/export",export)
+          before={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in export.iterdir()}
+          python=str(Path(sys.executable).resolve())
+          base=[python,"-B","-m","unittest","discover","-s","checks","-p","test_intentline_trace.py","-k"]
+          source=base+["test_complete_source_and_citations","-v"]
+          integrity=base+["test_export_completion_and_file_identities","-v"]
+          save("identity.json",{"host":platform.platform(),"python":sys.version,
+               "codex":subprocess.check_output(["codex","--version"],text=True).strip(),
+               "run_id":os.environ["GITHUB_RUN_ID"],"run_attempt":os.environ["GITHUB_RUN_ATTEMPT"],
+               "event":os.environ["GITHUB_EVENT_NAME"],"implementation_commit":git(src,"HEAD"),
+               "implementation_tree":git(src,"HEAD^{tree}"),"proofline_commit":git(tool,"HEAD"),
+               "source_sha256":before["source-S1.txt"],"export_hashes":before,
+               "model_calls":"0: check-only; external coding-stage accounting unavailable"})
+          scenarios=[("gap",[source],{"R1":[{"index":0,"argv":source}]}),
+                     ("linked",[source,integrity],{"R1":[{"index":0,"argv":source}],"R2":[{"index":1,"argv":integrity}]}),
+                     ("invalid-map",[source],{"R1":[{"index":0,"argv":["/nonexistent/mismatched-argv"]}]})]
+          for name,checks,links in scenarios:
+              save(name+"-checks.json",checks)
+              save(name+"-links.json",links)
+              cmd=[python,"-B",str(tool/"proofline.py"),"check","--repo",str(src),
+                   "--source",str(export/"source-S1.txt"),"--intentline-export",str(export),
+                   "--intentline-links",str(root/(name+"-links.json")),"--checks",str(root/(name+"-checks.json")),
+                   "--seconds","200","--check-seconds","40","--output",str(root/(name+"-record"))]
+              save(name+"-invocation.json",{"argv":cmd,"cwd":str(tool)})
+              start=time.monotonic()
+              p=subprocess.run(cmd,cwd=tool,capture_output=True,timeout=240)
+              (root/(name+".stdout")).write_bytes(p.stdout)
+              (root/(name+".stderr")).write_bytes(p.stderr)
+              (root/(name+".exit")).write_text(str(p.returncode)+"\n")
+              save(name+"-elapsed.json",{"seconds":time.monotonic()-start})
+              report=root/(name+"-record/report.json")
+              if report.is_file():
+                  status_cmd=[python,"-B",str(tool/"proofline.py"),"status",str(report),"--show-source"]
+                  save(name+"-status-invocation.json",{"argv":status_cmd,"cwd":str(tool)})
+                  s=subprocess.run(status_cmd,cwd=tool,capture_output=True,timeout=60)
+                  (root/(name+"-status.stdout")).write_bytes(s.stdout)
+                  (root/(name+"-status.stderr")).write_bytes(s.stderr)
+                  (root/(name+"-status.exit")).write_text(str(s.returncode)+"\n")
+                  product=root/(name+"-record/inputs/product")
+                  if (product/".git").exists():
+                      subprocess.run(["git","-C",str(product),"bundle","create",str(root/(name+"-candidate.bundle")),"--all"],check=True)
+          after={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in export.iterdir()}
+          save("export-integrity-after.json",after)
+          assert before==after
+          for name in ("gap","linked"):
+              report=json.loads((root/(name+"-record/report.json")).read_bytes())
+              assert report["status"]=="CHECKS PASSED",report["status"]
+              assert report["boundary"]["assessment"]["status"]=="OBSERVED"
+              assert report["candidate_tree"]=="a003d013419fd1f142f0d05175938c6b0d7008f3"
+              assert report["model_dispatches"]==0
+              assert (root/(name+".exit")).read_text().strip()=="0"
+          PYRUN
+
+      - name: Preserve results, including blocked attempts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: foundryline-21-native-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/foundryline-21-native/
+          include-hidden-files: true
+          retention-days: 7
+          if-no-files-found: warn

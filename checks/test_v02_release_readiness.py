@@ -33,17 +33,21 @@ class ManualV02ReadinessChecks(unittest.TestCase):
         ):
             self.assertIn(path, readme)
 
-    def test_release_is_unequivocally_not_published(self):
-        draft = RELEASE.read_text()
-        self.assertIn("RELEASE CANDIDATE NOTES — NOT TAGGED OR PUBLISHED", draft)
-        self.assertIn("Explicitly approve", draft)
-        self.assertIn("exact v0.2.0 release commit", draft)
-        self.assertIn("scheduled intake", draft.lower())
-        self.assertIn("defers scheduling", draft)
-        self.assertIn("coverage_completeness: UNKNOWN", draft)
-        self.assertIn("v0.1.0", draft)
-        self.assertNotIn("v0.2.0 is now published", draft.lower())
-        self.assertIn("release NOT published", ROADMAP.read_text())
+    def test_release_records_actual_verified_publication(self):
+        record = RELEASE.read_text()
+        self.assertIn("**Published:** [Foundryline v0.2.0", record)
+        self.assertIn("https://github.com/grove/foundryline/releases/tag/v0.2.0", record)
+        self.assertIn("8409eebe0389461ec60a4bef6a5ce2aec6fb0903", record)
+        self.assertIn("refs/tags/v0.2.0", record)
+        self.assertIn("39127978408", record)
+        self.assertIn("non-draft", record)
+        self.assertIn("defers scheduling", record)
+        self.assertIn("coverage_completeness: UNKNOWN", record)
+        self.assertIn("v0.1.0", record)
+        self.assertNotIn("RELEASE CANDIDATE NOTES — NOT TAGGED OR PUBLISHED", record)
+        roadmap = ROADMAP.read_text()
+        self.assertIn("v0.2.0 PUBLISHED", roadmap)
+        self.assertIn("v0.1.0 and v0.2.0 are both published", roadmap)
 
     def test_maintain_acceptance_names_real_both_modes_and_limits(self):
         review = MAINTAIN.read_text()
@@ -77,23 +81,7 @@ class ManualV02ReadinessChecks(unittest.TestCase):
 
     def test_active_workflows_are_not_scheduled_or_publishers(self):
         names = {p.name for p in (ROOT / ".github/workflows").glob("*.yml")}
-        standard = {"maintain-audit.yml", "reference-checks.yml"}
-        publisher = ".github/workflows/publish-v0.2.0-once.yml"
-        # Temporary, explicitly authorized one-shot publication PR only.
-        # The cleanup PR MUST delete this workflow and restore this guard.
-        if names != standard:
-            self.assertEqual(names, standard | {"publish-v0.2.0-once.yml"})
-            once = (ROOT / publisher).read_text()
-            self.assertIn('branches: [main]', once)
-            self.assertIn('"'+publisher+'"', once)
-            self.assertIn("RELEASE_TARGET: 8409eebe0389461ec60a4bef6a5ce2aec6fb0903", once)
-            self.assertIn("RELEASE_TAG: v0.2.0", once)
-            self.assertIn("permissions:\n  contents: write", once)
-            self.assertIn("git/matching-refs/tags/", once)
-            self.assertIn("gh release create", once)
-            self.assertIn("persist-credentials: false", once)
-            for disallowed in ("\n  schedule:", "\n  workflow_dispatch:", "\n  issues:", "\n  workflow_run:"):
-                self.assertNotIn(disallowed, once)
+        self.assertEqual(names, {"maintain-audit.yml", "reference-checks.yml"})
         workflow = WORKFLOW.read_text()
         self.assertIn("workflow_dispatch:", workflow)
         self.assertIn("permissions:\n  contents: read", workflow)

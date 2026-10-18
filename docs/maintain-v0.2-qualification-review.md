@@ -52,4 +52,4 @@ All offline structural and receipt tests remain useful regression checks, not ne
 python3 -B -m unittest discover -s checks -v
 ```
 
-**Publication:** Nothing in this decision tags or publishes a release; see the [v0.2.0 release candidate notes](releases/v0.2.0.md) for the separate publication gate.
+**Publication:** This Maintain acceptance **did not itself** tag or publish a release. A later, separately authorized one-shot operation published [Foundryline v0.2.0](https://github.com/grove/foundryline/releases/tag/v0.2.0) at exact source commit `8409eebe0389461ec60a4bef6a5ce2aec6fb0903`; see the [publication receipt](releases/v0.2.0.md). The release adds no schedule, issue-writing or repair authorization.

@@ -1,0 +1,60 @@
+{
+  "schema": "foundryline.deliver.native-artifact.v1",
+  "created_from_verified_observation": "2026-10-18",
+  "assessment": "OBSERVED_BOUNDED_NATIVE_EXECUTION_NOT_YET_MAINTAINER_ACCEPTED",
+  "original_artifact": {
+    "repo": "grove/proofline",
+    "run_id": 39123644533,
+    "event": "push",
+    "run_url": "https://github.com/grove/proofline/actions/runs/39123644533",
+    "artifact_id": 12134224973,
+    "artifact_url": "https://github.com/grove/proofline/actions/runs/39123644533/artifacts/12134224973",
+    "expires_at": "2026-10-25T11:32:59Z",
+    "zip_sha256": "31f8eb7ce91eb2a647a2e6af4e12050dddb47a3a73df619c7c24c8410c1883e8",
+    "zip_bytes": 1892994
+  },
+  "retained_copy": {
+    "path": "repotend-issue15-native-39123644533.zip",
+    "git_blob_sha1": "a33a6fa58fb13bb25f96393cb43c157799a479c2",
+    "zip_sha256": "31f8eb7ce91eb2a647a2e6af4e12050dddb47a3a73df619c7c24c8410c1883e8",
+    "zip_bytes": 1892994,
+    "caveat": "Full original binary archive, retained on this PR branch; permanent in main only after maintainer merge."
+  },
+  "identity": {
+    "original_issue": "https://github.com/grove/repotend/issues/15",
+    "coding_agent_candidate_commit": "ead77fde6a5a7ba33e54cc81deb76fced8dbc333",
+    "candidate_tree": "544421686de4112ca1ac8bfb118cde750821e3ef",
+    "actual_tested_proofline_revision": "f019a3927e5f4ce8a325b73edb2a28369265a95f",
+    "subsequently_merged_proofline_revision": "adc0eb21c17bc70310b5f231ba8a092ca0d7d4e4",
+    "intentline_revision": "25e926f57e69395193fc0ac258f9e6dd2332cb18",
+    "source_s1_sha256": "e1d61d83be03e8c442d05d1953bd2de47cd3a5a17a755c87d81826c56cb163f8",
+    "environment": "GitHub-hosted macOS 15.7.9 arm64, Python 3.12.10, Node 22.16.0, native Codex CLI 0.162.1",
+    "model_dispatches_for_check_only": 0
+  },
+  "member_sha256": {
+    "identity.json": "380b87c6ecd094a99d1cfc3e2a935cdd4d6b4957adf9d5a1342599b754b89c6a",
+    "summary.json": "9418551b0a6bcf5fb934e4259727b6c5cccff7380bef224ecfb561bc707b8cbf",
+    "paired-startup-comparison.json": "a5c06c64f7fb02008b13934aa0862d171e4b386cbc67a0ae6e47c809e3111023",
+    "node-startup-receipt.json": "70e4c01edb83ae40d963775eb899d7eb37fa2c648c24f3ccc56bbdb0dd93351e",
+    "node-baseline-without-file-receipt.json": "11d6cf2a9c3708e269059bd57687e52584905e95744068d6ebe8b0e5c24e5249",
+    "r1-only-record/report.json": "61c4e03abae2c280aaa64c58fe77b270e678dcb71f37fed6334c880cd6e0ef5a",
+    "r1-r2-record/report.json": "a58f38e709001651219227d7ce58231279624a1fb1aef7c497d6dd60e42b186e",
+    "r1-only-record/receipts/check-000.json": "195fbcfb4e5fc8eb1669475ed6352fc92cb5b50f86ad39dff197ba2006586b1a",
+    "r1-r2-record/receipts/check-000.json": "0d1e7a6bb52d19f8a76b7dd8dd7a2b2bc6c4f282bd0675c4800ca5aa9bfc583e",
+    "r1-r2-record/receipts/check-001.json": "f7ff5b3afd4e9fa4ae3e7af3968ea2116e7deae8e6ce56ed96573cd383c6a858",
+    "original/export/source-S1.txt": "e1d61d83be03e8c442d05d1953bd2de47cd3a5a17a755c87d81826c56cb163f8",
+    "original/export/contract.json": "d03db622308869e6bd6010d8ddf97d95fa1e0f3680ff710d9e3668c604a6987b",
+    "original/export/source-manifest.json": "e332914e1408cb65dd7596f5e47f729def4d8b4665abec01f5f59fce0f19c5d0",
+    "original/export/export-manifest.json": "9e40d693ca7a815eb82166d9ea73dccdfbd19714a90e4e6bf78723c3af3c7cce",
+    "r1-only-links.json": "0f8c990f0e6668bd242d39e4fba2e81a72d011ad177c81c76a3a9ecc752939b1",
+    "r1-r2-links.json": "6dc83c2108cf4410e0513f3366571eb0592e843146ff886b01f01692563bf2ea",
+    "r1-only-checks.json": "237959b9c1051a3994f3a6d8c6fed2f21a24ebb473eb7828cf86bb33d0386ab2",
+    "r1-r2-checks.json": "da43dad37c97bd952387cb8dfb46796472bee65c342030fddfed19eb2dc2ee1a",
+    "invalid-map-result.json": "7bd7deccd55a66fe15a9769088023a7292dfb57b8155a008a71d65c614a96bd6",
+    "invalid-map.stderr": "0108debd03feaec826c0583b8f1668fe1347a91937c9e01d2308608daad62041",
+    "r1-only-result.json": "b975f86cd1680b8767e1f01a4871530727a1823a2af67b64b666e5a27b39cad7",
+    "r1-r2-result.json": "504cceac94d7215aa692a5c1a96b85bee4a67997bd1b3dd020c366d53c828fee",
+    "r1-only-status-result.json": "6703272259779ea53e17611a32c56e72b50e34282446c92d4054234d11895d00",
+    "r1-r2-status-result.json": "662fa7d296356db70dce4ce579d65acb5ee44e4773d869a49586913b29e50531"
+  }
+}

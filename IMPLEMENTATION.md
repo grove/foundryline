@@ -98,7 +98,7 @@ automatic issue creation, remediation, or other platforms.
 
 ## 4. Milestone D — Qualified manual trigger and optional scheduled read-only intake
 
-**In progress — issue [#15](https://github.com/grove/foundryline/issues/15):** A first, narrowly scoped, [manual GitHub Actions RepoTend audit example](docs/manual-intake.md) is under implementation. It runs a deterministic auditor without a model and provides a negative control. **The [GitHub-hosted PR runner test](https://github.com/grove/foundryline/actions/runs/39112223810) passed** with a real audit (5 PASS/8 WARN), expected missing-target exit 2, an inspected report artifact, and no observed target changes. **A distinct `workflow_dispatch` launch remains NOT YET VERIFIED** and must be witnessed after merging before qualifying manual button-driven behavior. This is not scheduled Gapline intake and does not create issues or apply fixes.
+**Qualified narrow first slice — [issue #15](https://github.com/grove/foundryline/issues/15) completed:** The [manual GitHub Actions RepoTend audit](docs/manual-intake.md) has been **actually exercised by a `workflow_dispatch` event** on GitHub-hosted Ubuntu 24.04, [run #39112708357](https://github.com/grove/foundryline/actions/runs/39112708357), after [PR #16](https://github.com/grove/foundryline/pull/16) merged. The real audit returned **5 PASS / 8 advisory WARN, exit 0, no report errors**; an independently observed missing-target control returned **exit 2**, ENOENT, and no output report. The target Git working tree was unchanged before/after and a short-lived raw report artifact was uploaded and inspected. **Qualified scope:** this one button-triggered, deterministic RepoTend audit on the recorded Ubuntu/Node/pinned-tool configuration, not a generally secure sandbox. **Still planned/unqualified:** optional schedules, AI/Gapline agent host qualification on GitHub, issue publication and autonomous repairs.
 
 
 **Goal:** Provide a **copyable** workflow only after testing it in a real host; do not ship a YAML file that claims automation without installing/calling an agent.
@@ -110,7 +110,7 @@ automatic issue creation, remediation, or other platforms.
 - Bounded output: Markdown or structured artifact summarizing scope, no-findings/findings, evidence grade, existing issue lookup, potential issue drafts and areas unassessed.
 - Clear distinction between scheduled read-only proposal mode and a **separately authorized** publish mode.
 
-**Suggested trigger prototype (NOT YET IMPLEMENTED):**
+**Future scheduled/AI-intake trigger prototype (NOT YET IMPLEMENTED; the RepoTend-only manual trigger above is real):**
 
 ~~~yaml
 on:

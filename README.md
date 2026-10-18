@@ -38,7 +38,7 @@ You don't have to use everything. Start with the part that's useful to you.
 
 | Recipe | In plain English | Where it stands |
 | --- | --- | --- |
-| **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Try it now:** manual guide, worked examples, and a recorded pilot |
+| **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Scoped v0.1 accepted:** manual guide, worked examples, and a recorded macOS/Codex pilot |
 | **Deliver** | Start with an agreed task, use your coding agent to make a change, and gather evidence about what was checked. | **Planned:** design described, no Foundryline delivery automation yet |
 | **Maintain** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Planned:** intended to build on RepoTend |
 
@@ -119,7 +119,7 @@ Other tools can fit too. You can use your preferred coding assistant, and **you 
 
 **Foundryline is still an early project.** The manual Discover guide, examples, source-reading helper, and reference tests exist. We also have **one real, recorded pilot** on macOS with a specific Codex CLI version, including a fresh-agent reproduction and a missing-source test.
 
-The evidence supports a *limited* first use, but **formal v0.1 acceptance is still awaiting a maintainer decision**. It doesn't establish that every coding-agent setup is safe or that the full software factory is already running.
+**Manual Discover v0.1 has been accepted for the specific macOS/Codex setup we tested.** This is a modest, evidence-backed milestone—not a claim that every coding-agent setup is safe or that the full software factory is running. See the [scope and maintainer decision](docs/discover-v0.1-qualification-review.md) and [v0.1 release notes (prepared, not published)](docs/releases/v0.1.0.md).
 
 In particular, Foundryline does **not** currently run scheduled audits, publish GitHub issues automatically, implement code, or merge changes for you. The Deliver and Maintain recipes are future work.
 
@@ -141,6 +141,7 @@ You can also open an issue with suggestions for a recipe you'd like to see.
 - [Implementation plan](IMPLEMENTATION.md) — what's done, what's next, and what's intentionally postponed
 - [Discover examples](examples/manual-discover/README.md) — friendly, made-up examples for learning
 - [Real pilot and its limits](examples/repotend-pilot/README.md) — what we actually tried
-- [v0.1 evidence review](docs/discover-v0.1-qualification-review.md) — what's supported and what still needs approval
+- [v0.1 evidence review](docs/discover-v0.1-qualification-review.md) — what's supported, the accepted scope, and what's not qualified
+- [v0.1 release notes](docs/releases/v0.1.0.md) — what this limited first version includes (release publication is separate)
 
 **License:** [Apache-2.0](LICENSE).

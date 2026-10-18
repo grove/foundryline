@@ -1,0 +1,34 @@
+name: Temporary preserve Deliver audit artifact probe
+
+# One-time read-only transfer capability check; remove before review PR.
+on:
+  push:
+    branches: [docs/qualify-manual-deliver-v02]
+    paths: [.github/workflows/preserve-deliver-artifact.yml]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  verify:
+    name: Verify exact external workflow archive
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - name: Test whether this token can read a public Proofline artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          umask 077
+          archive="$RUNNER_TEMP/proofline-39123644533.zip"
+          curl --fail-with-body --location --silent --show-error --max-time 65 \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/grove/proofline/actions/artifacts/12134224973/zip" \
+            --output "$archive"
+          echo "archive size: $(wc -c < "$archive")"
+          echo "archive sha256: $(sha256sum "$archive")"
+          echo "31f8eb7ce91eb2a647a2e6af4e12050dddb47a3a73df619c7c24c8410c1883e8  $archive" | sha256sum -c -

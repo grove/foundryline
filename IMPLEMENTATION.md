@@ -98,7 +98,7 @@ automatic issue creation, remediation, or other platforms.
 
 ## 4. Milestone D — Qualified manual trigger and optional scheduled read-only intake
 
-**Qualified narrow first slice — [issue #15](https://github.com/grove/foundryline/issues/15) completed:** The [manual GitHub Actions RepoTend audit](docs/manual-intake.md) has been **actually exercised by a `workflow_dispatch` event** on GitHub-hosted Ubuntu 24.04, [run #39112708357](https://github.com/grove/foundryline/actions/runs/39112708357), after [PR #16](https://github.com/grove/foundryline/pull/16) merged. The real audit returned **5 PASS / 8 advisory WARN, exit 0, no report errors**; an independently observed missing-target control returned **exit 2**, ENOENT, and no output report. The target Git working tree was unchanged before/after and a short-lived raw report artifact was uploaded and inspected. **Qualified scope:** this one button-triggered, deterministic RepoTend audit on the recorded Ubuntu/Node/pinned-tool configuration, not a generally secure sandbox. **Still planned/unqualified:** optional schedules, AI/Gapline agent host qualification on GitHub, issue publication and autonomous repairs.
+**ACCEPTED for narrow manual Maintain — [decision](docs/maintain-v0.2-qualification-review.md), [issue #15](https://github.com/grove/foundryline/issues/15) completed:** The [manual GitHub Actions RepoTend audit](docs/manual-intake.md) has been **actually exercised by a `workflow_dispatch` event** on GitHub-hosted Ubuntu 24.04, [run #39112708357](https://github.com/grove/foundryline/actions/runs/39112708357), after [PR #16](https://github.com/grove/foundryline/pull/16) merged. The real audit returned **5 PASS / 8 advisory WARN, exit 0, no report errors**; an independently observed missing-target control returned **exit 2**, ENOENT, and no output report. The target Git working tree was unchanged before/after and a short-lived raw report artifact was uploaded and inspected. **Qualified scope:** this one button-triggered, deterministic RepoTend audit on the recorded Ubuntu/Node/pinned-tool configuration, not a generally secure sandbox. **Still planned/unqualified:** optional schedules, AI/Gapline agent host qualification on GitHub, issue publication and autonomous repairs.
 
 
 **Goal:** Provide a **copyable** workflow only after testing it in a real host; do not ship a YAML file that claims automation without installing/calling an agent.
@@ -129,7 +129,7 @@ This snippet **does not run an agent**. A future example must pin/install a comp
 **Acceptance:**
 
 - The manual workflow produces real bounded outcomes on a qualified runner and can refuse correctly when prerequisites are missing.
-- The scheduled workflow runs only where explicitly enabled and uses read-only repository permissions for discovery.
+- **A future scheduled workflow remains out of scope and NOT QUALIFIED for v0.2.** If separately proposed, it must actually run in a qualified host, stay read-only for discovery and require distinct authority.
 - Neither mode publishes an issue without a separately configured write path and publication authorization.
 - Runner failures, timeouts, zero findings, uncertain skill invocation, and agent failures cannot appear as completed audits.
 
@@ -137,7 +137,7 @@ This snippet **does not run an agent**. A future example must pin/install a comp
 
 ## 5. Milestone E — Document Deliver (optional for initial release)
 
-**Bounded direct-route implementation and native checks observed; maintainer decision pending in [issue #18](https://github.com/grove/foundryline/issues/18):** PR #19 supplied the [Deliver recipe](patterns/deliver.md), [authored username example](examples/manual-deliver/README.md), its native macOS check and missing-command control. The separate [approved coding-agent follow-up](examples/manual-deliver/agent-qualification/README.md) implements durable raw-receipt retention and validation, freezes the actual implementation, and records a new native Proofline run of all 27 selected repository tests, a missing-command result and a local boundary refusal. The original task, candidate/argv identities, raw reports and independent evidence review are retained for a separately authorized reviewable PR. Native evidence covers the exact implementation commit, not later evidence appendices. That direct-route task skipped Intentline; `coverage_completeness: UNKNOWN`. Keep issue #18 open pending independent maintainer review; passing selected checks is not overall acceptance.
+**ACCEPTED for a narrow manual Deliver reference — [decision](docs/deliver-v0.2-qualification-review.md) / [issue #18](https://github.com/grove/foundryline/issues/18):** PR #19 supplied the [Deliver recipe](patterns/deliver.md), [authored username example](examples/manual-deliver/README.md), its native macOS check and missing-command control. The separate [approved coding-agent follow-up](examples/manual-deliver/agent-qualification/README.md) implements durable raw-receipt retention and validation, freezes the actual implementation, and records a new native Proofline run of all 27 selected repository tests, a missing-command result and a local boundary refusal. The original task, candidate/argv identities, raw reports and independent evidence review are retained for a separately authorized reviewable PR. Native evidence covers the exact implementation commit, not later evidence appendices. That direct-route task skipped Intentline; `coverage_completeness: UNKNOWN`. Close issue #18 only for this scoped manual reference, retaining the independent-source-review and host limits; passing selected checks is never overall acceptance.
 
 
 The [issue #21 trace](examples/manual-deliver/intentline-trace/README.md) now
@@ -148,7 +148,7 @@ check; a separate mismatched map is rejected. All seven original obligations
 remain present and overall completeness stays UNKNOWN. Evidence belongs to the
 frozen implementation, with final evidence/status appendices checked ordinarily.
 
-**External-product qualification proposed, not maintainer-accepted:** The
+**External-product behavior qualification included in accepted narrow scope:** The
 [Deliver v0.2 evidence review](docs/deliver-v0.2-qualification-review.md)
 now preserves the **full original GitHub-hosted macOS Proofline artifact** for
 [RepoTend's actual CLI feature](https://github.com/grove/repotend/pull/16).
@@ -159,9 +159,10 @@ R1/R2 behavior tests both gave **limited linked passing evidence**. A wrong
 argv map was refused, and a paired startup check reproduced the old system
 read denial without the exact read grant. Native canaries were OBSERVED only
 within their checked scope; `coverage_completeness: UNKNOWN`. Historical
-blocked outcomes remain genuine. **Foundryline #18/#21 remain open** until
-an explicit, independent maintainer acceptance decision. No release or
-automatic workflow is authorized by this evidence review.
+blocked outcomes remain genuine. The bounded project-direction acceptance is recorded in the linked review;
+external human adversarial review and full-source completeness remain
+unqualified. No release publication or automatic workflow is authorized by
+this acceptance.
 
 **Goal:** Document one end-to-end candidate-and-check handoff without rebuilding the existing P2P controller.
 
@@ -240,11 +241,11 @@ Use the same source permissions, time/token limits, and review criteria. Collect
 
 **v0.1 (accepted, limited scope):** Manual Discover reference and recorded macOS/Codex pilot with same-operator fresh-agent reproduction, witnessed withheld-source refusal, source-grounded unpublished issue proposal, and structural/receipt checks. See the [accepted qualification scope](docs/discover-v0.1-qualification-review.md). No scheduler, automatic issue publication, cross-host qualification or broader isolation certification is implied.
 
-**v0.2 (proposed, manual-only scope pending acceptance):** Three copyable manual patterns (Discover, Maintain, Deliver) with specified host/tool evidence, including the genuinely button-triggered **read-only RepoTend** audit and optional direct/initial-S1 native Deliver check. **Scheduled intake is explicitly DEFERRED and NOT QUALIFIED.** Maintain formal acceptance, the Deliver review above, and a separate release/tag/publication decision remain prerequisites. No default issue-writing, automatic repair, code publication or merge privileges.
+**v0.2 (manual-only scope accepted; release NOT published):** Three copyable, accepted **manual** patterns (Discover, Maintain, Deliver), with each host/tool evidence boundary explicit; includes the real button-triggered **read-only RepoTend** audit and the optional direct/initial-S1 native Deliver check. See [Maintain acceptance](docs/maintain-v0.2-qualification-review.md), [Deliver acceptance](docs/deliver-v0.2-qualification-review.md) and [draft v0.2.0 release notes](docs/releases/v0.2.0.md). **Scheduled intake is DEFERRED and NOT QUALIFIED.** A separate approval of the *exact release/tag/publication* is still required. No default issue writing, automatic repair, coding, publishing or merge privileges.
 
 **v0.3 (conditional):** Controlled issue publication when justified, with a scoped standing mandate and robust duplicate handling; optional bounded Deliver reference.
 
-**v0.1.0 is now a published, narrowly scoped release.** Later versions are planning labels, not tagged/published releases or commitments to implement all stages.
+**v0.1.0 is published.** **v0.2.0 is presently a release candidate document, not a public tag or release.** Acceptance of manual recipes is not the same as permission to publish a release; future roadmap items are conditional rather than promised.
 
 ## 9. First issue to execute
 

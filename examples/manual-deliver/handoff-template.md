@@ -1,9 +1,11 @@
 # Deliver handoff — authored example, NOT PUBLISHED
 
 > **Template only, not a completed implementation record or GitHub PR.**
-> **Proofline native CHECK NOT RUN.** No Intentline export was produced or
-> accepted, no model/coding-agent implementation or human approval was observed,
-> and no PR CREATE or merge is authorized by this template.
+> **This handoff template itself is NOT COMPLETED and NOT PUBLISHED.** A
+> [separate model-free Proofline native check](native-qualification.md) really did
+> execute on the authored fixture, but **it is not a coding-agent implementation,
+> imported Intentline agreement, independent full acceptance or authorized PR**.
+> No Intentline export, real task approval or PR CREATE/merge is recorded here.
 
 ## Source and permission
 
@@ -36,7 +38,7 @@ in both `checks.json` and `links.json`.
 | **R2**, S1 line 2: preserve nonblank usernames unchanged | No selected command linked for R2 | **NOT DEMONSTRATED** |
 
 Even if the ordinary authored fixture suite passes in Foundryline CI, there is
-**no native Proofline check result** bound to a frozen candidate here.
+**no imported Intentline-linked Proofline receipt or actual product-delivery approval** in this unfilled template. A separate direct check of the authored candidate has [real native receipts](native-qualification.md), but R2 remains unselected and this handoff remains **NOT PUBLISHED**.
 `coverage_completeness` remains **UNKNOWN**.
 
 ## Native record and status — do not invent
@@ -64,4 +66,4 @@ Even if the ordinary authored fixture suite passes in Foundryline CI, there is
 - [ ] Seek separate explicit **PR CREATE** authorization; review full diff and
       record the real PR URL *only after creation*. Merge/deploy are separate.
 
-**Handoff result: NOT PUBLISHED / AWAITING QUALIFIED NATIVE EVIDENCE.**
+**Handoff result: NOT PUBLISHED / AWAITING A REAL AUTHORIZED CODING-AGENT-TO-PR HANDOFF.** A limited native fixture check exists separately.

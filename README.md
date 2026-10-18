@@ -159,7 +159,7 @@ Other tools can fit too. You can use your preferred coding assistant, and **you 
 
 **Foundryline is still an early project.** The manual Discover guide, examples, source-reading helper, and reference tests exist. We also have **one real, recorded Discover pilot** on macOS with a specific Codex CLI version, including a fresh-agent reproduction and a missing-source test. The manual Maintain reference adds an accepted, deterministic RepoTend audit, a failure control, and a separately witnessed button-triggered GitHub Actions run.
 
-**All three manual recipes now have narrowly accepted reference scopes.** Discover remains limited to the macOS/Codex pilot, Maintain to the observed local audit and real GitHub manual button run, and Deliver to the frozen candidate and supported native Proofline checks. See the [Discover decision](docs/discover-v0.1-qualification-review.md), [Maintain decision](docs/maintain-v0.2-qualification-review.md), and [Deliver decision](docs/deliver-v0.2-qualification-review.md). The [published v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0) remains unchanged; [v0.2.0 notes](docs/releases/v0.2.0.md) are **prepared, not yet released**.
+**All three manual recipes now have narrowly accepted reference scopes.** Discover remains limited to the macOS/Codex pilot, Maintain to the observed local audit and real GitHub manual button run, and Deliver to the frozen candidate and supported native Proofline checks. See the [Discover decision](docs/discover-v0.1-qualification-review.md), [Maintain decision](docs/maintain-v0.2-qualification-review.md), and [Deliver decision](docs/deliver-v0.2-qualification-review.md). The original [v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0) remains unchanged, and **[Foundryline v0.2.0 is now published](https://github.com/grove/foundryline/releases/tag/v0.2.0)** with the three manual recipes, acceptance boundaries, and their evidence.
 
 In particular, Foundryline does **not** currently run scheduled audits, publish GitHub issues automatically, implement code, or merge changes for you. The [manual Deliver follow-up](examples/manual-deliver/agent-qualification/README.md) records an approved coding-agent task and native candidate checks for a human PR decision. It supplies no autonomous publication or merge authority; automated Maintain options remain future work.
 
@@ -186,7 +186,8 @@ You can also open an issue with suggestions for a recipe you'd like to see.
 - [v0.1 evidence review](docs/discover-v0.1-qualification-review.md) — what's supported, the accepted scope, and what's not qualified
 - [Maintain acceptance](docs/maintain-v0.2-qualification-review.md) — what actual audits and button-run evidence support
 - [Deliver acceptance](docs/deliver-v0.2-qualification-review.md) — source-to-selected-check scope and limits
-- [v0.2.0 draft notes](docs/releases/v0.2.0.md) — manual-only release candidate; **not published**
+- [v0.2.0 public release](https://github.com/grove/foundryline/releases/tag/v0.2.0) — the published three manual recipes, evidence and limited scope
+- [v0.2.0 publication record](docs/releases/v0.2.0.md) — the exact approved tag and verification
 - [v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0) — the published manual Discover blueprint and its scope
 
 **License:** [Apache-2.0](LICENSE).

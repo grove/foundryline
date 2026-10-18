@@ -98,6 +98,9 @@ automatic issue creation, remediation, or other platforms.
 
 ## 4. Milestone D — Qualified manual trigger and optional scheduled read-only intake
 
+**In progress — issue [#15](https://github.com/grove/foundryline/issues/15):** A first, narrowly scoped, [manual GitHub Actions RepoTend audit example](docs/manual-intake.md) is under implementation. It runs a deterministic auditor without a model and provides a negative control. **The PR/job and actual `workflow_dispatch` run must be observed before claiming runner qualification.** This is not scheduled Gapline intake and does not create issues or apply fixes.
+
+
 **Goal:** Provide a **copyable** workflow only after testing it in a real host; do not ship a YAML file that claims automation without installing/calling an agent.
 
 **Deliverables:**

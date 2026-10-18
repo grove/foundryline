@@ -39,7 +39,7 @@ You don't have to use everything. Start with the part that's useful to you.
 | Recipe | In plain English | Where it stands |
 | --- | --- | --- |
 | **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Scoped v0.1 accepted:** manual guide, worked examples, and a recorded macOS/Codex pilot |
-| **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Bounded direct and optional S1 routes observed:** native macOS checks, requirement gap/relink and refusal; maintainer decision pending |
+| **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Real external-product pilot observed:** R1/R2 native behavior checks, limited evidence and refusal; scoped maintainer acceptance under review |
 | **[Maintain](patterns/maintain.md)** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Manual reference:** real pinned RepoTend audit, failure control, and separate-agent adoption record; pending maintainer review |
 
 All three are designed to be **copied into other projects**, not tied to this repository or to one AI provider.
@@ -133,6 +133,14 @@ real Intentline initial S1 draft/export from the complete user-authorized task a
 separate source/export integrity checks. The real native import first left R2
 NOT DEMONSTRATED, then reported limited linked-check evidence after its check
 was selected; a mismatched map was rejected. Overall completeness stays unknown.
+
+A stronger [external RepoTend Deliver qualification review](docs/deliver-v0.2-qualification-review.md)
+now preserves the **complete original successful macOS artifact**, tests two
+different user-facing behaviors, and records the failed-startup and invalid-map
+controls. **The selected checks passed, but overall requirement coverage is
+still UNKNOWN.** This is a proposal for a *narrow manual Deliver acceptance*;
+the maintainer has not approved it yet. Automatic coding and issue publication
+are still outside Foundryline's scope.
 
 ## The tools behind the recipes
 

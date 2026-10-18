@@ -1,6 +1,6 @@
 # Deliver — from an approved task to check evidence and a reviewable PR
 
-**Status: manual reference plus a bounded real coding-agent candidate and native check handoff.** PR #19 supplied the [authored fixture and original native check](../examples/manual-deliver/native-qualification.md). The separate [approved receipt-validation task](../examples/manual-deliver/agent-qualification/README.md) records actual coding-agent implementation, a frozen candidate, native Proofline checks and refusal evidence for independent review and an explicitly authorized PR. The [issue #21 trace](../examples/manual-deliver/intentline-trace/README.md) adds an actual initial S1 Intentline draft/export, native import, gap/relink comparison and safe map rejection. No automated controller, completeness certification or maintainer approval is implied. See [issue #18](https://github.com/grove/foundryline/issues/18).
+**Status: manual reference plus real coding-agent/native check handoffs; external-user-behavior qualification proposed for maintainer acceptance.** PR #19 supplied the [authored fixture and original native check](../examples/manual-deliver/native-qualification.md). The separate [approved receipt-validation task](../examples/manual-deliver/agent-qualification/README.md) records actual coding-agent implementation, a frozen candidate, native Proofline checks and refusal evidence for independent review and an explicitly authorized PR. The [issue #21 trace](../examples/manual-deliver/intentline-trace/README.md) adds an actual initial S1 Intentline draft/export, native import, gap/relink comparison and safe map rejection. No automated controller, completeness certification or maintainer approval is implied. See [issue #18](https://github.com/grove/foundryline/issues/18).
 
 **In one sentence:** Choose an authorized task, let your existing coding agent implement it, check the exact candidate with [Proofline](https://github.com/grove/proofline), then decide separately whether to open or merge a pull request.
 
@@ -25,6 +25,23 @@ If tests/dependencies need installation, do that **separately, with authorizatio
 ## 3. Choose checks; use Proofline only on a qualified native host
 
 **Pinned interface (verified from published upstream source):** [Proofline `8e117fff4de2459637fe7f74f47ab17fc3341d84`](https://github.com/grove/proofline/tree/8e117fff4de2459637fe7f74f47ab17fc3341d84), with **macOS, Python 3.11+, and exact Codex CLI `0.162.1`** for native checks. The CLI is `proofline.py check` (existing implementation, not a second agent); it uses Codex's protected native execution, **with no coding-model invocation in check-only mode**. Linux reference CI is not qualified native execution; never fall back to unprotected shell checks while claiming Proofline evidence. A skill installation alone does not install the Proofline CLI.
+
+**Node/macos qualification detail:** The original pinned Proofline revision
+`8e117fff4de2459637fe7f74f47ab17fc3341d84` applies to the earlier
+qualified **Python** teaching checks; on the observed macOS host it **could
+not run Node checks** because Node could not read its OpenSSL config inside
+that version's sandbox. The [independently reviewed, merged Proofline fix
+`adc0eb21c17bc70310b5f231ba8a092ca0d7d4e4`](https://github.com/grove/proofline/pull/60)
+adds read access to that **exact regular macOS configuration file**, with
+no corresponding broad directory/network permission. The [successful external
+RepoTend Node experiment](../docs/deliver-v0.2-qualification-review.md) used
+the **actually tested precursor tool revision**
+`f019a3927e5f4ce8a325b73edb2a28369265a95f`, whose native permission
+source blob matches the merged revision. This is evidence for **one specific
+macOS/Node/Codex setup**; choose and pin a reviewed compatible revision and
+reconfirm the native canaries on your own host. Never claim the old unpatched
+Node execution succeeded or assume all future Node versions are supported.
+
 
 Inspect/trust the pinned tool and supported environment first, keep a full Proofline checkout available, and require an **actual** sandbox preflight. Choose project commands that exist, are authorized to run, and do not require writing into the frozen candidate or network access. Examples use an absolute Python interpreter and `-B` to prevent import-cache writes.
 
@@ -122,3 +139,15 @@ rejection against its own frozen implementation. That does not execute the
 authored username fixture's proposed import path or certify all requirements. Historical unlinked R2 evidence stays **NOT DEMONSTRATED**
 by the earlier selected R1 check, and `coverage_completeness: UNKNOWN` applies
 throughout. Keep absent evidence **NOT RUN/UNAVAILABLE**.
+
+The [external RepoTend issue #15 behavior pilot](../docs/deliver-v0.2-qualification-review.md)
+also exercised the **real source-to-behavior trace**, not merely source-file
+integrity: the R1-only native check passed while R2 was **NOT DEMONSTRATED**;
+then separate actual R1 and R2 tests both passed on the exact same frozen
+coding-agent implementation using the original unaltered Intentline export.
+The archived evidence includes a real bad-map refusal and the earlier/paired
+OpenSSL failure controls. This supports a **proposed scoped manual Deliver
+acceptance**, pending independent maintainer review. Do not promote it to
+universal sandbox isolation, complete requirement satisfaction, PR/merge
+approval or a fully automatic controller.
+

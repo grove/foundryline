@@ -71,8 +71,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          # Matching-refs yields [] for missing tags, rather than a 404/error body.
           # Refuse a conflicting pre-existing tag rather than retargeting it.
-          existing_tag="$(gh api "repos/${GH_REPO}/git/ref/tags/${RELEASE_TAG}" --jq '.object.sha' 2>/dev/null || true)"
+          existing_tag="$(gh api "repos/${GH_REPO}/git/matching-refs/tags/${RELEASE_TAG}" --jq '.[] | select(.ref == "refs/tags/v0.1.0") | .object.sha')"
           if [[ -n "$existing_tag" && "$existing_tag" != "$RELEASE_TARGET" ]]; then
             echo "::error::Existing v0.1.0 tag points to an unexpected object; refusing to publish."
             exit 1

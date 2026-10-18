@@ -39,7 +39,7 @@ You don't have to use everything. Start with the part that's useful to you.
 | Recipe | In plain English | Where it stands |
 | --- | --- | --- |
 | **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Scoped v0.1 accepted:** manual guide, worked examples, and a recorded macOS/Codex pilot |
-| **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Bounded direct route observed:** approved receipt-validation task, coding candidate, native macOS check and refusal; maintainer decision pending |
+| **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Bounded direct and optional S1 routes observed:** native macOS checks, requirement gap/relink and refusal; maintainer decision pending |
 | **[Maintain](patterns/maintain.md)** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Manual reference:** real pinned RepoTend audit, failure control, and separate-agent adoption record; pending maintainer review |
 
 All three are designed to be **copied into other projects**, not tied to this repository or to one AI provider.
@@ -129,9 +129,10 @@ why one passing selected check does **not** demonstrate an unlinked requirement.
 The username example remains **authored**, with PR #19's [native check-only receipt](examples/manual-deliver/native-qualification.md). A separate [approved coding-agent follow-up](examples/manual-deliver/agent-qualification/README.md) now retains those original receipts and validates their identities. Its frozen implementation passed the selected 27-test suite through native Proofline on macOS, with an actual missing-command control and a retained local boundary refusal. This is bounded direct-route evidence for human review.
 
 The [issue #21 trace](examples/manual-deliver/intentline-trace/README.md) adds a
-real Intentline initial S1 draft/export from the complete approved issue and
-separate source/export integrity checks. Native consumer execution is pending;
-overall requirement completeness remains unknown.
+real Intentline initial S1 draft/export from the complete user-authorized task and
+separate source/export integrity checks. The real native import first left R2
+NOT DEMONSTRATED, then reported limited linked-check evidence after its check
+was selected; a mismatched map was rejected. Overall completeness stays unknown.
 
 ## The tools behind the recipes
 

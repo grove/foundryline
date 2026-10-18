@@ -1,0 +1,515 @@
+{
+  "scope": "Local Markdown file links in every changed/new Markdown document; HTTP URLs/anchors are not checked by this test.",
+  "documents": [
+    "IMPLEMENTATION.md",
+    "README.md",
+    "examples/manual-deliver/README.md",
+    "examples/manual-deliver/intentline-trace/README.md",
+    "examples/manual-deliver/intentline-trace/independent-review.md",
+    "examples/manual-deliver/refusals.md",
+    "patterns/deliver.md"
+  ],
+  "checked": 100,
+  "links": [
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "README.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "DESIGN.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "patterns/discover.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "examples/manual-discover/README.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "examples/manual-discover/run-record-template.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "checks/test_manual_discover.py",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "examples/repotend-pilot/README.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "docs/discover-v0.1-qualification-review.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "docs/releases/v0.1.0.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "patterns/maintain.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "examples/repo-maintenance/README.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "docs/manual-intake.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "patterns/deliver.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "examples/manual-deliver/README.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "examples/manual-deliver/agent-qualification/README.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "examples/manual-deliver/intentline-trace/README.md",
+      "exists": true
+    },
+    {
+      "document": "IMPLEMENTATION.md",
+      "destination": "docs/discover-v0.1-qualification-review.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/discover.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/deliver.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/maintain.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/discover.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/repotend-pilot/issue-proposal.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/repotend-pilot/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/manual-discover/example-issue-proposal.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "docs/discover-v0.1-qualification-review.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/maintain.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/repo-maintenance/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/repo-maintenance/issue-proposal.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "docs/manual-intake.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/deliver.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/manual-deliver/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/manual-deliver/native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/manual-deliver/agent-qualification/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/manual-deliver/intentline-trace/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "docs/discover-v0.1-qualification-review.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/manual-deliver/agent-qualification/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/discover.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "patterns/maintain.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "DESIGN.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "IMPLEMENTATION.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/manual-discover/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/repotend-pilot/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "examples/repo-maintenance/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "docs/discover-v0.1-qualification-review.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "destination": "LICENSE",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "agent-qualification/README.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "intentline-trace/README.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "original-request.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "candidate/README.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "verification-plan.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "native-qualification.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "handoff-template.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/README.md",
+      "destination": "refusals.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "export/source-S1.txt",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "issue-21.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "authorization.txt",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "export/export-manifest.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "producer.zip",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "verification.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "gap-checks.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "gap-links.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "linked-checks.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "linked-links.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "invalid-map-links.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "invalid-map-checks.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "local-refusal.zip",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "producer.zip",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "native-run.zip",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "local-refusal.zip",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "verification.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "remote-run.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "remote-artifacts.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "remote-log.txt",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "independent-review.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "final-validation.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "final-tests.txt",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/intentline-trace/README.md",
+      "destination": "final-links.json",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/refusals.md",
+      "destination": "native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/refusals.md",
+      "destination": "../../patterns/deliver.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/refusals.md",
+      "destination": "native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/refusals.md",
+      "destination": "agent-qualification/README.md",
+      "exists": true
+    },
+    {
+      "document": "examples/manual-deliver/refusals.md",
+      "destination": "intentline-trace/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/agent-qualification/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/intentline-trace/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/native-qualification.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/intentline-trace/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/verification-plan.json",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/refusals.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/intentline-trace/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/handoff-template.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/agent-qualification/README.md",
+      "exists": true
+    },
+    {
+      "document": "patterns/deliver.md",
+      "destination": "../examples/manual-deliver/intentline-trace/README.md",
+      "exists": true
+    }
+  ]
+}

@@ -5,6 +5,9 @@
 A separate [real approved coding-agent task](agent-qualification/README.md) now
 implements durable receipt retention and identity validation in Foundryline. Its
 new candidate/check evidence does not change this teaching fixture's provenance.
+A further [issue #21 trace](intentline-trace/README.md) runs a real initial S1
+Intentline export and native consumer against its own authorized coding change;
+this username fixture's optional import instructions remain unexecuted.
 
 This is an easy way to see why **a successful check does not mean all requirements are proven**.
 

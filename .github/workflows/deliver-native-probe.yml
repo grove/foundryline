@@ -42,6 +42,30 @@ jobs:
           codex --version
           test "$(codex --version)" = "codex-cli 0.162.1"
 
+      - name: Use installed native Codex binary instead of the Node wrapper
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$(uname -m)" in
+            arm64) triple=aarch64-apple-darwin ;;
+            x86_64) triple=x86_64-apple-darwin ;;
+            *) echo "Unsupported macOS architecture"; exit 1 ;;
+          esac
+          # Codex's npm entrypoint starts with /usr/bin/env node, which is not
+          # available inside Proofline's intentionally restricted sandbox.
+          # The identical-version native Mach-O binary is installed as an
+          # optional dependency; use it directly without changing permissions.
+          module_root="$(npm root -g)"
+          native="$(find "$module_root/@openai" -type f \
+            -path "*/vendor/$triple/bin/codex" -print -quit)"
+          test -n "$native"
+          test -x "$native"
+          mkdir -p "$RUNNER_TEMP/native-codex-bin"
+          ln -s "$native" "$RUNNER_TEMP/native-codex-bin/codex"
+          echo "$RUNNER_TEMP/native-codex-bin" >> "$GITHUB_PATH"
+          "$native" --version
+          test "$("$native" --version)" = "codex-cli 0.162.1"
+
       - name: Prepare disposable Git candidate and exact R1 command
         shell: bash
         env:

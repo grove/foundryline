@@ -38,9 +38,9 @@ You don't have to use everything. Start with the part that's useful to you.
 
 | Recipe | In plain English | Where it stands |
 | --- | --- | --- |
-| **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Scoped v0.1 accepted:** manual guide, worked examples, and a recorded macOS/Codex pilot |
-| **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Real external-product pilot observed:** R1/R2 native behavior checks, limited evidence and refusal; scoped maintainer acceptance under review |
-| **[Maintain](patterns/maintain.md)** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Manual reference:** real pinned RepoTend audit, failure control, and separate-agent adoption record; pending maintainer review |
+| **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Accepted manual reference:** scoped macOS/Codex pilot and witnessed missing-source refusal |
+| **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Accepted manual reference:** real RepoTend coding change, pinned macOS R1/R2 Proofline checks, limited evidence and refusal |
+| **[Maintain](patterns/maintain.md)** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Accepted manual reference:** real local RepoTend audit, refusal, same-host adoption, and verified GitHub Run workflow button |
 
 All three are designed to be **copied into other projects**, not tied to this repository or to one AI provider.
 
@@ -138,9 +138,9 @@ A stronger [external RepoTend Deliver qualification review](docs/deliver-v0.2-qu
 now preserves the **complete original successful macOS artifact**, tests two
 different user-facing behaviors, and records the failed-startup and invalid-map
 controls. **The selected checks passed, but overall requirement coverage is
-still UNKNOWN.** This is a proposal for a *narrow manual Deliver acceptance*;
-the maintainer has not approved it yet. Automatic coding and issue publication
-are still outside Foundryline's scope.
+still UNKNOWN.** The [recorded manual Deliver decision](docs/deliver-v0.2-qualification-review.md)
+accepts only those limited, real-host observations. It does not certify all
+requirements or enable automatic coding, issue publication or merges.
 
 ## The tools behind the recipes
 
@@ -157,9 +157,9 @@ Other tools can fit too. You can use your preferred coding assistant, and **you 
 
 ## What's ready today?
 
-**Foundryline is still an early project.** The manual Discover guide, examples, source-reading helper, and reference tests exist. We also have **one real, recorded Discover pilot** on macOS with a specific Codex CLI version, including a fresh-agent reproduction and a missing-source test. The manual Maintain reference now adds a deterministic RepoTend audit and adoption records, pending maintainer review.
+**Foundryline is still an early project.** The manual Discover guide, examples, source-reading helper, and reference tests exist. We also have **one real, recorded Discover pilot** on macOS with a specific Codex CLI version, including a fresh-agent reproduction and a missing-source test. The manual Maintain reference adds an accepted, deterministic RepoTend audit, a failure control, and a separately witnessed button-triggered GitHub Actions run.
 
-**Manual Discover v0.1 has been accepted for the specific macOS/Codex setup we tested.** This is a modest, evidence-backed milestone—not a claim that every coding-agent setup is safe or that the full software factory is running. See the [scope and maintainer decision](docs/discover-v0.1-qualification-review.md) and [published Foundryline v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0).
+**All three manual recipes now have narrowly accepted reference scopes.** Discover remains limited to the macOS/Codex pilot, Maintain to the observed local audit and real GitHub manual button run, and Deliver to the frozen candidate and supported native Proofline checks. See the [Discover decision](docs/discover-v0.1-qualification-review.md), [Maintain decision](docs/maintain-v0.2-qualification-review.md), and [Deliver decision](docs/deliver-v0.2-qualification-review.md). The [published v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0) remains unchanged; [v0.2.0 notes](docs/releases/v0.2.0.md) are **prepared, not yet released**.
 
 In particular, Foundryline does **not** currently run scheduled audits, publish GitHub issues automatically, implement code, or merge changes for you. The [manual Deliver follow-up](examples/manual-deliver/agent-qualification/README.md) records an approved coding-agent task and native candidate checks for a human PR decision. It supplies no autonomous publication or merge authority; automated Maintain options remain future work.
 
@@ -184,6 +184,9 @@ You can also open an issue with suggestions for a recipe you'd like to see.
 - [Real pilot and its limits](examples/repotend-pilot/README.md) — what we actually tried
 - [Real Maintain audit and adoption](examples/repo-maintenance/README.md) — pinned RepoTend outputs, triage and failure handling
 - [v0.1 evidence review](docs/discover-v0.1-qualification-review.md) — what's supported, the accepted scope, and what's not qualified
+- [Maintain acceptance](docs/maintain-v0.2-qualification-review.md) — what actual audits and button-run evidence support
+- [Deliver acceptance](docs/deliver-v0.2-qualification-review.md) — source-to-selected-check scope and limits
+- [v0.2.0 draft notes](docs/releases/v0.2.0.md) — manual-only release candidate; **not published**
 - [v0.1.0 release](https://github.com/grove/foundryline/releases/tag/v0.1.0) — the published manual Discover blueprint and its scope
 
 **License:** [Apache-2.0](LICENSE).

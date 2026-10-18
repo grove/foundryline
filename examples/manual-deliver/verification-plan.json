@@ -1,0 +1,49 @@
+{
+  "kind": "foundryline.authored-deliver-example",
+  "status": "AUTHORED TEACHING EXAMPLE — NO PROOFLINE NATIVE RUN",
+  "source": {
+    "path": "original-request.md",
+    "sha256": "12ee949075e5faaf1d260055cc0ffe193b0c18259f68a06d4e4b4d81b1f0a9b6",
+    "authority": "illustrative, not a real authorized GitHub issue",
+    "line_ending": "LF"
+  },
+  "candidate": {
+    "path": "candidate/",
+    "type": "authored Python teaching candidate, not a recorded coding-agent output",
+    "frozen_git_commit": null,
+    "proofline_report": null
+  },
+  "selected_check": {
+    "index": 0,
+    "argv_template": [
+      "HOST_ABSOLUTE_PYTHON",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_username_validation.UsernameValidationTests.test_rejects_blank"
+    ],
+    "execution": "PROPOSED — NOT RUN IN PROOFLINE",
+    "mapping_note": "replace HOST_ABSOLUTE_PYTHON with the same actual interpreter path in checks.json and links.json"
+  },
+  "illustrative_requirements": [
+    {
+      "id": "R1",
+      "source_id": "S1",
+      "line": 1,
+      "quote": "Reject usernames that are empty or contain only whitespace.",
+      "selected_check_indices": [0],
+      "proofline_evidence": "PROPOSED — NOT RUN"
+    },
+    {
+      "id": "R2",
+      "source_id": "S1",
+      "line": 2,
+      "quote": "Keep valid nonblank usernames exactly as entered, including Unicode and surrounding spaces.",
+      "selected_check_indices": [],
+      "proofline_evidence": "NOT DEMONSTRATED"
+    }
+  ],
+  "proofline_native_host": "macOS, Python 3.11+, Codex CLI exactly 0.162.1",
+  "optional_intentline_input": "one unamended S1 initial revision-1/schema-1 JSON export, produced by the real CLI only",
+  "intended_handoff_state": "NOT PUBLISHED; external coding, checks, PR and merge authorizations not provided by this example"
+}

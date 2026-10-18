@@ -11,6 +11,10 @@ this username fixture's optional import instructions remain unexecuted.
 
 This is an easy way to see why **a successful check does not mean all requirements are proven**.
 
+For a frozen real coding candidate, exact host/version preflight and raw-output
+retention, use the optional [macOS check-only walkthrough](macos-check-only.md).
+Its direct path needs no Intentline planning; new commands are **ILLUSTRATIVE — NOT RUN**.
+
 ## The source and the candidate
 
 The complete illustrative [original request](original-request.md) contains two lines:

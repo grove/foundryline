@@ -6,6 +6,10 @@
 
 You can use the direct Proofline route without Intentline. Structured acceptance is an **optional** extra when a task deserves it.
 
+For an opt-in, fully pinned Python replay, use the [copyable macOS check-only
+walkthrough](../examples/manual-deliver/macos-check-only.md). Its new commands are
+**ILLUSTRATIVE — NOT RUN**, with historical native evidence linked separately.
+
 ## First run
 
 | Before the detailed steps | Short path |

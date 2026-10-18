@@ -1,10 +1,10 @@
 # Foundryline — Implementation Plan
 
-**Status:** Manual Discover reference, structural checks/CI and a recorded real-host pilot exist; **v0.1 qualification is pending maintainer decision**. No hosted controller, scheduler, autonomous issue publisher, or generic host-isolation certification is supplied.  
+**Status:** Manual Discover **v0.1 accepted with the tested macOS/Codex host scope** (maintainer decision recorded in [issue #6](https://github.com/grove/foundryline/issues/6) on 2026-10-18). Reference checks/CI and pilot receipts exist; no hosted controller, scheduler, autonomous issue publisher, broad host-isolation certification, or published release is implied.  
 **Decision date:** 2026-10-18.  
 **See:** [README](README.md) · [Design](DESIGN.md).
 
-**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. An [actual pinned RepoTend pilot record](examples/repotend-pilot/README.md) now retains a live read-only audit, fresh-agent reproduction, witnessed source-unavailable refusal, unpublished proposal and usage. The separate [Discover v0.1 evidence review](docs/discover-v0.1-qualification-review.md) recommends **scoped, host-specific acceptance only after an explicit maintainer decision**. Host-visibility, shared-operator independence and missing cost/model identity remain qualified limitations. Until acceptance, v0.1 is **not** labeled live-qualified.
+**Implementation progress:** The [manual Discover recipe](patterns/discover.md), [authored examples](examples/manual-discover/README.md), blank [run-record template](examples/manual-discover/run-record-template.md), and [reference structural tests](checks/test_manual_discover.py) are provided as reviewable artifacts. An [actual pinned RepoTend pilot record](examples/repotend-pilot/README.md) now retains a live read-only audit, fresh-agent reproduction, witnessed source-unavailable refusal, unpublished proposal and usage. The [Discover v0.1 evidence review](docs/discover-v0.1-qualification-review.md) recommended narrow host-specific acceptance; the maintainer **accepted that limited scope on 2026-10-18**. Host-visibility limits, shared-operator reproduction and unknown cost/model identity remain disclosed. [Prepared v0.1 release notes](docs/releases/v0.1.0.md) describe the supported manual blueprint; they do **not** create a tag or published release.
 
 ## 0. Objective and development approach
 
@@ -199,7 +199,7 @@ Use the same source permissions, time/token limits, and review criteria. Collect
 
 ## 8. Release definitions and priorities
 
-**v0.1 (minimum):** Manual Discover recipe with one independently reproducible, real-host read-only exercise, evidence-calibrated issue proposal or honest no-findings outcome, tested source/duplicate checks, and clear safe adoption instructions. No scheduler required.
+**v0.1 (accepted, limited scope):** Manual Discover reference and recorded macOS/Codex pilot with same-operator fresh-agent reproduction, witnessed withheld-source refusal, source-grounded unpublished issue proposal, and structural/receipt checks. See the [accepted qualification scope](docs/discover-v0.1-qualification-review.md). No scheduler, automatic issue publication, cross-host qualification or broader isolation certification is implied.
 
 **v0.2 (conditional):** Manual and scheduled intake example *actually qualified* on a specified host; optional RepoTend maintenance recipe; still no default issue-writing privileges.
 

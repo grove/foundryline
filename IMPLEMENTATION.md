@@ -137,6 +137,9 @@ This snippet **does not run an agent**. A future example must pin/install a comp
 
 ## 5. Milestone E — Document Deliver (optional for initial release)
 
+**Partial reference now proposed in [issue #18](https://github.com/grove/foundryline/issues/18):** [manual Deliver recipe](patterns/deliver.md) and an [authored, runnable source/candidate example](examples/manual-deliver/README.md) describe the direct Proofline `check` path, optional initial single-S1 Intentline JSON export and exact selected-argv mapping. Ordinary example Python unit tests can run in Linux CI; this is **not** live Proofline evidence. A real native `check` on macOS with **Codex CLI exactly 0.162.1**, a negative/refusal run and independent review are still **NOT RUN / PENDING**. Do not close issue #18 or call Deliver qualified on documents and CI alone.
+
+
 **Goal:** Document one end-to-end candidate-and-check handoff without rebuilding the existing P2P controller.
 
 **Deliverables:**

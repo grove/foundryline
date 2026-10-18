@@ -1,7 +1,8 @@
 name: Blueprint reference checks
 
-# Verifies repository-owned documentation and authored fixture consistency.
-# Does NOT invoke an agent, audit another repository, or qualify Foundryline v0.1.
+# Verifies repository-owned docs, retained receipts and authored fixtures.
+# The Deliver fixture unit tests execute only the small authored example in this repo.
+# No Gapline/Proofline native agent, external target audit, or host qualification.
 on:
   pull_request:
   push:
@@ -12,7 +13,7 @@ permissions:
 
 jobs:
   reference-checks:
-    name: Manual Discover reference integrity
+    name: Foundryline reference and authored example checks
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -20,7 +21,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Run structural reference checks (not a Gapline audit)
+      - name: Run reference and authored fixture checks (not a Proofline native check)
         run: |
           python3 --version
           python3 -m unittest discover -s checks -v

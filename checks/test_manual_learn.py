@@ -16,7 +16,7 @@ class ManualLearnReferenceTests(unittest.TestCase):
         guide = GUIDE.read_text()
         example = EXAMPLE.read_text()
         self.assertIn("NOT QUALIFIED", guide)
-        self.assertIn("no post-delivery", guide.lower())
+        self.assertIn("No pilot was run", guide)
         self.assertIn("UNKNOWN", guide)
         self.assertIn("PROPOSED — NOT RUN", example)
         self.assertIn("NOT OBSERVED", example)

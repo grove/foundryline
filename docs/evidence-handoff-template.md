@@ -1,6 +1,6 @@
 # Evidence and decision handoff
 
-Optional summary for Discover, Maintain or Deliver. Copy, omit inapplicable fields
+Optional summary for Discover, Maintain, Deliver or Learn. Copy, omit inapplicable fields
 and link existing receipts. See
 [completed small samples](../examples/evidence-handoff-samples.md).
 Complements the [detailed Discover record](../examples/manual-discover/run-record-template.md);

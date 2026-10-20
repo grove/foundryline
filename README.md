@@ -52,6 +52,7 @@ The three accepted recipes can be **copied into other projects**; Learn is a pro
 | **[Discover first run](patterns/discover.md#first-run)** | Recorded host: macOS / Codex CLI `0.163.0`; installed Gapline `bd6a1dea3677482e2d4a305a5bf8084cb3c95e69`; readable repository at a full SHA and one investigation question. | Authorize skill setup separately, then restrict the host to source reads and explicitly invoke `gapline-audit`. Expect a bounded report, including no-findings or refusal; issue drafting is a later step. |
 | **[Maintain first run](patterns/maintain.md#first-run)** | Git, npm, Node.js >=22.16.0; RepoTend `2d69cce901475380775f674b9cc5755f1f89f82e`; readable pinned target and an outside report directory. **No AI or GitHub token required.** | In a new work directory, follow the pinned tool setup, then audit with an explicit `--root`. Expect raw JSON/Markdown reports, stderr and exits. |
 | **[Deliver first run](patterns/deliver.md#first-run)** | macOS, Python 3.11+, exact native Codex CLI `0.162.1`; pinned Proofline and working native boundary; full approved request, frozen Git candidate and selected authorized check. | Confirm source/candidate and check permissions, then run the direct `proofline.py check` template. Expect `report.json` and native receipts. **Intentline planning/export is optional.** |
+| **[Learn first run](patterns/learn.md#first-run-one-approved-change-one-outcome)** | One authorized original request, source/candidate/PR identities, selected receipts and any independently sourced post-delivery observation. No new runtime required. | Compare source intent, approved change, selected checks, SCM/deployment events and unknown outcomes. Record **UNKNOWN** rather than infer impact; [worked evidence-limited example](examples/manual-learn/README.md). |
 
 The linked first-run sections give exact sources, setup steps and stop conditions.
 Tool download/installation and private report writes need scoped permission;
@@ -168,6 +169,10 @@ controls. **The selected checks passed, but overall requirement coverage is
 still UNKNOWN.** The [recorded manual Deliver decision](docs/deliver-v0.2-qualification-review.md)
 accepts only those limited, real-host observations. It does not certify all
 requirements or enable automatic coding, issue publication or merges.
+
+## Try the optional Learn retrospective
+
+The [manual Learn guide](patterns/learn.md) starts with one real approved change and distinguishes selected checks from independently observed post-delivery events and outcomes. The [issue #21 → PR #22 retrospective](examples/manual-learn/README.md) documents an actual source-control merge, while explicitly recording unavailable deployment/customer impact and a separate passing-tests-but-no-impact-evidence control. **Learn remains NOT QUALIFIED**; this is documentation, not a post-delivery pilot or acceptance of a new workflow.
 
 ## The tools behind the recipes
 

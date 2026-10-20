@@ -1,7 +1,7 @@
 # Discover — manual, read-only reference pattern
 
 **Foundryline pattern:** Discover, manual profile.  
-**Status: ACCEPTED for the narrow macOS/Codex manual Discover reference.** See the [recorded acceptance and limits](../docs/discover-v0.1-qualification-review.md) and [actual RepoTend pilot record](../examples/repotend-pilot/README.md). This does not qualify automatic discovery, uncoached adoption or general host isolation.
+**Status: ACCEPTED for the narrow macOS/Codex manual Discover reference, plus one separately accepted native fresh-session trial.** See the [original manual pilot decision](../docs/discover-v0.1-qualification-review.md), [scoped issue #29 cold-start trial and limits](../docs/discover-v0.2-cold-start-qualification.md), and [RepoTend pilot](../examples/repotend-pilot/README.md). The new result documents uncoached completion **after operator setup and explicit activation**; it does not qualify automatic discovery, self-installation, general host isolation or cross-host adoption.
 **Issue:** [Live qualification #4](https://github.com/grove/foundryline/issues/4), following [reference blueprint #2](https://github.com/grove/foundryline/issues/2).
 **Related:** [Design](../DESIGN.md) · [Implementation](../IMPLEMENTATION.md) · [Authored examples](../examples/manual-discover/README.md).
 
@@ -20,7 +20,18 @@
 Following the skill document manually is **not** evidence of native installed skill
 activation. No prompt is an enforcement boundary. A new adoption claim needs an
 actually new agent/session and its own record; the existing same-host reproduction
-does not establish uncoached or independently administered adoption.
+does not establish uncoached or independently administered adoption. The separately
+accepted [issue #29 trial](../docs/discover-v0.2-cold-start-qualification.md)
+demonstrates explicit native activation without post-launch coaching, not an
+operator-free first installation or automatic skill choice.
+
+**Host qualification lessons from issue #29 (not universal security guarantees):**
+
+1. **Check the live tool inventory before worker launch.** A Codex `read-only` filesystem sandbox still allowed `/usr/bin/true` during the failed preflight. Restrict actual command, patch, issue-writing and project-service tools at the host; do not infer a no-execution boundary from the sandbox label.
+2. **Record structured native activation.** Prefer a host event containing a `type: skill` invocation and the injected installed skill input. Merely listing, reading or mentioning `gapline-audit` is not enough.
+3. **Use an exact-key source allowlist when feasible.** [The existing pilot reader](../examples/repotend-pilot/host/read_snapshot.py) can serve a previously verified, pinned source bundle through read-only keys. Keep bundle preparation and report writes **outside** the agent's audit; the reader and native host must still be checked for other exposed capabilities.
+4. **Design negative controls carefully.** To test withheld-source refusal, remove an *otherwise valid* source key from a separate worker's mapping and verify that the worker tried that **exact key** in the actual event stream. An unknown or prefixed invalid key establishes only unknown-key refusal.
+5. **Separate setup from uncoached work.** Report operator installation, tool configuration, chosen skill and initial prompt independently of post-launch human interventions. Mark frozen operator-collected open/closed issue **and PR** inventory as frozen, not live worker search; retain unknown costs and reviewer/provider overlap.
 
 ## Purpose
 

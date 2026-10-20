@@ -29,6 +29,8 @@ Use the existing [evidence and decision handoff](../docs/evidence-handoff-templa
 
 ### Worked evidence-limited example — historical sources, not a Learn execution
 
+See the [source-linked issue #21 → PR #22 retrospective and separate no-data control](../examples/manual-learn/README.md). Its independent GitHub PR merge observation establishes delivery in source control only, not a production or customer outcome.
+
 The [Deliver requirement trace](../examples/manual-deliver/intentline-trace/README.md) documents a real, limited source-to-candidate check and a `NOT DEMONSTRATED` state for an unlinked obligation. The [Deliver qualification review](../docs/deliver-v0.2-qualification-review.md) limits the accepted claim to selected checks and explicitly keeps overall requirement coverage unknown.
 
 From those records alone, this **Learn example** can state:

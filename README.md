@@ -41,8 +41,9 @@ You don't have to use everything. Start with the part that's useful to you.
 | **[Discover](patterns/discover.md)** | Ask an AI assistant to look through a project for meaningful problems or missing behavior, then help you draft a clear GitHub issue. | **Accepted manual reference:** scoped macOS/Codex pilot and witnessed missing-source refusal |
 | **[Deliver](patterns/deliver.md)** | Start with an approved task, use your coding agent to make a change, and gather evidence about what was checked. | **Accepted manual reference:** real RepoTend coding change, pinned macOS R1/R2 Proofline checks, limited evidence and refusal |
 | **[Maintain](patterns/maintain.md)** | Check whether your repository has useful basics such as good contribution guidance, sensible CI, and safer workflows. | **Accepted manual reference:** real local RepoTend audit, refusal, same-host adoption, and verified GitHub Run workflow button |
+| **[Learn](patterns/learn.md)** | Review existing evidence after a delivered change and ask whether its intended outcome was actually observed. | **New optional manual guide — NOT QUALIFIED; no post-delivery pilot run** |
 
-All three are designed to be **copied into other projects**, not tied to this repository or to one AI provider.
+The three accepted recipes can be **copied into other projects**; Learn is a proposed optional extension and has not been qualified on a real post-delivery outcome. None is tied to one AI provider.
 
 ## First run: choose one path
 
@@ -204,6 +205,7 @@ You can also open an issue with suggestions for a recipe you'd like to see.
 - [Implementation plan](IMPLEMENTATION.md) — what's done, what's next, and what's intentionally postponed
 - [Discover examples](examples/manual-discover/README.md) — friendly, made-up examples for learning
 - [Real pilot and its limits](examples/repotend-pilot/README.md) — what we actually tried
+- [Optional Learn recipe](patterns/learn.md) — evidence-limited post-delivery review, not yet qualified
 - [Real Maintain audit and adoption](examples/repo-maintenance/README.md) — pinned RepoTend outputs, triage and failure handling
 - [v0.1 evidence review](docs/discover-v0.1-qualification-review.md) — what's supported, the accepted scope, and what's not qualified
 - [Maintain acceptance](docs/maintain-v0.2-qualification-review.md) — what actual audits and button-run evidence support

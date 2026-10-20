@@ -41,6 +41,8 @@ DOCUMENTS = (
     ROOT / "examples/repotend-pilot/host/README.md",
     ROOT / "patterns/maintain.md",
     ROOT / "patterns/deliver.md",
+    ROOT / "patterns/learn.md",
+    ROOT / "examples/manual-learn/README.md",
     ROOT / "examples/manual-deliver/README.md",
     ROOT / "examples/manual-deliver/macos-check-only.md",
     ROOT / "examples/manual-deliver/candidate/README.md",

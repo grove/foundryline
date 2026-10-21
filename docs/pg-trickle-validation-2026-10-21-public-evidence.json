@@ -1,0 +1,673 @@
+{
+  "foundryline_revision": "cc80099b4d955ba789509ceca4e7af113ae440ad",
+  "baseline": "0cbd84dce4fede39fa36f2c8716e0faa0a9b1b14",
+  "baseline_tree": "05ee73d25ae6d10adcd4788a2826525d30eb8085",
+  "model": "same inherited session model; exact runtime build/tokens/cost UNAVAILABLE",
+  "reasoning": "medium, all four fresh agents",
+  "budget": "20 minutes per coding attempt",
+  "candidates": {
+    "a-ordinary": {
+      "base": "0cbd84dce4fede39fa36f2c8716e0faa0a9b1b14",
+      "tree": "b545ed25c1254c17c8f04c205b51a777e673b9fd",
+      "patch_sha256": "53fcff669bfecc45b6c50211f6625f850b8c95aa6b3fb28538ae66c5a5024ddd",
+      "tracked_modified": {
+        "src/api/outbox.rs": "cddd867e269a17c649d72a48d611e1467c49b30fdd7640e502bac928ce694935"
+      },
+      "nonignored_untracked": [],
+      "staged_diff_empty": true
+    },
+    "a-deliver": {
+      "base": "0cbd84dce4fede39fa36f2c8716e0faa0a9b1b14",
+      "tree": "9bf65bc54ff336fc858cd4144a9c7ba2a187e13a",
+      "patch_sha256": "b100723b5298bef152e49dcb28945406c8246f354722dc9426d04b383dc29f41",
+      "tracked_modified": {
+        "src/api/outbox.rs": "c4bd505d49011d9228e0427ba288d77003644a515df455a7bd2700646c60ee92"
+      },
+      "nonignored_untracked": [],
+      "staged_diff_empty": true
+    },
+    "b-ordinary": {
+      "base": "0cbd84dce4fede39fa36f2c8716e0faa0a9b1b14",
+      "tree": "a64fe106ee933d98b46254424a140f72dd816ed4",
+      "patch_sha256": "851fbc05434bfe247c55133e2957e7c594254cee8b41bf40cc14629ad3d5db13",
+      "tracked_modified": {
+        "docs/SQL_REFERENCE.md": "2abc3af1775c8267706d69e98cee91d08bf4d8cd680eb5a88572c8281c2ef34e",
+        "src/api/output_delta.rs": "9f08b5929ff16876b3b9dd80ca3c129ff8cf01987ea60c2e78263e1bb772c36f",
+        "tests/e2e_v108_conformance_tests.rs": "c7e4cf794b9eadde7502c856b88db50aff8b46f6ffc8e3a449ae5194725b77ca"
+      },
+      "nonignored_untracked": [],
+      "staged_diff_empty": true
+    },
+    "b-deliver": {
+      "base": "0cbd84dce4fede39fa36f2c8716e0faa0a9b1b14",
+      "tree": "f4131b0e8651518f06de2d34ea39d44bcd1e0b49",
+      "patch_sha256": "cd8dd695ec9ebee965c918818614fef0bee0a0248c85dd3e773291acbb4207a3",
+      "tracked_modified": {
+        "docs/SQL_REFERENCE.md": "b61f4e9cb7724e4eca0c64c242daa585d647f1eb1ce4b91ebcf15a45e55382ce",
+        "src/api/output_delta.rs": "b1c3170352e7a59a161b3baa272ce378485bf093a823c893f2b27640080820a7",
+        "tests/e2e_v108_conformance_tests.rs": "c527af82fcd2278227cb8613e5ba934d57cfd703659146d5841dcc18fe31a551"
+      },
+      "nonignored_untracked": [],
+      "staged_diff_empty": true
+    }
+  },
+  "docker_inspect_ids": {
+    "baseline": "sha256:a8b455d90e33971b147885d73153ac9048c2a50f83d1b716d69a3d1e7944c03a",
+    "b-ordinary": "sha256:99859de61233a39404b8b86cb7dd93b7739e404dcf1f0550a34fc9e3dc3a218c",
+    "b-deliver": "sha256:f6efbc7791082c45697c1b2457851ed34f4e6729f861a08a207ae334c7670681"
+  },
+  "decision": "NO CLEAR BENEFIT in this pilot",
+  "action": "KEEP FOUNDRYLINE UNCHANGED",
+  "publication_note": "Selected public derivatives; reviewed/public input files were not found. Full raw archive remains private. No new experiment.",
+  "private_source_archive_sha256": "e61110ec5edacd99b81a705aeb976e853ab22b0af73352d28f83b76b8fd99d15",
+  "archive": {
+    "path": "pg-trickle-validation-2026-10-21-public-evidence.zip",
+    "bytes": 71781,
+    "sha256": "c8756d416305a39e20dbaed7fe3d54843b4fcb70c7829e24a89ecc825d544cfc"
+  },
+  "members": [
+    {
+      "path": "README.md",
+      "bytes": 2595,
+      "sha256": "c2a03a7c712efd6cf6a5aa21a08040e865538c2497a83ad155369b8429feaddc",
+      "treatment": "Publication curation note; not historical run evidence"
+    },
+    {
+      "path": "assessment-plan.md",
+      "bytes": 4375,
+      "sha256": "47a184a704770a113121226fcd5ca3d3443eea0f0374eda8f0e4539bf2007959",
+      "source_member": "assessment-plan.md",
+      "source_sha256": "47a184a704770a113121226fcd5ca3d3443eea0f0374eda8f0e4539bf2007959",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/a-baseline/outbox_assessment.rs",
+      "bytes": 2854,
+      "sha256": "39cca248bdc421197e9109cad15be34c9499fdc01baa7fe8bfed4e35b3c4302e",
+      "source_member": "assessment/a-baseline/outbox_assessment.rs",
+      "source_sha256": "39cca248bdc421197e9109cad15be34c9499fdc01baa7fe8bfed4e35b3c4302e",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/a-baseline/result.json",
+      "bytes": 2461,
+      "sha256": "240154192ea6b7a59300d48aa7ad7ffb5f58ccb065131805f3eebebc5e53f7f5",
+      "source_member": "assessment/a-baseline/result.json",
+      "source_sha256": "7e1c9bcd9b3bdb8b2a38ae287b23a77c6df672fac1ad313a40b566f571dbcdad",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "assessment/a-deliver.patch",
+      "bytes": 1999,
+      "sha256": "b100723b5298bef152e49dcb28945406c8246f354722dc9426d04b383dc29f41",
+      "source_member": "assessment/a-deliver.patch",
+      "source_sha256": "b100723b5298bef152e49dcb28945406c8246f354722dc9426d04b383dc29f41",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/a-deliver/outbox_assessment.rs",
+      "bytes": 2956,
+      "sha256": "70023451070095a0f0842be59dd6ace21ec0f0133dbbfa05fb02c678fb0854ae",
+      "source_member": "assessment/a-deliver/outbox_assessment.rs",
+      "source_sha256": "70023451070095a0f0842be59dd6ace21ec0f0133dbbfa05fb02c678fb0854ae",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/a-deliver/result.json",
+      "bytes": 1602,
+      "sha256": "252eb85ad283c3bf3a2da4785b41a4ff3b354850a28e083871976b986e361b6b",
+      "source_member": "assessment/a-deliver/result.json",
+      "source_sha256": "f982e82bae7d50d69a945d9900e782c8a85b7f373bcb44f74015161d51c457f2",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "assessment/a-ordinary.patch",
+      "bytes": 2106,
+      "sha256": "53fcff669bfecc45b6c50211f6625f850b8c95aa6b3fb28538ae66c5a5024ddd",
+      "source_member": "assessment/a-ordinary.patch",
+      "source_sha256": "53fcff669bfecc45b6c50211f6625f850b8c95aa6b3fb28538ae66c5a5024ddd",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/a-ordinary/outbox_assessment.rs",
+      "bytes": 2967,
+      "sha256": "01f2ca802544553855f722181b6147bca3157d8f3907eaabfc28c7c7d7aaae3b",
+      "source_member": "assessment/a-ordinary/outbox_assessment.rs",
+      "source_sha256": "01f2ca802544553855f722181b6147bca3157d8f3907eaabfc28c7c7d7aaae3b",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/a-ordinary/result.json",
+      "bytes": 1608,
+      "sha256": "884094ce441bd68b8df372eff0bb5178065bad853951156b8ca2ecb4b751e84a",
+      "source_member": "assessment/a-ordinary/result.json",
+      "source_sha256": "4731155e3c4f7789940402e9809e86cf8bbe4bedd5b9e662164875754cf16489",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "assessment/assessment-results.json",
+      "bytes": 6117,
+      "sha256": "dc21ace33673df762dde22fa3b8b6accd1de581a83e7d1acacbe87ad767c693b",
+      "source_member": "assessment/assessment-results.json",
+      "source_sha256": "d9943a29af9425b934602e7a51e699df3b18fbcc3ac05c8864fba80f8be4c59d",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "assessment/b-baseline-independent-v3.log",
+      "bytes": 875,
+      "sha256": "3cf83050f7de72310d2c3677375a1e7832b895fdb22f33db06f8c0d94b34f9bf",
+      "source_member": "assessment/b-baseline-independent-v3.log",
+      "source_sha256": "3cf83050f7de72310d2c3677375a1e7832b895fdb22f33db06f8c0d94b34f9bf",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/b-baseline-privilege-static.log",
+      "bytes": 46,
+      "sha256": "821ebe22e19d9546c18cde497f1655e346c24ced0ee8493a1b9c2f8f28305da5",
+      "source_member": "assessment/b-baseline-privilege-static.log",
+      "source_sha256": "821ebe22e19d9546c18cde497f1655e346c24ced0ee8493a1b9c2f8f28305da5",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/b-deliver-independent-v3.log",
+      "bytes": 184,
+      "sha256": "a68748b0116d3e111a81257afdfa7e582886a82f58f12bff59699d7590374c80",
+      "source_member": "assessment/b-deliver-independent-v3.log",
+      "source_sha256": "a68748b0116d3e111a81257afdfa7e582886a82f58f12bff59699d7590374c80",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/b-deliver-privilege-static.log",
+      "bytes": 46,
+      "sha256": "821ebe22e19d9546c18cde497f1655e346c24ced0ee8493a1b9c2f8f28305da5",
+      "source_member": "assessment/b-deliver-privilege-static.log",
+      "source_sha256": "821ebe22e19d9546c18cde497f1655e346c24ced0ee8493a1b9c2f8f28305da5",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/b-deliver.patch",
+      "bytes": 7794,
+      "sha256": "cd8dd695ec9ebee965c918818614fef0bee0a0248c85dd3e773291acbb4207a3",
+      "source_member": "assessment/b-deliver.patch",
+      "source_sha256": "cd8dd695ec9ebee965c918818614fef0bee0a0248c85dd3e773291acbb4207a3",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/b-ordinary-independent-v3.log",
+      "bytes": 185,
+      "sha256": "c5dcddabb00488e048f96ea83f0610ebf28d4b85d5a3f6473b7da53f49acf458",
+      "source_member": "assessment/b-ordinary-independent-v3.log",
+      "source_sha256": "c5dcddabb00488e048f96ea83f0610ebf28d4b85d5a3f6473b7da53f49acf458",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/b-ordinary-v108-full.log",
+      "bytes": 1598,
+      "sha256": "f4938309a67d58e0b481e0a3efa9070f0abf67d1742965912aec3eb6312e4457",
+      "source_member": "assessment/b-ordinary-v108-full.log",
+      "source_sha256": "f4938309a67d58e0b481e0a3efa9070f0abf67d1742965912aec3eb6312e4457",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/b-ordinary.patch",
+      "bytes": 6991,
+      "sha256": "851fbc05434bfe247c55133e2957e7c594254cee8b41bf40cc14629ad3d5db13",
+      "source_member": "assessment/b-ordinary.patch",
+      "source_sha256": "851fbc05434bfe247c55133e2957e7c594254cee8b41bf40cc14629ad3d5db13",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/candidate-identities.json",
+      "bytes": 2084,
+      "sha256": "9e92ad728eb1b513edeb17a58267c87ecb2daa84a55f11c5e3fbaa5b78f2025c",
+      "source_member": "assessment/candidate-identities.json",
+      "source_sha256": "9e92ad728eb1b513edeb17a58267c87ecb2daa84a55f11c5e3fbaa5b78f2025c",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment/harness-corrections.md",
+      "bytes": 1273,
+      "sha256": "5a3d5402b97cb7a86893bb81f6dedf3c1cb56568d001b43677dcb3b7f96ee903",
+      "source_member": "assessment/harness-corrections.md",
+      "source_sha256": "5a3d5402b97cb7a86893bb81f6dedf3c1cb56568d001b43677dcb3b7f96ee903",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "assessment_1177.rs",
+      "bytes": 9014,
+      "sha256": "8131461210ba313756a1d69f887b4743c89bb62b3c737ae34f0687e13a71b785",
+      "source_member": "assessment_1177.rs",
+      "source_sha256": "8131461210ba313756a1d69f887b4743c89bb62b3c737ae34f0687e13a71b785",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "learn-handoff.md",
+      "bytes": 5755,
+      "sha256": "f34453906dadd71a7bebf18001a6a69712fca0a8f7e45f53d0470a475fd622e6",
+      "source_member": "learn-handoff.md",
+      "source_sha256": "f34453906dadd71a7bebf18001a6a69712fca0a8f7e45f53d0470a475fd622e6",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "learn/issue-1198.json",
+      "bytes": 4165,
+      "sha256": "8e89499f43882f37c4de272977dfb0186c93bd7ff1a2b6400a5604f7434d59f2",
+      "source_member": "sources/issue-1198.json",
+      "source_sha256": "3cce4447ed733af99be3b82c380200c604007feed00e884211b67c7d4b25ae4b",
+      "treatment": "Primary source field excerpt; profiles/diff/HTML omitted; request body preserved"
+    },
+    {
+      "path": "learn/postmerge-failure-excerpt.log",
+      "bytes": 3312,
+      "sha256": "d21e1036dd78d9e94efa998187d62398017b0841a849aa6fd8ad39538f3cb56a",
+      "source_member": "sources/job-118624985581.log",
+      "source_sha256": "6e256d944c97be104df442c12715b12388cc5d3de75d15ce248c5a43dabbe9d1",
+      "treatment": "Line excerpt; full original remains private; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "learn/postmerge-jobs.json",
+      "bytes": 4926,
+      "sha256": "5b6f9e727d995c16bcdd5f4e1ba96bcb2ca968ad8a0059e8c8e508eb245700b8",
+      "source_member": "sources/learnmore-1.json",
+      "source_sha256": "77b0779cc03aa7434b4077aa6db83bb6527001c6171569a7f1d54181a2b9b83d",
+      "treatment": "Primary API field excerpt; account/runner metadata omitted"
+    },
+    {
+      "path": "learn/postmerge-run.json",
+      "bytes": 389,
+      "sha256": "77fd4b929aff5767340ba175424fe7e2310ed36982cf37fca7c31a3a56bee176",
+      "source_member": "sources/run-39397208394.json",
+      "source_sha256": "dc7a875797d10255fc555f33bcf4f67ff75daf63ec26d252bcbb1265d07ba20a",
+      "treatment": "Primary API field excerpt; account/runner metadata omitted"
+    },
+    {
+      "path": "learn/pr-1197.json",
+      "bytes": 5648,
+      "sha256": "9d14aa67340e0cb4cf494142e39aa741339f0c0950657cea409aaf6837fc56d6",
+      "source_member": "sources/pr-1197.json",
+      "source_sha256": "95cd862620c9456864a5d35024c022e0fde5703854abb509a4b8680e7bee50a1",
+      "treatment": "Primary source field excerpt; profiles/diff/HTML omitted; request body preserved"
+    },
+    {
+      "path": "learn/pr-1199.json",
+      "bytes": 3644,
+      "sha256": "5dda3e23abfbec3134b780fc4f2337ef75e0f847945e212f6e7f5152507641e2",
+      "source_member": "sources/pr-1199.json",
+      "source_sha256": "893d0f674f1cfb625fa132ab0b35077f2855f014a95d09391c2e2e969e724afa",
+      "treatment": "Primary source field excerpt; profiles/diff/HTML omitted; request body preserved"
+    },
+    {
+      "path": "learn/premerge-integration-excerpt.log",
+      "bytes": 1029,
+      "sha256": "adaf930dd152ba3f24d9a53b1bae78930fb009a81396a521d11e40e25af89546",
+      "source_member": "sources/pr-1197-integration-log.json",
+      "source_sha256": "b7132c0d79b721352937a6bc7aefd79064d3bc35cd24629303ca53fa0f12ab86",
+      "treatment": "Primary log line excerpt from tool JSON content; original line numbers shown; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "learn/premerge-jobs.json",
+      "bytes": 4673,
+      "sha256": "cb49936ecf7494c51538be9122a01798f163d34d9196e419287babf1f58be338",
+      "source_member": "sources/learnmore-3.json",
+      "source_sha256": "c0dc358863ce0261688d0d01f8d3681a81772c2f0753df9aec019166109fbea5",
+      "treatment": "Primary API field excerpt; account/runner metadata omitted"
+    },
+    {
+      "path": "learn/premerge-run.json",
+      "bytes": 397,
+      "sha256": "32083f0bf3a27082b338c2edbbc0111d1f90bcd2768d6fd6fe606d08dc558d6c",
+      "source_member": "sources/learnmore-2.json",
+      "source_sha256": "b26e400f8fbd6ff9dbbcbe02a56dde64928aa7f19ede27d693406c414db0d15f",
+      "treatment": "Primary API field excerpt; account/runner metadata omitted"
+    },
+    {
+      "path": "learn/premerge-unit-excerpt.log",
+      "bytes": 132,
+      "sha256": "1377352c0d000aa0445a83f56931f0f336d5fecc39d2317eea364dd803076563",
+      "source_member": "sources/pr-1197-unit-log.json",
+      "source_sha256": "e9a0eb6ceb3d1f9d0dbf6208c0d1ea08307a638dc1ab8d7f8770f103e2f7a2dc",
+      "treatment": "Primary log line excerpt from tool JSON content; original line numbers shown"
+    },
+    {
+      "path": "native/a-final-refusal-excerpt.json",
+      "bytes": 886,
+      "sha256": "9eb50ed22eb2611fd9061acdc6a7a275f5fdc7867821d62b086e6475a79d16d6",
+      "source_member": "records/a-deliver/proofline-frozen/report.json",
+      "source_sha256": "36fe9c50661d225fb847a27d015b4cdb3bda3569d732782e7674dfd9253bc50a",
+      "treatment": "Field excerpt of native REFUSAL; not an intact native receipt or executed check; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "native/a-initial-refusal-excerpt.json",
+      "bytes": 366,
+      "sha256": "30b5e48db656cfd4d12b60b8fccd852e6829053a0ab4583a9eade98dfcb473ca",
+      "source_member": "records/a-deliver/proofline-native/report.json",
+      "source_sha256": "ca8351356552c47120c8e6a4ef12130e8ab6282366cf4650b9c65a4668048c5a",
+      "treatment": "Field excerpt of native REFUSAL; not an intact native receipt or executed check; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "native/b-final-refusal-excerpt.json",
+      "bytes": 1037,
+      "sha256": "6d51c6e1faea4cd06c68e71ab8a98953614dc2f576b3649bc78ea1507867843b",
+      "source_member": "records/b-deliver/native-corrected/report.json",
+      "source_sha256": "c0873425d38f402a990b3cc76d6300f7df4359f6d0e6f6debecc48950e590955",
+      "treatment": "Field excerpt of native REFUSAL; not an intact native receipt or executed check; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-deliver/fmt-final.json",
+      "bytes": 234,
+      "sha256": "2758622b70e8e52de6e61a1349a4cf910b9fa8a5ea0f2c49ccb32ac9a8149aa3",
+      "source_member": "records/a-deliver/fmt-final.json",
+      "source_sha256": "3e5522707189595d9d75e1df5d2f71bde606fb02d52b1b4ec35b44036ad90835",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-deliver/fmt-final.log",
+      "bytes": 10,
+      "sha256": "4bc9081580f4e39592690330243d5b8dd68a61a937a07a5557ad63da682c7ade",
+      "source_member": "records/a-deliver/fmt-final.log",
+      "source_sha256": "4bc9081580f4e39592690330243d5b8dd68a61a937a07a5557ad63da682c7ade",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/a-deliver/handoff.md",
+      "bytes": 7802,
+      "sha256": "e5c4cb6114fcb0bff2f9755de364cde59404ea575c971b5bf1a118fe36cd347d",
+      "source_member": "records/a-deliver/handoff.md",
+      "source_sha256": "f2a173bf6567faafc37e5331d350726a62a749232548a1f7e40bafed65036ba0",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-deliver/lint-python.json",
+      "bytes": 324,
+      "sha256": "d2f5c46a46379195f0b51f2c42db486961232b3e377b6333f1b4a2cbd487c4f0",
+      "source_member": "records/a-deliver/lint-python.json",
+      "source_sha256": "374ba7e4c814b2f2a414e58c2b061cc7b3f415a9f32b3c539759ae68025314af",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-deliver/lint-python.log",
+      "bytes": 2305,
+      "sha256": "cdce91c7f9243795103d6bf9f206c3c0d09f6093490e9f5e57a2dfd363072d45",
+      "source_member": "records/a-deliver/lint-python.log",
+      "source_sha256": "b7254934fc30dcf0745270520fdf7981503f0bcba03ef10c021f50af49ab5371",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-deliver/unit-python-excerpt.log",
+      "bytes": 307,
+      "sha256": "429e696c9de35ee226aa759b905f53c7451331fffbea2926ec34e286cb2a26c6",
+      "source_member": "records/a-deliver/unit-python.log",
+      "source_sha256": "15601e510d95e2841e1b9bb355d1e6a88d239ccf765eb0bc958919c6b92b1a76",
+      "treatment": "Line excerpt; full original remains private"
+    },
+    {
+      "path": "records/a-deliver/unit-python.json",
+      "bytes": 332,
+      "sha256": "218a5ce542494382cf0f3f03481f2be8f3e6bc38e4bae96bb5da3ee9d36ad40b",
+      "source_member": "records/a-deliver/unit-python.json",
+      "source_sha256": "e06d1fb21792e3bb27ad71249f7f13adddf9e356d527465f9ded5acfdb603afa",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-ordinary/attachment-excerpt.log",
+      "bytes": 301,
+      "sha256": "c9445de284878f5ddce87de88a07ba708f5a42fa7ebda307bb7c519e18884623",
+      "source_member": "records/a-ordinary/attachment.log",
+      "source_sha256": "58a5423ec1d34e4268d2fe25e130ef5164ca314dc1f7f24b298cf3edb9bda6b3",
+      "treatment": "Line excerpt; full original remains private"
+    },
+    {
+      "path": "records/a-ordinary/attachment.json",
+      "bytes": 221,
+      "sha256": "a7b8594185aea039b204db6b8864d06481ae4ffddabdbdd64cbeaf4305213ef8",
+      "source_member": "records/a-ordinary/attachment.json",
+      "source_sha256": "ec18c6614add6229bb295c8e53e1d971fa68662b939a81e167a1ed279b2b96b7",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-ordinary/attachment.sql",
+      "bytes": 1111,
+      "sha256": "30fe79cafa71c38033b4ce309240995141471a6d336dbc45c3b14af5428fccb7",
+      "source_member": "records/a-ordinary/attachment.sql",
+      "source_sha256": "30fe79cafa71c38033b4ce309240995141471a6d336dbc45c3b14af5428fccb7",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/a-ordinary/baseline-regression-failure.log",
+      "bytes": 1232,
+      "sha256": "52a5bea9e793989f67292f6be538097b83d1f89d542f6356a665281454c7bebe",
+      "source_member": "records/a-ordinary/baseline-regression-failure.log",
+      "source_sha256": "52a5bea9e793989f67292f6be538097b83d1f89d542f6356a665281454c7bebe",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/a-ordinary/e2e-outbox.json",
+      "bytes": 327,
+      "sha256": "05af2bb7ddaddbad7e0824921a2101893f0e92ba7d23a07136e3f52f5b611fbd",
+      "source_member": "records/a-ordinary/e2e-outbox.json",
+      "source_sha256": "9f5ccfe885a3b1e0759d44cb9da615ceb1681cc4b727f5f7ec6237b0e71b879b",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-ordinary/e2e-outbox.log",
+      "bytes": 1622,
+      "sha256": "4c4a9642e2c2d46f5642f05c58d6ff19b0129a400caaddf2b6de9bb918f7d66d",
+      "source_member": "records/a-ordinary/e2e-outbox.log",
+      "source_sha256": "4c4a9642e2c2d46f5642f05c58d6ff19b0129a400caaddf2b6de9bb918f7d66d",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/a-ordinary/fmt.json",
+      "bytes": 204,
+      "sha256": "2b2851f6e190e5e2e48b4a8714209b5f5bd06bb2f13e8726683dae32c53079e8",
+      "source_member": "records/a-ordinary/fmt.json",
+      "source_sha256": "242abace2d1de00ad3349761721dc417f113f7422b2e2b9e5ca3ff10c27cef2e",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-ordinary/fmt.log",
+      "bytes": 10,
+      "sha256": "4bc9081580f4e39592690330243d5b8dd68a61a937a07a5557ad63da682c7ade",
+      "source_member": "records/a-ordinary/fmt.log",
+      "source_sha256": "4bc9081580f4e39592690330243d5b8dd68a61a937a07a5557ad63da682c7ade",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/a-ordinary/handoff.txt",
+      "bytes": 2953,
+      "sha256": "0a323cb8f0547fd952d5437de1cf5936514ee1b29a60f883c1134881afe6a388",
+      "source_member": "records/a-ordinary/handoff.txt",
+      "source_sha256": "0a323cb8f0547fd952d5437de1cf5936514ee1b29a60f883c1134881afe6a388",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/a-ordinary/lint-excerpt.log",
+      "bytes": 494,
+      "sha256": "be48c3b2c0bfec9cc2d7ac1dad1e9eef69d0e21dc883dc7dea3e7c8ef599e638",
+      "source_member": "records/a-ordinary/lint.log",
+      "source_sha256": "71419ea34b532ef7e86fb0c9039dcb7804f0c41c536e4b6bbeb24ccefba92489",
+      "treatment": "Line excerpt; full original remains private"
+    },
+    {
+      "path": "records/a-ordinary/lint.json",
+      "bytes": 207,
+      "sha256": "8719867ea5d9393954efef2cefbb63cf00088ddd2d28013a79a550db097a8cdb",
+      "source_member": "records/a-ordinary/lint.json",
+      "source_sha256": "99c1a10063472a68d4900bcb0cf3c98c5429f12443fe9601ee910933ee3a963d",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/a-ordinary/unit-host-excerpt.log",
+      "bytes": 305,
+      "sha256": "f749ee6751802f592e195bce7271545854a7f25afff56a84dd92056afac40f96",
+      "source_member": "records/a-ordinary/unit-host.log",
+      "source_sha256": "e471f2f93cf12f8898b90da01a38c7fdb5e01316374b94b39c5b51352613c172",
+      "treatment": "Line excerpt; full original remains private"
+    },
+    {
+      "path": "records/a-ordinary/unit-host.json",
+      "bytes": 206,
+      "sha256": "8b714af199b45777cefec20dac51ffd2af44e105e7fa18a1af3588815947bf4c",
+      "source_member": "records/a-ordinary/unit-host.json",
+      "source_sha256": "b1530c8496c76557ee8d0d19ead3795cd1da4adf8174e2a3248ecf2e27765efb",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-deliver/candidate-image.log",
+      "bytes": 84,
+      "sha256": "1a0a9167e342da55168a103ce82d5f1bc0c2cda2da061dd959b83773bca26745",
+      "source_member": "records/b-deliver/candidate-image.log",
+      "source_sha256": "1a0a9167e342da55168a103ce82d5f1bc0c2cda2da061dd959b83773bca26745",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/b-deliver/e2e-corrected.json",
+      "bytes": 475,
+      "sha256": "4b1219ca7424f649847cb12dc80ae7c8f28d58ba82c43b2a24fa192715751b57",
+      "source_member": "records/b-deliver/e2e-corrected.json",
+      "source_sha256": "4f891c93d5a30d38cec368398e5b39e8a21a3a9f6d8d2f4820fcca73d1a1ade4",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-deliver/e2e-corrected.log",
+      "bytes": 1886,
+      "sha256": "c951b2ea0822f4478b4edf21a7a6df5a5815465020e3687d7becaf4aa35df718",
+      "source_member": "records/b-deliver/e2e-corrected.log",
+      "source_sha256": "e0d7cafc95b22bdeb6dbf2368bb89f3667b593d9626d10f55cdfe9d715dcd34d",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-deliver/fmt-corrected.json",
+      "bytes": 210,
+      "sha256": "114e252ae238157b3a4a06e0e4a2010ce10a65e35902b43784ef275f4c13827b",
+      "source_member": "records/b-deliver/fmt-corrected.json",
+      "source_sha256": "427b21d949a112101f061bf5691aaeb57a07480f2ea5ed46bd35a0fed68de1b6",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-deliver/fmt-corrected.log",
+      "bytes": 10,
+      "sha256": "4bc9081580f4e39592690330243d5b8dd68a61a937a07a5557ad63da682c7ade",
+      "source_member": "records/b-deliver/fmt-corrected.log",
+      "source_sha256": "4bc9081580f4e39592690330243d5b8dd68a61a937a07a5557ad63da682c7ade",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/b-deliver/handoff.md",
+      "bytes": 6959,
+      "sha256": "98a46bfb2b39ba5cfca46ef1dab3da5c3005a134430d743ce471a06da0250c66",
+      "source_member": "records/b-deliver/handoff.md",
+      "source_sha256": "080441a9bd27e562cffe51a7dd153e9ae73d94ef4ba6b2e5c07ac14c4c416aa0",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-deliver/lint-corrected.json",
+      "bytes": 317,
+      "sha256": "4690125179f5cf8d2601ffd667931db920ee0da72dc50234aba042d058896c70",
+      "source_member": "records/b-deliver/lint-corrected.json",
+      "source_sha256": "e83adc97351dbb06fce1b6d6a73c102e172d40f7c447e37658f28058c6cc707d",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-deliver/lint-corrected.log",
+      "bytes": 992,
+      "sha256": "bea269ad822601815a594a7598748cf784a38dd798fe554e3baee5a71389457c",
+      "source_member": "records/b-deliver/lint-corrected.log",
+      "source_sha256": "4bc33bc8c10c6ef63d503e77b1cabf053fe0e4dd9dd315c22de72b02f4975efe",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-ordinary/16-image-identity.log",
+      "bytes": 84,
+      "sha256": "69fb7cd74584ad3acd1905e75f2b3b9bdd8705a9d9fbcdd44396ac58a893bc1b",
+      "source_member": "records/b-ordinary/16-image-identity.log",
+      "source_sha256": "69fb7cd74584ad3acd1905e75f2b3b9bdd8705a9d9fbcdd44396ac58a893bc1b",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "records/b-ordinary/19-fixture-fmt-lint.json",
+      "bytes": 334,
+      "sha256": "39bdff45fceef76eb0922c9cc6855d6e1b0ce60979292d63026c8b0a497a8f04",
+      "source_member": "records/b-ordinary/19-fixture-fmt-lint.json",
+      "source_sha256": "eccd904dcc76d725b96e9d0a38e2130a1adecd7edf4c8e1ea0da35bd652c7ac1",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-ordinary/19-fixture-fmt-lint.log",
+      "bytes": 949,
+      "sha256": "9e4c72451bc104df25d3932388714bff24e2c1295460f4260ce3c6158a28984b",
+      "source_member": "records/b-ordinary/19-fixture-fmt-lint.log",
+      "source_sha256": "5fb6a61764c385e17ae9a06947c890873a940ebc8244f60842897c0bdfd3e3a2",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-ordinary/20-regression.json",
+      "bytes": 481,
+      "sha256": "316344496484353d1979363db464d4d6db0a3aac79319857a7a09f61d40927c9",
+      "source_member": "records/b-ordinary/20-regression.json",
+      "source_sha256": "b6fad1b301c7b14cd118a4592323e8ad6ed8f872d4434b16e25f96658258153d",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-ordinary/20-regression.log",
+      "bytes": 479,
+      "sha256": "95e4728bf10091978cc8bc9c189cec4e8fc471b24ee36e7151eb927a77c0c93b",
+      "source_member": "records/b-ordinary/20-regression.log",
+      "source_sha256": "1bd6ea12e1412cb18ddbaac46ee23e6cf1527166105dbb0b4d34b67eef102620",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "records/b-ordinary/handoff.md",
+      "bytes": 3218,
+      "sha256": "8d22448d065d95d81d8d15eefbc0488cf3e4792403d20ca8d9b8d7c648d07041",
+      "source_member": "records/b-ordinary/handoff.md",
+      "source_sha256": "8d22448d065d95d81d8d15eefbc0488cf3e4792403d20ca8d9b8d7c648d07041",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "setup-observations.md",
+      "bytes": 4302,
+      "sha256": "84a324c48e6beb7f9cfc9b481a6ab0268c4d6aeae6667f184e37abc936475654",
+      "source_member": "setup-observations.md",
+      "source_sha256": "b86b3efb06355b955e364a7b085d2133353deb73307046473effd657c4142d5a",
+      "treatment": "Selected original artifact; no behavioral result rewritten; local paths replaced and/or ANSI removed"
+    },
+    {
+      "path": "sources/issue-1177-comments.json",
+      "bytes": 436,
+      "sha256": "5e360b656fa623304aa508ce491a04712609c1c3d886785f4bf15127884fe217",
+      "source_member": "sources/issue-1177-comments.json",
+      "source_sha256": "5e360b656fa623304aa508ce491a04712609c1c3d886785f4bf15127884fe217",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "sources/issue-1177.json",
+      "bytes": 4082,
+      "sha256": "1fa7b5c687e8744f8ec81ea91e5fdbb3c09e1796834d1a7b2684e84011e110b6",
+      "source_member": "sources/issue-1177.json",
+      "source_sha256": "1fa7b5c687e8744f8ec81ea91e5fdbb3c09e1796834d1a7b2684e84011e110b6",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "sources/issue-1179-comments.json",
+      "bytes": 436,
+      "sha256": "0dbe3e3071bd3d7580193d9aada5443768de822878b2ca04e0f4d595ad713809",
+      "source_member": "sources/issue-1179-comments.json",
+      "source_sha256": "0dbe3e3071bd3d7580193d9aada5443768de822878b2ca04e0f4d595ad713809",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    },
+    {
+      "path": "sources/issue-1179.json",
+      "bytes": 3354,
+      "sha256": "6482de23a6d55cc7152811f5f2bae7ec9270571ee4356fb7160c7a9e3ed9681e",
+      "source_member": "sources/issue-1179.json",
+      "source_sha256": "6482de23a6d55cc7152811f5f2bae7ec9270571ee4356fb7160c7a9e3ed9681e",
+      "treatment": "Selected original artifact; no behavioral result rewritten"
+    }
+  ],
+  "limitations": "Redacted/selected copies; not intact native receipts. Hashes bind public bytes, not correctness or independent authenticity. See report and archive README.",
+  "report": {
+    "path": "pg-trickle-validation-2026-10-21.md",
+    "sha256": "44806bb392e77a891874bad0de0fc7f1bc7c79560f3605cd654f729704a65f52"
+  }
+}

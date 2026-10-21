@@ -172,6 +172,8 @@ requirements or enable automatic coding, issue publication or merges.
 
 ## Try the optional Learn retrospective
 
+The [pg-trickle Deliver + Learn comparison](docs/pg-trickle-validation-2026-10-21.md) found **NO CLEAR BENEFIT** across two issues and four attempts; the decision is to **KEEP FOUNDRYLINE UNCHANGED**.
+
 The [manual Learn guide](patterns/learn.md) starts with one real approved change and distinguishes selected checks from independently observed post-delivery events and outcomes. The [issue #21 → PR #22 retrospective](examples/manual-learn/README.md) documents an actual source-control merge, while explicitly recording unavailable deployment/customer impact and a separate passing-tests-but-no-impact-evidence control. **Learn remains NOT QUALIFIED**; this is documentation, not a post-delivery pilot or acceptance of a new workflow.
 
 ## The tools behind the recipes
